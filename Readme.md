@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Матвей Новиков](https://up.htmlacademy.ru/adaptive/19/user/700999).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Налимова](https://up.htmlacademy.ru/adaptive/19/user/16507).
 
 ---
 
