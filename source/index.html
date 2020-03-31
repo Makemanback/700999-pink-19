@@ -5,8 +5,63 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="https://via.placeholder.com/75x22" width="75" height="22" alt="Пинк">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav_wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main class="page-main">
 
+      <h1 class="visually-hidden">Pink</h1>
+
+      <section class="app-store">
+        <h2 class="app-store__header">Взгляните на жизнь иначе!</h2>
+        <a href="#" class="app-store__button button">Скачать приложение</a>
+        <a href="#" class="app-store__logo">
+          <img class="app-store__logo--apple" src="https://via.placeholder.com/47x56" width="47" height="56" alt="Логотип Эппл">
+        </a>
+        <a href="#" class="app-store__logo">
+          <img class="app-store__logo--android" src="https://via.placeholder.com/43x47" width="43" height="47" alt="Логотип Андроид">
+        </a>
+        <a href="#" class="app-store__logo">
+          <img class="app-store__logo--windows-phone" src="https://via.placeholder.com/44x41" width="44" height="41" alt="Логотип Виндоус Фон">
+        </a>
+        <p class="app-store__description">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </section>
+
+      <section class="preferences">
+        <h2 class="preferences__header">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
+        <div class="preferences__wrapper">
+          <h3 class="preferences__header-small">Поднимает настроение</h3>
+          <p class="preferences__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <h3 class="preferences__header-small">Меняет мир вокруг</h3>
+          <p class="preferences__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <h3 class="preferences__header-small">Заводит новых друзей</h3>
+          <p class="preferences__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
