@@ -75,29 +75,59 @@
       <section class="reviews">
         <h2 class="visually-hidden">Комментарии</h2>
         <div class="reviews__wrapper">
-          <h3 class="reviews__header">Николай Петров</h3>
-          <blockquote class="reviews__cite">
+          <cite class="reviews__cite">Николай Петров</cite>
+          <blockquote class="reviews__blockquote">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </blockquote>
         </div>
-        <button class="reviews__button"></button>
-        <button class="reviews__button"></button>
-        <button class="reviews__button"></button>
+        <button class="reviews__button" type="button"></button>
+        <button class="reviews__button" type="button"></button>
+        <button class="reviews__button" type="button"></button>
       </section>
 
       <section class="rates">
         <h2 class="visually-hidden">Тарифы</h2>
-        <header class="rates__header">
-          <b class="rates__title">Стандарт</b>
-          <p class="rates__price">3,99 USD</p>
-          <span class="rates__hit">3,99 USD</span>
-        </header>
         <div class="rates__wrapper">
-          <ul class="rates__list">
-            <li class="rates__list-item">Розовый фильтр</li>
-            <li class="rates__list-item">Смайлики</li>
-            <li class="rates__list-item">Комментарии</li>
-          </ul>
+          <header class="rates__header">
+            <b class="rates__title">База</b>
+            <p class="rates__price">1,99 USD</p>
+          </header>
+          <div class="rates__wrapper-inner">
+            <ul class="rates__list">
+              <li class="rates__list-item">Розовый фильтр</li>
+              <li class="rates__list-item">Смайлики</li>
+              <li class="rates__list-item">Комментарии</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rates__wrapper">
+          <header class="rates__header">
+            <b class="rates__title">Стандарт</b>
+            <p class="rates__price">3,99 USD</p>
+            <span class="rates__hit">хит</span>
+          </header>
+          <div class="rates__wrapper-inner">
+            <ul class="rates__list">
+              <li class="rates__list-item">Розовый фильтр</li>
+              <li class="rates__list-item">Смайлики</li>
+              <li class="rates__list-item">Комментарии</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rates__wrapper">
+          <header class="rates__header">
+            <b class="rates__title">Анлим</b>
+            <p class="rates__price">9,99 USD</p>
+          </header>
+          <div class="rates__wrapper-inner">
+            <ul class="rates__list">
+              <li class="rates__list-item">Розовый фильтр</li>
+              <li class="rates__list-item">Смайлики</li>
+              <li class="rates__list-item">Комментарии</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -107,7 +137,7 @@
         <span class="main-footer__header">Остались вопросы? Свяжитесь с нами!</span>
         <div class="contacts">
           <h3 class="contacts__phone-header">Звоните:</h3>
-          <a href="78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
+          <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
         </div>
         <div class="contacts">
           <h3 class="contacts__mail-header">Пишите:</h3>
