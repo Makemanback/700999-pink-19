@@ -34,6 +34,90 @@
 
     <h1 class="main-nav__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
 
+    <span class="main-nav__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</span>
+
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+
+      <fieldset class="form__names names">
+        <label class="names__surname">
+          Фамилия:
+          <input class="names__input" type="text" name="surname" placeholder="Укажите фамилию *" required>
+        </label>
+        <label class="names__name">
+          Имя:
+          <input class="names__input" type="text" name="name" placeholder="Введите ваше имя *" required>
+        </label>
+        <label class="names__patronymic">
+          Отчество:
+          <input class="names__input" type="text" name="patronymic" placeholder="ВНу и отчество тоже">
+        </label>
+      </fieldset>
+
+      <fieldset class="form__achievements">
+        <legend class="form__achievement-legend">Ваши безбашенные достижения в путешествии</legend>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="shark" checked>
+          Сделал селфи с акулой
+        </label>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="beach" checked>
+          Обгорел на пляже
+        </label>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="Norris">
+          Видел Чака Норриса
+        </label>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="souvenirs">
+          Накупил сувениров
+        </label>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="tower" checked>
+          Удержал башню
+        </label>
+        <label class="form__achievement-label">
+          <input class="form__achievement-checkbox" type="checkbox" name="hotel">
+          Разгромил отель
+        </label>
+      </fieldset>
+
+      <fieldset class="form__contacts">
+        <label class="form__contacts-phone">
+          Номер телефона
+          <input class="form__contacts-input" type="tel" name="phone" placeholder="Номер, пожалуйста">
+        </label>
+        <label class="form__contacts-mail">
+          Адрес почты
+          <input class="form__contacts-input" type="email" name="email" placeholder="Введите почту *" required>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__radio">
+        <legend class="form__radio-legend">С каким приложением путешествовали?</legend>
+        <label class="form__radio-label">
+          <input class="form__radio-input" type="radio" name="app" checked>
+          Pink для iOS
+        </label>
+        <label class="form__radio-label">
+          <input class="form__radio-input" type="radio" name="app">
+          Pink на Android
+        </label>
+        <label class="form__radio-label">
+          <input class="form__radio-input" type="radio" name="app">
+          Windows Phone
+        </label>
+      </fieldset>
+
+      <fieldset class="form__textarea">
+        <label class="form__textarea-label">
+          Опишите свои эмоции
+          <textarea class="form__textarea-field" name="textareaMessage">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </label>
+      </fieldset>
+
+      <button class="form__submit button" type="submit">Отправить форму</button>
+      <span class="form__required">* — обязательные поля</span>
+    </form>
   </main>
 
   <footer class="page-footer">
