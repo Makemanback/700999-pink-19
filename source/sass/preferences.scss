@@ -1,0 +1,41 @@
+.preferences__slogan {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  color: #283645;
+}
+
+.preferences__wrapper {
+  background-color: #f2f2f2;
+  background-image: url(../img/iphone-screen-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 20px;
+}
+
+.preferences__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.preferences__header {
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.preferences__description {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #283645;
+}
