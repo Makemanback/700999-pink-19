@@ -3,22 +3,22 @@
 // глобальные стили
 @import 'common.scss';
 // хедер
-@import 'page-header.scss';
+@import 'blocks/page-header.scss';
 // главная навигация
-@import 'main-nav.scss';
+@import 'blocks/main-nav.scss';
 // блок загрузки приложения
-@import 'app-download.scss';
+@import 'blocks/app-download.scss';
 // преимущества
-@import 'preferences.scss';
+@import 'blocks/preferences.scss';
 // галерея фотографий
-@import 'photos.scss';
+@import 'blocks/photos.scss';
 // комментарии
-@import 'comment-wrapper.scss';
+@import 'blocks/comment-wrapper.scss';
 // футер страницы
-@import 'page-footer.scss';
+@import 'blocks/page-footer.scss';
 // соцсети в футере
-@import 'footer-socials.scss';
+@import 'blocks/footer-socials.scss';
 // акадесия ф вутере
-@import 'footer-copyright.scss';
+@import 'blocks/footer-copyright.scss';
 // главное содержимое страниц
-@import 'page-main.scss';
+@import 'blocks/page-main.scss';
