@@ -1,0 +1,26 @@
+// шрифты
+@import 'fonts.scss';
+// нормалайз
+@import 'normalize.scss';
+// глобальные стили
+@import 'common.scss';
+// хедер
+@import 'blocks/page-header.scss';
+// главная навигация
+@import 'blocks/main-nav.scss';
+// блок загрузки приложения
+@import 'blocks/app-download.scss';
+// преимущества
+@import 'blocks/preferences.scss';
+// галерея фотографий
+@import 'blocks/photos.scss';
+// комментарии
+@import 'blocks/comment-wrapper.scss';
+// футер страницы
+@import 'blocks/page-footer.scss';
+// соцсети в футере
+@import 'blocks/footer-socials.scss';
+// акадесия ф вутере
+@import 'blocks/footer-copyright.scss';
+// главное содержимое страниц
+@import 'blocks/page-main.scss';

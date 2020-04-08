@@ -1,0 +1,36 @@
+.photos {
+  display: flex;
+  flex-direction: column;
+  background-color: #283645;
+  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.photos__header {
+  padding: 0;
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.photos__description {
+  padding: 55px 40px;
+  margin: 0;
+  background-color: #ffffff;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #283645;
+}
+
+.photos__wrapper {
+  background-color: #ffffff;
+}
+

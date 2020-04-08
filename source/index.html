@@ -2,16 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/75x22" width="75" height="22" alt="Пинк">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
       </a>
       <nav class="main-nav">
         <button class="menu" type="button">Открыть меню</button>
-        <div class="main-nav_wrapper">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
               <a>Главная</a>
@@ -38,13 +42,13 @@
         <h2 class="app-download__header">Взгляните на жизнь иначе!</h2>
         <a href="https://www.apple.com/ru/ios/app-store/" class="app-download__button button">Скачать приложение</a>
         <a href="https://www.apple.com/ru/ios/app-store/" class="app-download__link">
-          <img class="app-download__logo" src="https://via.placeholder.com/47x56" width="47" height="56" alt="Логотип Эппл">
+          <img class="app-download__logo" src="img/logo-apple.svg" width="47" height="56" alt="Логотип Эппл">
         </a>
         <a href="https://play.google.com/store" class="app-download__link">
-          <img class="app-download__logo" src="https://via.placeholder.com/43x47" width="43" height="47" alt="Логотип Андроид">
+          <img class="app-download__logo" src="img/logo-android.svg" width="43" height="47" alt="Логотип Андроид">
         </a>
         <a href="https://www.microsoft.com/ru-ru?rtc=1" class="app-download__link">
-          <img class="app-download__logo" src="https://via.placeholder.com/44x41" width="44" height="41" alt="Логотип Виндоус Фон">
+          <img class="app-download__logo" src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Виндоус Фон">
         </a>
         <p class="app-download__description">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -129,6 +133,9 @@
             </ul>
           </div>
         </div>
+        <button class="rates__button button" type="button"></button>
+        <button class="rates__button button" type="button"></button>
+        <button class="rates__button button" type="button"></button>
       </section>
     </main>
 

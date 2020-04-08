@@ -1,0 +1,18 @@
+.footer-socials {
+  display: flex;
+}
+
+.footer-socials__link {
+  width: 46px;
+  height: 46px;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+}
+
+.footer-socials__link-twitter,
+.footer-socials__link-facebook,
+.footer-socials__link-youtube {
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
