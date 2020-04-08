@@ -4,6 +4,8 @@
 @import 'normalize.scss';
 // глобальные стили
 @import 'common.scss';
+// миксины
+@import 'mixins.scss';
 // хедер
 @import 'blocks/page-header.scss';
 // главная навигация
@@ -24,3 +26,15 @@
 @import 'blocks/footer-copyright.scss';
 // главное содержимое страниц
 @import 'blocks/page-main.scss';
+// комментарии на главной
+@import 'blocks/reviews.scss';
+// блок с тарифами
+@import 'blocks/rates.scss';
+// футер индексовой страницы
+@import 'blocks/main-footer.scss';
+// кнопка общие стили
+@import 'blocks/button.scss';
+// фильтр для загрузки фотографий
+@import 'blocks/uploader.scss';
+// форма ФИО внутреняя
+@import 'blocks/form.scss';
