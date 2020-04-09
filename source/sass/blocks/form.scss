@@ -1,0 +1,82 @@
+.form {
+  border: none;
+}
+
+.form__names-label,
+.form__contacts-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #d22856;
+}
+
+.form__names-input,
+.form__contacts-input {
+  width: 276px;
+  height: 59px;
+  padding-left: 20px;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+  color: #283645;
+
+  border: solid 2px #e5e5e5;
+}
+
+.form__names-input::placeholder {
+  color: #283645;
+}
+
+.form__achievement,
+.form__radio {
+  background-color: #f2f2f2;
+}
+
+.form__achievement-legend,
+.form__radio-legend,
+.form__textarea-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: #d22856;
+}
+
+.form__achievement-label,
+.form__radio-label,
+.form__textarea-field {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #283645;
+}
+
+.form__textarea-field {
+  border: 2px solid #e5e5e5;
+}
+
+.form__submit {
+  border-radius: 0;
+  background-color: #2aab6d;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.form__required {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: #283645;
+}
+
+.form__required::before {
+  content: "*";
+  color: #d22856;
+}

@@ -1,0 +1,54 @@
+.rates {
+  text-transform: uppercase;
+}
+
+.rates__list {
+  @include list-reset;
+}
+
+.rates__header {
+  position: relative;
+
+  background-color: #283645;
+}
+
+.rates__title {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.rates__price {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.rates__list-item {
+  font-size: 14px;
+  line-height: 30p;
+  text-align: left;
+  font-weight: 400;
+  color: #283645;
+}
+
+.rates__hit {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  font-size: 10px;
+  line-height: 21px;
+  text-align: center;
+  font-weight: 400;
+  color: #ffffff;
+  transform: rotate(-45deg);
+}
