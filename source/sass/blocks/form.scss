@@ -9,7 +9,7 @@
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
-  color: #d22856;
+  color: $pink-color;
 }
 
 .form__names-input,
@@ -22,13 +22,13 @@
   font-weight: 300;
   line-height: 30px;
   text-align: left;
-  color: #283645;
+  color: $darkblue-color;
 
   border: solid 2px #e5e5e5;
 }
 
 .form__names-input::placeholder {
-  color: #283645;
+  color: $darkblue-color;
 }
 
 .form__achievement,
@@ -43,7 +43,7 @@
   font-weight: 400;
   line-height: 18px;
   text-align: center;
-  color: #d22856;
+  color: $pink-color;
 }
 
 .form__achievement-label,
@@ -53,7 +53,7 @@
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  color: #283645;
+  color: $darkblue-color;
 }
 
 .form__textarea-field {
@@ -63,7 +63,7 @@
 .form__submit {
   border-radius: 0;
   background-color: #2aab6d;
-  color: #ffffff;
+  color: $white-color;
   text-transform: uppercase;
 }
 
@@ -73,10 +73,10 @@
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  color: #283645;
+  color: $darkblue-color;
 }
 
 .form__required::before {
   content: "*";
-  color: #d22856;
+  color: $pink-color;
 }

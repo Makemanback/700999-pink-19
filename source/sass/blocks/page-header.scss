@@ -1,3 +1,69 @@
+// шапка страницы
 .page-header {
-  background-color: #283645;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 69px;
+
+  background-color: $darkblue-color;
+}
+
+.page-header--paddings {
+  padding-left: 20px;
+  padding-right: 13px;
+}
+
+// скрытый логотип для планшета
+.page-header__logo-image--tablet {
+  display: none;
+}
+
+// скрытый логотип для десктопа
+.page-header__logo-image--desktop {
+  display: none;
+}
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 110px;
+  }
+
+// логотип
+  .page-header__logo-image--tablet {
+    display: block;
+    margin-top: -20px;
+  }
+
+// прячем мобильный
+  .page-header__logo-image {
+    display: none;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    min-width: 1200px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+// прячем лого планшета
+  .page-header__logo-image--tablet {
+    display: none;
+  }
+
+// логотип для десктопа
+  .page-header__logo-image--desktop {
+    display: flex;
+    margin-top: -15px;
+    margin-left: 250px;
+    margin-right: 140px;
+  }
+
 }

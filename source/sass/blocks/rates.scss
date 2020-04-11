@@ -9,7 +9,7 @@
 .rates__header {
   position: relative;
 
-  background-color: #283645;
+  background-color: $darkblue-color;
 }
 
 .rates__title {
@@ -17,7 +17,7 @@
   line-height: 30px;
   text-align: center;
   font-weight: 700;
-  color: #ffffff;
+  color: $white-color;
 }
 
 .rates__price {
@@ -27,7 +27,7 @@
   line-height: 30px;
   text-align: center;
   font-weight: 300;
-  color: #ffffff;
+  color: $white-color;
 }
 
 .rates__list-item {
@@ -35,7 +35,7 @@
   line-height: 30p;
   text-align: left;
   font-weight: 400;
-  color: #283645;
+  color: $darkblue-color;
 }
 
 .rates__hit {
@@ -49,6 +49,6 @@
   line-height: 21px;
   text-align: center;
   font-weight: 400;
-  color: #ffffff;
+  color: $white-color;
   transform: rotate(-45deg);
 }

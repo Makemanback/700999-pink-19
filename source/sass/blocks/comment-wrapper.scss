@@ -1,9 +1,21 @@
+// стили комментариев
 .comment-wrapper {
-  background-color: #f2f2f2;
-  color: #283645;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+
   margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 18px;
+  padding-left: 18px;
+  padding-right: 11px;
+
+  background-color: #f2f2f2;
+  color: $darkblue-color;
 }
 
+// заголовок
 .comment-wrapper__header {
   font-size: 14px;
   font-weight: 700;
@@ -11,26 +23,97 @@
   text-align: left;
 }
 
+// время комментария
 .comment-wrapper__comment-time {
   font-size: 12px;
   font-weight: 300;
   line-height: 24px;
   text-align: left;
+  text-transform: uppercase;
 }
 
-.comment-wrapper_comment-text {
+// текст комментария
+.comment-wrapper__comment-text {
   margin: 0;
+  margin-bottom: 9px;
 
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
 }
 
-.comment-wrapper_like {
+// текст лайка
+.comment-wrapper__like {
+  margin-bottom: 20px;
+
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color: #d22856;
+  color: $pink-color;
+  text-transform: uppercase;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+// обертка комментария
+  .comment-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    min-height: 155px;
+
+    padding-top: 24px;
+    padding-left: 27px;
+    padding-bottom: 22px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+// отступ для заголовка комментария
+  .comment-wrapper__header {
+    margin-bottom: -10px;
+  }
+// счетчик лайков
+  .comment-wrapper__like {
+    margin-bottom: 0;
+  }
+
+// обертка комментария панорамы
+  .comment-wrapper--panorama {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 24px;
+    padding-right: 28px;
+    padding-left: 27px;
+    padding-bottom: 24px;
+
+    background-color: #f2f2f2;
+  }
+
+  .comment-wrapper__comment-text--panorama {
+    margin: 0;
+  }
+
+  .comment-wrapper__like--panorama {
+    margin: 0;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+// комментарий
+  .comment-wrapper--panorama {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

@@ -1,14 +1,50 @@
+// копирайт академии
 .footer-copyright {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .footer-copyright__description {
-  margin: 0;
-  margin-right: 15px;
-  padding: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   text-align: left;
-  color: #283645;
+  color: $darkblue-color;
+}
+
+.footer-copyright__description--margin {
+  margin: 0;
+  margin-right: 15px;
+  margin-top: -7px;
+  padding: 0;
+}
+
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .footer-copyright--margin {
+    margin-top: -14px;
+  }
+
+  .footer-copyright__description--margin {
+    margin-top: -6px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .footer-copyright__description {
+    font-size: 18px;
+  }
+
+  .footer-copyright__description--margin {
+    margin-right: 14px;
+  }
+
+  .footer-copyright__link {
+    margin-top: 5px;
+  }
 }

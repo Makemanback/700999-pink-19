@@ -1,3 +1,13 @@
+// прячем форму на мобильном и планшете
+.main-nav__visually-hidden {
+  display: none;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  top: 69px;
+  left: 0;
+}
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -5,6 +15,9 @@
 }
 
 .main-nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 320px;
   height: 63px;
@@ -14,7 +27,6 @@
   line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
-
 
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 -1px 0 0 #000000;
@@ -26,5 +38,52 @@
 
 
 .main-nav__item a {
-  color: #ffffff;
+  color: $white-color;
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+// показываем форму
+  .main-nav__visually-hidden {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+  }
+
+  .main-nav__wrapper {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-nav__list {
+    width: 751px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .main-nav__item {
+    max-width: 132px;
+    margin-right: 39px;
+
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+
+    border: none;
+    box-shadow: none;
+  }
+  .main-nav__item:nth-child(3) {
+    margin-right: 49px;
+  }
+
+  .main-nav__item:last-child {
+    border: none;
+    margin-right: 0;
+  }
 }

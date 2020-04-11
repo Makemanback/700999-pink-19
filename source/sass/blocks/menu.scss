@@ -1,0 +1,12 @@
+.menu {
+  background-color: transparent;
+  border: none;
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .menu {
+    display: none;
+  }
+}

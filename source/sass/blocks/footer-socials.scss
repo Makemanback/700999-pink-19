@@ -1,18 +1,57 @@
+// социальные сети
 .footer-socials {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 176px;
+}
+
+.footer-socials--margin {
+  margin-bottom: 40px;
 }
 
 .footer-socials__link {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
 }
 
-.footer-socials__link-twitter,
-.footer-socials__link-facebook,
+// позиционирование свг иконок
+.footer-socials__link-twitter {
+  position: relative;
+  top: 15px;
+  left: 13px;
+}
+
+.footer-socials__link-facebook {
+  position: relative;
+  top: 12px;
+  left: 17px;
+}
+
 .footer-socials__link-youtube {
   position: relative;
-  top: 10px;
-  left: 15px;
+  top: 14px;
+  left: 16px;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+// социальные кнопки
+  .footer-socials--margin {
+    margin: 0;
+    margin-right: 92px;
+    margin-top: -25px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .footer-socials--margin {
+    margin-right: 224px;
+    margin-top: -18px;
+  }
 }

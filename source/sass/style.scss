@@ -6,6 +6,10 @@
 @import 'common.scss';
 // миксины
 @import 'mixins.scss';
+// переменные
+@import 'variables.scss';
+// кнопка общие стили
+@import 'blocks/button.scss';
 // хедер
 @import 'blocks/page-header.scss';
 // главная навигация
@@ -22,19 +26,27 @@
 @import 'blocks/page-footer.scss';
 // соцсети в футере
 @import 'blocks/footer-socials.scss';
-// акадесия ф вутере
+// академия в футере
 @import 'blocks/footer-copyright.scss';
-// главное содержимое страниц
-@import 'blocks/page-main.scss';
+// главное содержимое страницы формы
+@import 'blocks/page-form.scss';
 // комментарии на главной
 @import 'blocks/reviews.scss';
 // блок с тарифами
 @import 'blocks/rates.scss';
-// футер индексовой страницы
-@import 'blocks/main-footer.scss';
-// кнопка общие стили
-@import 'blocks/button.scss';
+// контакты индексовой страницы
+@import 'blocks/contacts.scss';
 // фильтр для загрузки фотографий
 @import 'blocks/uploader.scss';
 // форма ФИО внутреняя
 @import 'blocks/form.scss';
+// кнопка бургер
+@import 'blocks/menu.scss';
+
+html {
+  // max-width: 320px;
+  // width: 660px;
+  // min-width: 1200px;
+  // margin: 0 auto;
+  width: 100%;
+}

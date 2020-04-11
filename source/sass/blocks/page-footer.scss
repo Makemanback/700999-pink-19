@@ -1,3 +1,76 @@
+// футер
 .page-footer {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $white-color;
+}
+
+.page-footer--margins {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+// логотип
+.page-footer__logo {
+  margin-bottom: 36px;
+}
+
+// прячем футер на главной для мобильной
+.page-footer--main {
+  display: none;
+}
+
+// прячем лого для десктопа
+.page-footer__logo-image--desktop {
+  display: none;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+// показываем футер на главной
+  .page-footer--main {
+    display: flex;
+  }
+
+  .page-footer {
+    flex-direction: row;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .page-footer--margins {
+    margin-top: 36px;
+  }
+
+  .page-footer--logo {
+    margin-right: 77px;
+  }
+
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $tablet-width) {
+// прячем лого мобильного
+  .page-footer__logo-image {
+    display: none;
+  }
+
+  .page-footer--margins {
+    margin-left: 250px;
+    margin-top: 98px;
+  }
+
+  .page-footer--logo {
+    margin-right: 239px;
+  }
+
+// лого десктопа
+  .page-footer__logo-image--desktop {
+    display: flex;
+  }
 }
