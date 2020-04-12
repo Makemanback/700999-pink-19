@@ -63,15 +63,14 @@
   }
 
   .main-nav__list {
-    width: 751px;
+    width: 621px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .main-nav__item {
     max-width: 132px;
-    margin-right: 39px;
 
     line-height: 18px;
     font-weight: 400;
@@ -81,12 +80,9 @@
     box-shadow: none;
   }
 
-  .main-nav__item:nth-child(3) {
-    margin-right: 49px;
-  }
-
   .main-nav__item:last-child {
-    border: none;
     margin-right: 0;
+
+    border: none;
   }
 }

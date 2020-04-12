@@ -1,4 +1,7 @@
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
   border: none;
 }
 
@@ -79,4 +82,20 @@
 .form__required::before {
   content: "*";
   color: $pink-color;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .form {
+    max-width: 616px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .form {
+    max-width: 936px;
+  }
 }

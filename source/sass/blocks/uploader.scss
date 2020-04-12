@@ -1,4 +1,8 @@
 .uploader {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
   background-color: #f2f2f2;
   // временно
   height: 905px;
@@ -29,6 +33,7 @@
 @media (min-width: $tablet-width) {
   .uploader {
     // временно
+    max-width: 660px;
     height: 713px;
   }
 }
@@ -38,6 +43,7 @@
 @media (min-width: $desktop-width) {
   .uploader {
     // временно
+    max-width: 940px;
     height: 404px;
   }
 }
