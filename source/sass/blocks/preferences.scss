@@ -3,7 +3,7 @@
   height: 962px;
 
   background-color: #ffffff;
-  background-image: url(../img/iphone-screen-mobile@1x.png);
+  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
 
   background-position: center 684px;
@@ -18,7 +18,6 @@
   line-height: 29px;
   text-align: center;
   color: $darkblue-color;
-
 }
 
 .preferences--slogan {
@@ -82,9 +81,10 @@
 
 @media (min-width: $tablet-width) {
 
-// слоган преимуществ
+  // слоган преимуществ
   .preferences {
     min-height: 1010px;
+    background-image: none;
   }
 
   .preferences--slogan {
@@ -106,17 +106,11 @@
     padding-left: 40px;
   }
 
-
-// спискок преимуществ
-  .preferences {
-
-    background-image: none;
-  }
-
+  // спискок преимуществ
   .preferences__wrapper {
     padding-bottom: 8px;
 
-    background-image: url(../img/iphone-screen-3-tablet@1x.png);
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: 21px 42px;
     background-repeat: no-repeat;
   }
@@ -138,7 +132,7 @@
     text-align: left;
   }
 
-// эффект
+  // эффект
   .preferences__effect {
     position: relative;
 
@@ -154,12 +148,13 @@
   .preferences__effect-image {
     margin-right: 70px;
   }
+
   .preferences__effect::before {
     position: absolute;
     top: 77px;
     left: 63px;
 
-    content: '24';
+    content: "24";
 
     font-size: 96px;
     line-height: 149.5px;
@@ -206,7 +201,7 @@
     text-decoration: underline;
   }
 
-// прячем будильник для десктопа
+  // прячем будильник для десктопа
   .preferences__effect-image--desktop {
     display: none;
   }
@@ -220,11 +215,11 @@
 
     background-color: #f2f2f2;
   }
-// слоган
+
+  // слоган
   .preferences__slogan {
     font-size: 50px;
     line-height: 60px;
-
   }
 
   .preferences--slogan {
@@ -237,23 +232,21 @@
   }
 
   .preferences__slogan--padding {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-// обертка преимуществ
+  // обертка преимуществ
   .preferences__wrapper {
     display: flex;
     justify-content: center;
     padding: 0;
-    background-image: url(../img/iphone-screen-1-desktop@1x.png),
-                      url(../img/iphone-screen-2-desktop@1x.png),
-                      url(../img/iphone-screen-3-desktop@1x.png);
+    background-image: url("../img/iphone-screen-1-desktop@1x.png"), url("../img/iphone-screen-2-desktop@1x.png"), url("../img/iphone-screen-3-desktop@1x.png");
     background-position: 254px 0, 578px 0, 898px 0;
   }
 
-// список преимуществ
+  // список преимуществ
   .preferences--list {
     display: flex;
     flex-direction: row;
@@ -265,38 +258,41 @@
     padding-top: 357px;
   }
 
-// элемент списка
+  // элемент списка
   .preferences--list-item {
     width: 240px;
   }
-// заголовок в списке
- .preferences__header {
-  font-size: 30px;
-  line-height: 30px;
-  text-align: center;
- }
 
- .preferences--header {
-  margin-bottom: 24px;
- }
+  // заголовок в списке
+  .preferences__header {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
 
-// описание
- .preferences__description {
-   font-size: 18px;
-   line-height: 30px;
-   text-align: center;
- }
+  .preferences--header {
+    margin-bottom: 24px;
+  }
 
-// эффект
+  // описание
+  .preferences__description {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  // эффект
   .preferences--effect {
     margin-top: 32px;
     margin-left: 250px;
   }
-// прячем планшет
+
+  // прячем планшет
   .preferences__effect-image--tablet {
     display: none;
   }
-// показываем декстоп
+
+  // показываем декстоп
   .preferences__effect-image {
     margin-right: 68px;
   }
@@ -305,18 +301,18 @@
     display: flex;
   }
 
-// прячем br
+  // прячем br
   .preferences__divider {
     display: none;
   }
 
-// заголовок
+  // заголовок
   .preferences__effect-header--margin {
     margin-top: 90px;
     margin-bottom: 22px;
   }
 
-// описание
+  // описание
   .preferences__effect-description {
     font-size: 18px;
     line-height: 30px;
@@ -327,18 +323,18 @@
     margin-bottom: 30px;
   }
 
-// ссылка
+  // ссылка
   .preferences__effect-link {
     font-size: 18px;
     line-height: 30px;
   }
 
-// цифра 24
-.preferences__effect::before {
-  top: 95px;
-  left: 80px;
+  // цифра 24
+  .preferences__effect::before {
+    top: 95px;
+    left: 80px;
 
-  font-size: 120px;
-  line-height: 187px;
-}
+    font-size: 120px;
+    line-height: 187px;
+  }
 }

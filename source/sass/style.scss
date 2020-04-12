@@ -1,52 +1,52 @@
 // шрифты
-@import 'fonts.scss';
+@import "fonts.scss";
 // нормалайз
-@import 'normalize.scss';
+@import "normalize.scss";
 // глобальные стили
-@import 'common.scss';
+@import "common.scss";
 // миксины
-@import 'mixins.scss';
+@import "mixins.scss";
 // переменные
-@import 'variables.scss';
+@import "variables.scss";
 // кнопка общие стили
-@import 'blocks/button.scss';
+@import "blocks/button.scss";
 // хедер
-@import 'blocks/page-header.scss';
+@import "blocks/page-header.scss";
 // главная навигация
-@import 'blocks/main-nav.scss';
+@import "blocks/main-nav.scss";
 // блок загрузки приложения
-@import 'blocks/app-download.scss';
+@import "blocks/app-download.scss";
 // преимущества
-@import 'blocks/preferences.scss';
+@import "blocks/preferences.scss";
 // галерея фотографий
-@import 'blocks/photos.scss';
+@import "blocks/photos.scss";
 // комментарии
-@import 'blocks/comment-wrapper.scss';
+@import "blocks/comment-wrapper.scss";
 // футер страницы
-@import 'blocks/page-footer.scss';
+@import "blocks/page-footer.scss";
 // соцсети в футере
-@import 'blocks/footer-socials.scss';
+@import "blocks/footer-socials.scss";
 // академия в футере
-@import 'blocks/footer-copyright.scss';
+@import "blocks/footer-copyright.scss";
 // главное содержимое страницы формы
-@import 'blocks/page-form.scss';
+@import "blocks/page-form.scss";
 // комментарии на главной
-@import 'blocks/reviews.scss';
+@import "blocks/reviews.scss";
 // блок с тарифами
-@import 'blocks/rates.scss';
+@import "blocks/rates.scss";
 // контакты индексовой страницы
-@import 'blocks/contacts.scss';
+@import "blocks/contacts.scss";
 // фильтр для загрузки фотографий
-@import 'blocks/uploader.scss';
+@import "blocks/uploader.scss";
 // форма ФИО внутреняя
-@import 'blocks/form.scss';
+@import "blocks/form.scss";
 // кнопка бургер
-@import 'blocks/menu.scss';
+@import "blocks/menu.scss";
 
 html {
   // max-width: 320px;
   // width: 660px;
   // min-width: 1200px;
-  // margin: 0 auto;
-  width: 100%;
+  margin: 0 auto;
+  // width: 100%;
 }

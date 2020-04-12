@@ -39,10 +39,9 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
-// социальные кнопки
+  // социальные кнопки
   .footer-socials--margin {
     margin: 0;
-    margin-right: 92px;
     margin-top: -25px;
   }
 }
@@ -51,7 +50,6 @@
 
 @media (min-width: $desktop-width) {
   .footer-socials--margin {
-    margin-right: 224px;
     margin-top: -18px;
   }
 }

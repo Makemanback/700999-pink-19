@@ -7,10 +7,10 @@
   color: $white-color;
 
   background-color: $darkblue-color;
-  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-
+  background-size: cover;
+  background-position-x: center;
 }
 
 .page-form--header {
@@ -34,7 +34,7 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
-// заголовок главный
+  // заголовок главный
   .page-form--header {
     margin-top: -115px;
     padding-top: 180px;
@@ -43,11 +43,10 @@
     font-size: 50px;
     line-height: 60px;
 
-    background-image: url(../img/bg-back-tablet@1x.jpg);
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 1200px 729px;
-    background-position: -270px 0;
+    background-size: auto auto;
+    background-position-x: center;
   }
 }
 
@@ -57,10 +56,10 @@
   .page-form__header {
     margin-top: -106px;
 
-    background-image: url(../img/bg-back-desktop@1x.jpg);
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 2560px 853px;;
-    background-position: -560px 0;
+    background-size: auto auto;
+    background-position-x: center;
   }
 
   .page-form--header {

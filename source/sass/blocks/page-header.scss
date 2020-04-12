@@ -30,13 +30,13 @@
     min-height: 110px;
   }
 
-// логотип
+  // логотип
   .page-header__logo-image--tablet {
     display: block;
     margin-top: -20px;
   }
 
-// прячем мобильный
+  // прячем мобильный
   .page-header__logo-image {
     display: none;
   }
@@ -53,17 +53,16 @@
     justify-content: flex-start;
   }
 
-// прячем лого планшета
+  // прячем лого планшета
   .page-header__logo-image--tablet {
     display: none;
   }
 
-// логотип для десктопа
+  // логотип для десктопа
   .page-header__logo-image--desktop {
     display: flex;
     margin-top: -15px;
     margin-left: 250px;
     margin-right: 140px;
   }
-
 }

@@ -58,7 +58,7 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
-// обертка комментария
+  // обертка комментария
   .comment-wrapper {
     display: flex;
     flex-direction: column;
@@ -73,16 +73,16 @@
     margin-bottom: 20px;
   }
 
-// отступ для заголовка комментария
+  // отступ для заголовка комментария
   .comment-wrapper__header {
     margin-bottom: -10px;
   }
-// счетчик лайков
+  // счетчик лайков
   .comment-wrapper__like {
     margin-bottom: 0;
   }
 
-// обертка комментария панорамы
+  // обертка комментария панорамы
   .comment-wrapper--panorama {
     display: flex;
     flex-wrap: wrap;
@@ -110,7 +110,7 @@
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {
-// комментарий
+  // комментарий
   .comment-wrapper--panorama {
     width: 940px;
     margin-right: auto;
