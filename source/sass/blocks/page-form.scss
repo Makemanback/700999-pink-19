@@ -1,0 +1,83 @@
+// секция формы
+.page-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+// хедер на странице формы
+.page-form__header {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  color: $white-color;
+
+  background-color: $darkblue-color;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.page-form--header {
+  margin: 0;
+  margin-top: -71px;
+  padding-top: 95px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 54px;
+}
+
+// слоган на странице формы
+.page-form__slogan {
+  display: flex;
+  margin: 0 auto;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: $darkblue-color;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  // заголовок главный
+  .page-form--header {
+    margin-top: -115px;
+    padding-top: 180px;
+    padding-bottom: 80px;
+
+    font-size: 50px;
+    line-height: 60px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position-x: center;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .page-form__header {
+    margin-top: -110px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position-x: center;
+  }
+
+  .page-form--header {
+    display: flex;
+    justify-content: center;
+    padding-top: 173px;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 101px;
+  }
+}

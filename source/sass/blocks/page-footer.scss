@@ -1,3 +1,80 @@
+// футер
 .page-footer {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $white-color;
+}
+
+.page-footer--margins {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+// логотип
+.page-footer__logo {
+  margin-bottom: 36px;
+}
+
+// прячем футер на главной для мобильной
+.page-footer--main {
+  display: none;
+}
+
+// прячем лого для десктопа
+.page-footer__logo-image--desktop {
+  display: none;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // показываем футер на главной
+  .page-footer--main {
+    display: flex;
+  }
+
+  .page-footer--margins {
+    margin-top: 36px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 130px;
+    padding-left: 130px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // прячем лого мобильного
+  .page-footer__logo-image {
+    display: none;
+  }
+
+  .page-footer--margins {
+    margin-top: 98px;
+  }
+
+  // лого десктопа
+  .page-footer__logo-image--desktop {
+    display: flex;
+  }
 }
