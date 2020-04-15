@@ -2,7 +2,6 @@
 .photos {
   display: flex;
   flex-direction: column;
-  height: 2696px;
   margin-top: -69px;
 
   background-color: $darkblue-color;
@@ -22,10 +21,10 @@
 }
 
 .photos--header {
-  padding-right: 76px;
-  padding-left: 76px;
+  width: 180px;
+
   padding-bottom: 83px;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 96px;
 }
 
@@ -62,7 +61,6 @@
 
 // фото панорамы
 .photos__image {
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -112,6 +110,8 @@
 
   // заголовок
   .photos--header {
+    width: 350px;
+
     margin-top: 180px;
     margin-bottom: 57px;
 

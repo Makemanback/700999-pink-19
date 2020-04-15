@@ -117,87 +117,100 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews reviews--margins">
         <h2 class="visually-hidden">Комментарии</h2>
-        <div class="reviews__wrapper">
-          <cite class="reviews__cite">Николай Петров</cite>
-          <blockquote class="reviews__blockquote">
+        <div class="reviews__wrapper reviews--wrapper">
+          <cite class="reviews__cite reviews--cite">Николай Петров</cite>
+          <span class="reviews__cite-sub">25 лет, водитель трамвая</span>
+          <blockquote class="reviews__blockquote reviews--blockquote">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </blockquote>
         </div>
-        <button class="reviews__button" type="button"></button>
-        <button class="reviews__button" type="button"></button>
-        <button class="reviews__button" type="button"></button>
+        <div class="reviews__button-wrapper">
+          <button class="reviews__button" type="button"></button>
+          <button class="reviews__button" type="button"></button>
+          <button class="reviews__button" type="button"></button>
+        </div>
       </section>
 
       <section class="rates">
         <h2 class="visually-hidden">Тарифы</h2>
-        <div class="rates__wrapper">
-          <header class="rates__header">
-            <b class="rates__title">База</b>
-            <p class="rates__price">1,99 USD</p>
-          </header>
-          <div class="rates__wrapper-inner">
-            <ul class="rates__list">
-              <li class="rates__list-item">Розовый фильтр</li>
-              <li class="rates__list-item">Смайлики</li>
-              <li class="rates__list-item">Комментарии</li>
-            </ul>
+        <div class="rates__container">
+          <div class="rates__wrapper">
+            <header class="rates__header">
+              <b class="rates__title">База</b>
+              <p class="rates__price">1,99 USD</p>
+            </header>
+            <div class="rates__wrapper-inner">
+              <ul class="rates__list">
+                <li class="rates__list-item">Розовый фильтр</li>
+                <li class="rates__list-item">Смайлики</li>
+                <li class="rates__list-item">Комментарии</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="rates__wrapper">
-          <header class="rates__header">
-            <b class="rates__title">Стандарт</b>
-            <p class="rates__price">3,99 USD</p>
-            <span class="rates__hit">хит</span>
-          </header>
-          <div class="rates__wrapper-inner">
-            <ul class="rates__list">
-              <li class="rates__list-item">Розовый фильтр</li>
-              <li class="rates__list-item">Смайлики</li>
-              <li class="rates__list-item">Комментарии</li>
-            </ul>
+          <div class="rates__wrapper">
+            <header class="rates__header">
+              <b class="rates__title">Стандарт</b>
+              <p class="rates__price">3,99 USD</p>
+              <span class="rates__hit">хит</span>
+            </header>
+            <div class="rates__wrapper-inner">
+              <ul class="rates__list">
+                <li class="rates__list-item">Розовый фильтр</li>
+                <li class="rates__list-item">Смайлики</li>
+                <li class="rates__list-item">Комментарии</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="rates__wrapper">
-          <header class="rates__header">
-            <b class="rates__title">Анлим</b>
-            <p class="rates__price">9,99 USD</p>
-          </header>
-          <div class="rates__wrapper-inner">
-            <ul class="rates__list">
-              <li class="rates__list-item">Розовый фильтр</li>
-              <li class="rates__list-item">Смайлики</li>
-              <li class="rates__list-item">Комментарии</li>
-            </ul>
+          <div class="rates__wrapper">
+            <header class="rates__header">
+              <b class="rates__title">Анлим</b>
+              <p class="rates__price">9,99 USD</p>
+            </header>
+            <div class="rates__wrapper-inner">
+              <ul class="rates__list">
+                <li class="rates__list-item">Розовый фильтр</li>
+                <li class="rates__list-item">Смайлики</li>
+                <li class="rates__list-item">Комментарии</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <button class="rates__button button" type="button"></button>
-        <button class="rates__button button" type="button"></button>
-        <button class="rates__button button" type="button"></button>
+        <div class="rates__button-wrapper">
+          <button class="rates__button" type="button"></button>
+          <button class="rates__button" type="button"></button>
+          <button class="rates__button" type="button"></button>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__wrapper contacts__wrapper--margins">
+          <span class="contacts__header contacts--header">Остались вопросы? Свяжитесь с нами!</span>
+          <div class="contacts__container-inner">
+            <div class="contacts__wrapper-inner">
+              <h3 class="contacts__phone-header contacts--phone-header">Звоните:</h3>
+              <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
+            </div>
+            <div class="contacts__wrapper-inner">
+              <h3 class="contacts__mail-header contacts--mail-header">Пишите:</h3>
+              <a href="#" class="contacts__mail-address">mail@htmlacademy.ru</a>
+            </div>
+            <div class="contacts__wrapper-inner">
+              <h3 class="contacts__address-header contacts--address-header">Приезжайте в гости:</h3>
+              <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <div class="map--mobile"></div>
+          <div class="map--tablet"></div>
+          <div class="map--desktop"></div>
+        </div>
       </section>
     </main>
-
-    <section class="contacts">
-      <div class="contacts__wrapper">
-        <span class="contacts__header">Остались вопросы? Свяжитесь с нами!</span>
-        <div class="contacts__wrapper-inner">
-          <h3 class="contacts__phone-header">Звоните:</h3>
-          <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__wrapper-inner">
-          <h3 class="contacts__mail-header">Пишите:</h3>
-          <a href="#" class="contacts__mail-address">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__wrapper-inner">
-          <h3 class="contacts__address-header">Приезжайте в гости:</h3>
-          <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
-        </div>
-      </div>
-      <div class="map"></div>
-    </section>
 
     <footer class="page-footer page-footer--margins page-footer--main">
       <a class="page-footer__logo page-footer--logo" href="index.html">

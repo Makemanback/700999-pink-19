@@ -1,17 +1,41 @@
+// блок с тарифами
 .rates {
+  display: flex;
+  flex-direction: column;
+
   text-transform: uppercase;
 }
 
-.rates__list {
-  @include list-reset;
+// обертка всех тарифов
+.rates__container {
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
+// обертка тарифа
+.rates__wrapper {
+  min-width: 276px;
+
+  border-right: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+}
+
+// блок заголовка тарифа
 .rates__header {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 98px;
 
   background-color: $darkblue-color;
 }
 
+// заголовок
 .rates__title {
   font-size: 18px;
   line-height: 30px;
@@ -20,6 +44,7 @@
   color: $white-color;
 }
 
+// цена
 .rates__price {
   margin: 0;
 
@@ -30,25 +55,78 @@
   color: $white-color;
 }
 
+// список фишек
+.rates__list {
+  display: flex;
+  flex-direction: column;
+
+  @include list-reset;
+}
+
+// элемент списка
 .rates__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 61px;
+  padding-right: 18px;
+  padding-left: 22px;
+
   font-size: 14px;
   line-height: 30px;
   text-align: left;
   font-weight: 400;
   color: $darkblue-color;
+
+  border-bottom: 2px solid #f2f2f2;
 }
 
+// плашка с хитом
 .rates__hit {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 16px;
+  left: 9px;
 
   display: block;
 
-  font-size: 10px;
+  font-size: 14px;
   line-height: 21px;
   text-align: center;
   font-weight: 400;
+  text-transform: uppercase;
   color: $white-color;
   transform: rotate(-45deg);
+}
+
+// обертка кнопок слайдера
+.rates__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 60px;
+  height: 102px;
+
+  margin: 0 auto;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  // прячем кнопки слайдера
+  .rates__button-wrapper {
+    display: none;
+  }
+
+  .rates {
+    width: 660px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+  }
+
+  .rates__wrapper {
+    min-width: 0;
+  }
 }

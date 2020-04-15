@@ -2,11 +2,10 @@
 .comment-wrapper {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  width: 280px;
 
+  margin: 0 auto;
   margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
   padding-top: 18px;
   padding-left: 18px;
   padding-right: 11px;

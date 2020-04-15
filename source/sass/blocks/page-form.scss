@@ -32,6 +32,9 @@
 // слоган на странице формы
 .page-form__slogan {
   display: flex;
+  justify-content: center;
+  width: 275px;
+
   margin: 0 auto;
 
   font-size: 14px;
@@ -39,6 +42,16 @@
   line-height: 30px;
   text-align: center;
   color: $darkblue-color;
+}
+
+.page-form--slogan {
+  margin-top: 45px;
+  margin-bottom: 28px;
+}
+
+// прячем нижнюю подпись слогана
+.page-form__slogan-tablet {
+  display: none;
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
@@ -58,8 +71,37 @@
     background-size: auto auto;
     background-position-x: center;
   }
-}
 
+
+  // слоган
+  .page-form__slogan {
+    width: 500px;
+
+    font-size: 18px;
+  }
+
+  .page-form--slogan {
+    margin-bottom: 0;
+    margin-top: 90px;
+  }
+
+  // показываем нижнюю часть подписи
+  .page-form__slogan-tablet {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: $darkblue-color;
+  }
+
+  .page-form__slogan--tablet {
+    margin-bottom: 73px;
+  }
+}
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {

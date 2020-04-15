@@ -22,6 +22,8 @@
 @import "blocks/photos.scss";
 // комментарии
 @import "blocks/comment-wrapper.scss";
+// карта на главной
+@import "blocks/map.scss";
 // футер страницы
 @import "blocks/page-footer.scss";
 // соцсети в футере
@@ -45,8 +47,8 @@
 
 html {
   // max-width: 320px;
-  // width: 660px;
+  // max-width: 660px;
   // min-width: 1200px;
   margin: 0 auto;
-  // width: 100%;
+  width: 100%;
 }

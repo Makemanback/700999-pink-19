@@ -1,12 +1,47 @@
+// секция контактов
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+// обертка для контактов
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__wrapper--margins {
+  margin-right: 39px;
+  margin-top: 39px;
+  margin-left: 44px;
+}
+
+// общий заголовок контактов
 .contacts__header {
   font-size: 24px;
-  line-height: 1;
+  line-height: 29px;
   text-align: center;
   font-weight: 300;
-  text-transform: uppercase;
   color: $darkblue-color;
 }
 
+.contacts--header {
+  margin-bottom: 37px;
+}
+
+// внутренняя обертка контактов
+.contacts__wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 27px;
+}
+
+// заголовки типов связей
 .contacts__phone-header,
 .contacts__mail-header,
 .contacts__address-header {
@@ -17,12 +52,88 @@
   color: $darkblue-color;
 }
 
+.contacts--phone-header,
+.contacts--mail-header,
+.contacts--address-header {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+// контакты
 .contacts__phone-number,
 .contacts__mail-address,
 .contacts__address {
   font-size: 24px;
-  line-height: 1;
+  line-height: 29px;
   text-align: center;
   font-weight: 300;
   color: $pink-color;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: 660px;
+  }
+
+  .contacts--margins {
+    margin-top: 51px;
+  }
+
+  // обертка
+  .contacts__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 660px;
+  }
+
+  // заголовок
+  .contacts__header {
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .contacts--header {
+    margin-bottom: 44px;
+  }
+
+  // обертка контактов
+  .contacts__wrapper-inner {
+    max-width: 240px;
+  }
+
+  // контакты
+  .contacts--phone-header,
+  .contacts--mail-header,
+  .contacts--address-header {
+    margin-bottom: 8px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    width: 1200px;
+  }
+
+  .contacts__wrapper {
+    width: 960px;
+  }
+
+  // заголовок
+  .contacts__header {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  // обертка контактов
+  .contacts__container-inner {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+  }
 }

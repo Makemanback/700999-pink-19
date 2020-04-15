@@ -1,14 +1,128 @@
+// секция комментария
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.reviews--margins {
+  margin-bottom: 133px;
+}
+// обертка комментария
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+}
+
+// заголовок цитаты
 .reviews__cite {
   font-size: 18px;
+  font-style: normal;
   line-height: 30px;
   font-weight: 700;
   text-align: center;
 }
 
+.reviews--cite {
+  margin-bottom: 14px;
+}
+// блок цитаты
 .reviews__blockquote {
-  font-style: 14px;
+  margin: 0;
+
+  font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
   color: $darkblue-color;
+}
+
+.reviews--blockquote {
+  margin-bottom: 30px;
+}
+
+// обертка кнопок
+.reviews__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+
+  margin: 0 auto;
+}
+
+// кнопки слайдера
+
+// прячем нижнюю подпись
+.reviews__cite-sub {
+  display: none;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .reviews--margins {
+    margin-top: 47px;
+    margin-bottom: 107px;
+  }
+
+  // обертка
+  .reviews__wrapper {
+    width: 620px;
+  }
+
+  .reviews--wrapper {
+    margin-bottom: 33px;
+  }
+
+  // блок цитаты
+  .reviews__blockquote {
+    font-size: 18px;
+    order: 1;
+  }
+
+  .reviews--blockquote {
+    margin-bottom: 35px;
+  }
+
+  // блок заголовка
+  .reviews__cite {
+    font-size: 20px;
+    order: 2;
+  }
+
+  .reviews--cite {
+    margin-bottom: 2px;
+  }
+
+  // нижняя подпись
+  .reviews__cite-sub {
+    display: flex;
+
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: $darkblue-color;
+
+    order: 3;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  // блок заголовка
+  .reviews__cite {
+    font-size: 24px;
+  }
+
+  .reviews--cite {
+    margin-bottom: 2px;
+  }
+
+  .reviews__cite-sub {
+    font-size: 18px;
+  }
 }
