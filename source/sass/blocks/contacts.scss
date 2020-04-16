@@ -74,7 +74,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    width: 660px;
+    max-width: 660px;
   }
 
   .contacts--margins {
@@ -86,7 +86,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 660px;
+
+    max-width: 660px;
+  }
+
+  .contacts__wrapper--margins {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   // заголовок
@@ -117,11 +123,11 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    width: 1200px;
+    max-width: 960px;
   }
 
   .contacts__wrapper {
-    width: 960px;
+    max-width: 960px;
   }
 
   // заголовок

@@ -136,11 +136,8 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
     max-width: 660px;
-    padding-right: 20px;
-    padding-left: 20px;
     margin: 0 auto;
   }
 
@@ -151,7 +148,7 @@
   .preferences__effect::before {
     position: absolute;
     top: 77px;
-    left: 63px;
+    left: 84px;
 
     content: "24";
 
@@ -161,11 +158,22 @@
     color: $pink-color;
   }
 
+  // часы
+  .preferences__image-wrapper {
+    margin-left: 20px;
+  }
+  .preferences__effect-image {
+    margin-right: 71px;
+
+  }
+
   // обертка блока с часами
   .preferences__effect-wrapper-inner {
     display: flex;
     flex-direction: column;
+
     max-width: 295px;
+    margin-right: 20px;
   }
 
   .preferences__effect-header {
@@ -336,6 +344,11 @@
   .preferences__effect-link {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  // обнуляем внешний отступ картинке будильника
+  .preferences__image-wrapper {
+    margin-left: 0;
   }
 
   // цифра 24
