@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
 
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -75,7 +75,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    max-width: 660px;
+    width: 660px;
   }
 
   .contacts--margins {
