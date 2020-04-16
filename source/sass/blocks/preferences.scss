@@ -83,7 +83,6 @@
 
   // слоган преимуществ
   .preferences {
-    min-height: 1010px;
     background-image: none;
   }
 
@@ -135,14 +134,19 @@
   // эффект
   .preferences__effect {
     position: relative;
-
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 660px;
+    max-width: 940px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
   }
 
   .preferences--effect {
     margin-top: 59px;
-    margin-left: 21px;
   }
 
   .preferences__effect-image {
@@ -162,9 +166,11 @@
     color: $pink-color;
   }
 
+  // обертка блока с часами
   .preferences__effect-wrapper-inner {
     display: flex;
     flex-direction: column;
+    max-width: 530px;
   }
 
   .preferences__effect-header {
@@ -285,9 +291,13 @@
   }
 
   // эффект
+  .preferences__effect {
+    width: 940px;
+    margin: 0 auto;
+  }
+
   .preferences--effect {
     margin-top: 32px;
-    margin-left: 250px;
   }
 
   // прячем планшет
