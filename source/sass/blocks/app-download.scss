@@ -63,6 +63,8 @@
 
 // текст о доступности приложений
 .app-download__description {
+  width: 230px;
+
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -73,8 +75,6 @@
 // модификатор для отступов
 .app-download--description {
   margin: 0;
-  padding-left: 45px;
-  padding-right: 45px;
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
