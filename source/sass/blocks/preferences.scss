@@ -287,7 +287,7 @@
 
   // эффект
   .preferences__effect {
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
   }
 
@@ -307,7 +307,7 @@
 
   // обертка текста
   .preferences__effect-wrapper-inner {
-    width: 525px;
+    max-width: 525px;
   }
 
   // прячем br
