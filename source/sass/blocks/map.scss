@@ -1,6 +1,8 @@
 .map {
   display: flex;
   justify-content: center;
+
+  max-width: 320px;
 }
 
 .map--mobile {
@@ -35,6 +37,7 @@
 
   .map--tablet {
     display: flex;
+    justify-content: center;
 
     width: 660px;
     height: 400px;
