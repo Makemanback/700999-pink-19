@@ -1,8 +1,6 @@
 .map {
   display: flex;
   justify-content: center;
-
-  margin: 0 auto;
 }
 
 .map--mobile {
@@ -32,7 +30,7 @@
   }
 
   .map {
-    min-width: 660px;
+    max-width: 660px;
   }
 
   .map--tablet {
@@ -59,7 +57,7 @@
     display: flex;
     justify-content: center;
 
-    width: 1200px;
+    max-width: 1200px;
     height: 500px;
 
     background-image: url("../../img/bg-map-desktop@1x.jpg");

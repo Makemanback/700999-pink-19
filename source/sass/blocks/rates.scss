@@ -2,6 +2,7 @@
 .rates {
   display: flex;
   flex-direction: column;
+  max-width: 660px;
 
   text-transform: uppercase;
 }
@@ -11,12 +12,18 @@
   display: flex;
   justify-content: center;
 
+  max-width: 660px;
+
   overflow: hidden;
 }
 
 // обертка тарифа
 .rates__wrapper {
-  min-width: 276px;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 278px;
+  max-width: 278px;
 
   border-right: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
@@ -55,6 +62,17 @@
   color: $white-color;
 }
 
+// обертка элементов списка
+.rates__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 278px;
+  padding-right: 18px;
+  padding-left: 22px;
+
+  border-bottom: 2px solid #f2f2f2;
+}
+
 // список фишек
 .rates__list {
   display: flex;
@@ -70,16 +88,14 @@
   align-items: center;
 
   height: 61px;
-  padding-right: 18px;
-  padding-left: 22px;
+
+  margin-left: 0;
 
   font-size: 14px;
   line-height: 30px;
   text-align: left;
   font-weight: 400;
   color: $darkblue-color;
-
-  border-bottom: 2px solid #f2f2f2;
 }
 
 // плашка с хитом
@@ -111,6 +127,11 @@
   margin: 0 auto;
 }
 
+// прячем панель для планшета
+.rates__item-wrapper--tablet {
+  display: none;
+}
+
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
@@ -119,6 +140,43 @@
     display: none;
   }
 
+  // показываем панель для планшета
+  .rates__item-wrapper--tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 278px;
+  }
+
+  .rates__list-item--tablet {
+    display: flex;
+    align-items: center;
+
+    height: 63.3px;
+    min-width: 156px;
+    margin-left: 0;
+    padding-left: 15px;
+
+    font-size: 14px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 400;
+    text-transform: none;
+    color: $darkblue-color;
+
+    border: 1px solid #f2f2f2;
+    border-left: 2px solid #f2f2f2;
+  }
+
+  .rates__list-item--tablet:first-of-type {
+    border-top: 2px solid #f2f2f2;
+  }
+
+  .rates__list-item--tablet:last-of-type {
+    border-bottom: 2px solid #f2f2f2;
+  }
+  // общие
   .rates {
     width: 660px;
     padding-right: 20px;
@@ -127,6 +185,17 @@
   }
 
   .rates__wrapper {
-    min-width: 0;
+    min-width: 154px;
+    max-width: 154px;
+  }
+
+  .rates__item-wrapper {
+    justify-content: center;
+    min-width: 154px;
+    max-width: 154px;
+  }
+
+  .rates__list-item:first-of-type {
+    display: none;
   }
 }

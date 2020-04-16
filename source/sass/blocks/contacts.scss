@@ -75,7 +75,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    width: 660px;
+    max-width: 660px;
   }
 
   .contacts--margins {
