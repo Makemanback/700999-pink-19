@@ -23,48 +23,49 @@
 .map--desktop {
   display: none;
 }
-// СТИЛИ ДЛЯ ПЛАНШЕТА
 
-@media (min-width: $tablet-width) {
-  // прячем мобильную карту
-  .map--mobile {
-    display: none;
-  }
+// // СТИЛИ ДЛЯ ПЛАНШЕТА
 
-  .map {
-    max-width: 660px;
-  }
+// @media (min-width: $tablet-width) {
+//   // прячем мобильную карту
+//   .map--mobile {
+//     display: none;
+//   }
 
-  .map--tablet {
-    display: flex;
-    justify-content: center;
+//   .map {
+//     max-width: 660px;
+//   }
 
-    width: 660px;
-    height: 400px;
+//   .map--tablet {
+//     display: flex;
+//     justify-content: center;
 
-    background-image: url("../../img/bg-map-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position-y: -305px;
-  }
-}
+//     width: 660px;
+//     height: 400px;
 
-// СТИЛИ ДЛЯ ДЕСКТОПА
+//     background-image: url("../../img/bg-map-tablet@1x.jpg");
+//     background-repeat: no-repeat;
+//     background-position-y: -305px;
+//   }
+// }
 
-@media (min-width: $desktop-width) {
-  // прячем планшетную карту
-  .map--tablet {
-    display: none;
-  }
+// // СТИЛИ ДЛЯ ДЕСКТОПА
 
-  .map--desktop {
-    display: flex;
-    justify-content: center;
+// @media (min-width: $desktop-width) {
+//   // прячем планшетную карту
+//   .map--tablet {
+//     display: none;
+//   }
 
-    max-width: 1200px;
-    height: 500px;
+//   .map--desktop {
+//     display: flex;
+//     justify-content: center;
 
-    background-image: url("../../img/bg-map-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position-y: -305px;
-  }
-}
+//     max-width: 1200px;
+//     height: 500px;
+
+//     background-image: url("../../img/bg-map-desktop@1x.jpg");
+//     background-repeat: no-repeat;
+//     background-position-y: -305px;
+//   }
+// }
