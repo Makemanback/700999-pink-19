@@ -135,6 +135,27 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
+  // общие
+  .rates {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .rates__wrapper {
+    min-width: 154px;
+    max-width: 154px;
+  }
+
+  .rates__item-wrapper {
+    justify-content: center;
+    min-width: 154px;
+    max-width: 154px;
+  }
+
+  .rates__list-item:first-of-type {
+    display: none;
+  }
+
   // прячем кнопки слайдера
   .rates__button-wrapper {
     display: none;
@@ -176,26 +197,13 @@
   .rates__list-item--tablet:last-of-type {
     border-bottom: 2px solid #f2f2f2;
   }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
   // общие
   .rates {
-    width: 660px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 0 auto;
-  }
-
-  .rates__wrapper {
-    min-width: 154px;
-    max-width: 154px;
-  }
-
-  .rates__item-wrapper {
-    justify-content: center;
-    min-width: 154px;
-    max-width: 154px;
-  }
-
-  .rates__list-item:first-of-type {
-    display: none;
+    max-width: 940px;
   }
 }
