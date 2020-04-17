@@ -1,12 +1,48 @@
+// секция контактов
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+// обертка для контактов
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 280px;
+}
+
+.contacts__wrapper--margins {
+  margin-top: 39px;
+}
+
+// общий заголовок контактов
 .contacts__header {
   font-size: 24px;
-  line-height: 1;
+  line-height: 29px;
   text-align: center;
   font-weight: 300;
-  text-transform: uppercase;
   color: $darkblue-color;
 }
 
+.contacts--header {
+  margin-bottom: 37px;
+}
+
+// внутренняя обертка контактов
+.contacts__wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 27px;
+}
+
+// заголовки типов связей
 .contacts__phone-header,
 .contacts__mail-header,
 .contacts__address-header {
@@ -17,12 +53,102 @@
   color: $darkblue-color;
 }
 
+.contacts--phone-header,
+.contacts--mail-header,
+.contacts--address-header {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+// контакты
 .contacts__phone-number,
 .contacts__mail-address,
 .contacts__address {
   font-size: 24px;
-  line-height: 1;
+  line-height: 29px;
   text-align: center;
   font-weight: 300;
   color: $pink-color;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    max-width: 660px;
+  }
+
+  .contacts--margins {
+    margin-top: 51px;
+  }
+
+  // обертка
+  .contacts__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    max-width: 660px;
+  }
+
+  .contacts__wrapper--margins {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // заголовок
+  .contacts__header {
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .contacts--header {
+    margin-bottom: 44px;
+  }
+
+  // контакты
+  .contacts--phone-header,
+  .contacts--mail-header,
+  .contacts--address-header {
+    margin-bottom: 8px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПА
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    max-width: 940px;
+  }
+
+  .contacts__wrapper {
+    max-width: 940px;
+  }
+
+  // заголовок
+  .contacts__header {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  // обертка контактов
+  .contacts__container-inner {
+    display: flex;
+    max-width: 940px;
+    justify-content: space-between;
+  }
+
+  .contacts__wrapper-inner:first-of-type {
+    order: 1;
+  }
+
+  .contacts__wrapper-inner:nth-of-type(3) {
+    order: 2;
+    max-width: 220px;
+  }
+
+  .contacts__wrapper-inner:nth-of-type(2) {
+    order: 3;
+  }
 }

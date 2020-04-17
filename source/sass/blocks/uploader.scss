@@ -1,25 +1,54 @@
+// блок загрузки фотографий
 .uploader {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
   margin: 0 auto;
 
   background-color: #f2f2f2;
-  // временно
-  height: 905px;
-  margin-top: 49px;
 }
 
+// слоган
 .uploader__slogan {
+  width: 100%;
+
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
   color: $darkblue-color;
+
+  background-color: $white-color;
 }
 
+.uploader--slogan {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+// обертка формы
+.uploader__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// фото формы
+.uploader--photo {
+  // временно
+  margin-bottom: 200px;
+}
+
+// кнопки формы
 .uploader__button-submit {
   color: $pink-color;
   border: 3px solid $pink-color;
+}
+
+.uploader--button-submit {
+  margin-bottom: 12px;
 }
 
 .uploader__button-reset {
@@ -31,10 +60,29 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
-  .uploader {
+  // обертка формы
+  .uploader__form {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  // обертка инструментов и кнопок
+  .uploader__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // слоган
+  .uploader__slogan {
+    font-size: 18px;
+  }
+
+  // фото
+  .uploader--photo {
     // временно
-    max-width: 660px;
-    height: 713px;
+    margin-bottom: 0;
   }
 }
 

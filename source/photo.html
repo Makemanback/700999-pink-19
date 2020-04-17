@@ -153,19 +153,23 @@
         </div>
       </section>
 
-      <form class="uploader">
+      <section class="uploader">
         <h2 class="visually-hidden">Загрузка фотографии</h2>
-        <span class="uploader__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</span>
-        <img class="uploader__photo" src="img/photo-road-mobile@1x.jpg" alt="Зимняя дорога" width="280" height="374">
-        <div class="uploader__filter">
-          <span class="uploader__tool"></span>
-          <span class="uploader__tool"></span>
-          <span class="uploader__tool"></span>
-          <span class="uploader__range"></span>
+        <span class="uploader__slogan uploader--slogan">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</span>
+        <form action="post" class="uploader__form">
+          <img class="uploader__photo uploader--photo" src="img/photo-road-mobile@1x.jpg" alt="Зимняя дорога" width="280" height="374">
+          <div class="uploader__wrapper">
+            <div class="uploader__filter">
+              <span class="uploader__tool"></span>
+              <span class="uploader__tool"></span>
+              <span class="uploader__tool"></span>
+              <span class="uploader__range"></span>
+            </div>
+            <button class="button uploader__button-submit uploader--button-submit" type="submit">Запостить</button>
+            <button class="button uploader__button-reset" type="reset">Отмена</button>
         </div>
-        <button class="button uploader__button-submit" type="submit">Запостить</button>
-        <button class="button uploader__button-reset" type="reset">Отмена</button>
       </form>
+      </section>
     </main>
 
     <footer class="page-footer page-footer--margins">

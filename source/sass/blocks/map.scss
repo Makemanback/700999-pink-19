@@ -1,0 +1,71 @@
+.map {
+  display: flex;
+  justify-content: center;
+
+  max-width: 320px;
+}
+
+.map--mobile {
+  max-width: 320px;
+  height: 200px;
+
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position-y: -450px;
+}
+
+// прячем карту для планшета
+.map--tablet {
+  display: none;
+}
+
+// прячем карту для десктопа
+.map--desktop {
+  display: none;
+}
+
+// // СТИЛИ ДЛЯ ПЛАНШЕТА
+
+// @media (min-width: $tablet-width) {
+//   // прячем мобильную карту
+//   .map--mobile {
+//     display: none;
+//   }
+
+//   .map {
+//     max-width: 660px;
+//   }
+
+//   .map--tablet {
+//     display: flex;
+//     justify-content: center;
+
+//     width: 660px;
+//     height: 400px;
+
+//     background-image: url("../../img/bg-map-tablet@1x.jpg");
+//     background-repeat: no-repeat;
+//     background-position-y: -305px;
+//   }
+// }
+
+// // СТИЛИ ДЛЯ ДЕСКТОПА
+
+// @media (min-width: $desktop-width) {
+//   // прячем планшетную карту
+//   .map--tablet {
+//     display: none;
+//   }
+
+//   .map--desktop {
+//     display: flex;
+//     justify-content: center;
+
+//     max-width: 1200px;
+//     height: 500px;
+
+//     background-image: url("../../img/bg-map-desktop@1x.jpg");
+//     background-repeat: no-repeat;
+//     background-position-y: -305px;
+//   }
+// }

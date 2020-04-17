@@ -1,10 +1,26 @@
+// блок формы
 .form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+
   margin: 0 auto;
   border: none;
 }
 
+// поле имен
+.form__names {
+  display: flex;
+  flex-direction: column;
+
+  width: 276px;
+  margin: 0 auto;
+
+  border: none;
+}
+
+// обертки лейблов имен и контактов
 .form__names-label,
 .form__contacts-label {
   font-size: 14px;
@@ -15,10 +31,22 @@
   color: $pink-color;
 }
 
+.form__names--label {
+  margin-bottom: 21px;
+}
+
+// лейблы
+.form__names-descrition {
+  display: flex;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+// инпуты
 .form__names-input,
 .form__contacts-input {
   width: 276px;
-  height: 59px;
+  height: 63px;
   padding-left: 20px;
 
   font-size: 18px;
@@ -30,25 +58,54 @@
   border: solid 2px #e5e5e5;
 }
 
+// филдсет контактов и текстареа
+.form__contacts,
+.form__textarea {
+  width: 320px;
+
+  border: none;
+}
+
+// текстаера лейбл
+.form__textarea-label {
+  display: flex;
+  justify-content: center;
+}
+
+// плейсхолдеры инпутов
 .form__names-input::placeholder {
   color: $darkblue-color;
 }
 
+// филдсеты достижений и радио
 .form__achievement,
 .form__radio {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+
   background-color: #f2f2f2;
+  border: 2px solid #e5e5e5;
 }
 
+.form__achievement-container {
+  display: flex;
+  flex-direction: column;
+}
+
+// легенды
 .form__achievement-legend,
 .form__radio-legend,
-.form__textarea-label {
+.form__textarea-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
   color: $pink-color;
 }
 
+// блоии лейблов
 .form__achievement-label,
 .form__radio-label,
 .form__textarea-field {
@@ -60,22 +117,28 @@
 }
 
 .form__textarea-field {
+  width: 280px;
+
   border: 2px solid #e5e5e5;
 }
 
-.form__submit {
+// кнопка формы
+.form__button {
   border-radius: 0;
   background-color: #2aab6d;
   color: $white-color;
   text-transform: uppercase;
 }
 
+// подпись об обязательных полях
 .form__required {
   display: block;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+  text-transform: uppercase;
   color: $darkblue-color;
 }
 
@@ -84,11 +147,148 @@
   color: $pink-color;
 }
 
+// прячем легенду контактов
+.form__contacts-legend {
+  display: none;
+}
+
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
   .form {
-    max-width: 616px;
+    width: 620px;
+  }
+
+  // ордера
+  .form__names {
+    width: 620px;
+    order: 1;
+  }
+
+  .form__radio {
+    width: 620px;
+
+    order: 2;
+    background-color: $white-color;
+  }
+
+  .form__contacts {
+    min-width: 620px;
+
+    order: 3;
+    border: 2px solid #e5e5e5;
+  }
+
+  .form__achievement {
+    min-width: 620px;
+
+    order: 4;
+    border: 2px solid #e5e5e5;
+    background-color: $white-color;
+  }
+
+  .form__textarea {
+    min-width: 620px;
+
+    border: 2px solid #e5e5e5;
+    order: 5;
+  }
+
+  .form--submit {
+    order: 6;
+  }
+
+  .form--required {
+    order: 7;
+  }
+
+  // обертка формы имен
+  .form--names {
+    padding: 0;
+  }
+
+  // обертки форм имен
+  .form__names--label {
+    display: flex;
+    margin-bottom: 52px;
+  }
+
+  .form__names-input {
+    flex-grow: 2;
+  }
+
+  // подписи к инпутам
+  .form__names-descrition {
+    align-items: center;
+    padding-left: 0;
+    padding-right: 18px;
+  }
+
+  // контакты
+  .form__contacts-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form__contacts-description {
+    margin-left: 78px;
+
+    order: 2;
+  }
+
+  .form__contacts-input {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+
+    order: 1;
+  }
+
+  .form__contacts-legend {
+    display: block;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  // текстареа
+  .form__textarea-label {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    padding-top: 47px;
+    padding-bottom: 53px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .form__textarea-field {
+    width: 500px;
+    height: 193px;
+
+    padding: 20px;
+  }
+
+
+  .form__textarea-description {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  // отправка формы
+  .form__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 616px;
+    margin: 0 auto;
   }
 }
 
@@ -96,6 +296,80 @@
 
 @media (min-width: $desktop-width) {
   .form {
-    max-width: 936px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 940px;
+  }
+
+  .form__names {
+    max-width: 433px;
+    margin: 0;
+  }
+
+  .form__radio {
+    width: 435px;
+    max-width: 435px;
+    margin: 0;
+  }
+
+  // контейнер контактов
+  .form__contacts-container {
+    display: flex;
+    justify-content: space-between;
+    width: 820px;
+
+    margin: 0 auto;
+  }
+
+  .form--contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    min-width: 940px;
+    margin: 0;
+  }
+
+  .form__contacts-input {
+    width: 373px;
+  }
+
+  .form__contacts-description {
+    margin-left: 20px;
+  }
+
+  // радио
+  .form--radio {
+    margin: 0;
+  }
+
+  // достижения
+  .form--achievement {
+    min-width: 940px;
+    margin: 0;
+  }
+
+  .form__achievement-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  // текстареа
+  .form--textarea {
+    min-width: 940px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__textarea-field {
+    min-width: 820px;
+    height: 128px;
+  }
+
+  // отправка
+  .form__submit {
+    min-width: 940px;
+    margin: 0;
   }
 }
