@@ -8,7 +8,7 @@
 }
 
 .reviews--margins {
-  margin-bottom: 133px;
+  margin-bottom: 41px;
 }
 
 // обертка комментария
@@ -74,8 +74,7 @@
   }
 
   .reviews--margins {
-    margin-top: 47px;
-    margin-bottom: 107px;
+    margin-bottom: 20px;
   }
 
   // обертка
@@ -128,15 +127,19 @@
 @media (min-width: $desktop-width) {
   // блок цитаты
   .reviews {
-    width: 940px;
+    max-width: 940px;
+  }
+
+  .reviews--margins {
+    margin-bottom: 0;
   }
 
   .reviews__wrapper {
-    width: 690px;
+    max-width: 690px;
   }
 
   .reviews__blockquote {
-    width: 690px;
+    max-width: 690px;
   }
 
   // блок заголовка

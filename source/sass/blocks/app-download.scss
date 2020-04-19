@@ -107,8 +107,9 @@
   .app-download--container {
     margin-top: 202px;
     margin-left: 20px;
-    margin-bottom: 57px;
+    margin-bottom: 46px;
   }
+
   // заголовок
   .app-download__header {
     width: 300px;
@@ -154,28 +155,43 @@
 
 @media (min-width: $desktop-width) {
   .app-download {
-    background-image: url("../../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto auto, auto auto;
-    background-position: 259px 209px, center 0;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position: center 0;
   }
 
   // контейнер приложений
+  .app-download__container {
+    align-items: start;
+
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: url("../../img/iphone-hand-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 16px 0;
+    background-size: 1050px auto;
+  }
+
   .app-download--container {
-    margin-top: 219px;
-    margin-left: 243px;
-    margin-bottom: 57px;
+    margin-top: 209px;
+    margin-bottom: 0;
+    padding-bottom: 57px;
   }
 
   // заголовок
   .app-download__header {
-    width: auto;
+    width: 310px;
+    padding-left: 30px;
 
     font-size: 50px;
     line-height: 60px;
   }
 
   .app-download--header {
+    margin-top: 10px;
     margin-bottom: 23px;
   }
 

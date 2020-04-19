@@ -46,11 +46,16 @@
 
 .page-form--slogan {
   margin-top: 45px;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 // прячем нижнюю подпись слогана
 .page-form__slogan-tablet {
+  display: none;
+}
+
+// прячем слогана для десктопа
+.page-form__slogan--desktop {
   display: none;
 }
 
@@ -82,7 +87,7 @@
 
   .page-form--slogan {
     margin-bottom: 0;
-    margin-top: 90px;
+    margin-top: 92px;
   }
 
   // показываем нижнюю часть подписи
@@ -99,12 +104,16 @@
   }
 
   .page-form__slogan--tablet {
-    margin-bottom: 73px;
+    margin-bottom: 71px;
   }
 }
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {
+  .page-form {
+    position: relative;
+  }
+
   .page-form__header {
     margin-top: -110px;
 
@@ -122,5 +131,25 @@
     padding-right: 200px;
     padding-left: 200px;
     padding-bottom: 101px;
+  }
+
+  // слоган
+  .page-form__slogan,
+  .page-form__slogan--tablet {
+    display: none;
+  }
+
+  .page-form__slogan--desktop {
+    display: block;
+    width: 760px;
+    margin: 0 auto;
+    margin-top: 92px;
+    margin-bottom: 70px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: $darkblue-color;
   }
 }

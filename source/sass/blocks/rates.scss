@@ -2,9 +2,14 @@
 .rates {
   display: flex;
   flex-direction: column;
+
   max-width: 660px;
+  margin-bottom: 42px;
 
   text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  background-image: linear-gradient(-4deg, #f2f2f2 95%, $white-color 95%);
 }
 
 // обертка всех тарифов
@@ -13,7 +18,9 @@
   justify-content: center;
 
   max-width: 660px;
+  margin-top: 91px;
 
+  background-color: $white-color;
   overflow: hidden;
 }
 
@@ -24,6 +31,7 @@
 
   min-width: 278px;
   max-width: 278px;
+  margin: 0;
 
   border-right: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
@@ -66,7 +74,9 @@
 .rates__item-wrapper {
   display: flex;
   justify-content: space-between;
+
   min-width: 278px;
+  height: 61px;
   padding-right: 18px;
   padding-left: 22px;
 
@@ -122,7 +132,7 @@
   align-items: center;
 
   width: 60px;
-  height: 102px;
+  height: 99px;
 
   margin: 0 auto;
 }
@@ -137,8 +147,19 @@
 @media (min-width: $tablet-width) {
   // общие
   .rates {
-    max-width: 620px;
+    max-width: 660px;
     margin: 0 auto;
+    margin-bottom: 45px;
+
+    background-image: linear-gradient(-4.3deg, #f2f2f2 88.4%, #ffffff 86%);
+  }
+
+  .rates__container {
+    max-width: 620px;
+    margin-top: 87px;
+    margin-bottom: 68px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .rates__wrapper {
@@ -146,10 +167,36 @@
     max-width: 154px;
   }
 
+  .rates__wrapper:last-of-type .rates__item-wrapper {
+    border-right: 3px solid #f2f2f2;
+  }
+
+  // хедер тарифа
+  .rates__header {
+    height: 79px;
+  }
+
+  .rates__title {
+    font-size: 16px;
+  }
+
+  .rates__price {
+    font-size: 18px;
+  }
+
+  .rates__hit {
+    top: 8px;
+    left: 5px;
+  }
+
+  // обертка
   .rates__item-wrapper {
     justify-content: center;
+    align-items: center;
+
     min-width: 154px;
     max-width: 154px;
+    height: 47px;
   }
 
   .rates__list-item:first-of-type {
@@ -168,13 +215,16 @@
     justify-content: flex-end;
 
     width: 278px;
+    margin: 0;
+
+    background-color: #f2f2f2;
   }
 
   .rates__list-item--tablet {
     display: flex;
     align-items: center;
 
-    height: 63.3px;
+    height: 47px;
     min-width: 156px;
     margin-left: 0;
     padding-left: 15px;
@@ -188,6 +238,7 @@
 
     border: 1px solid #f2f2f2;
     border-left: 2px solid #f2f2f2;
+    background-color: #ffffff;
   }
 
   .rates__list-item--tablet:first-of-type {
@@ -204,6 +255,57 @@
 @media (min-width: $desktop-width) {
   // общие
   .rates {
+    max-width: 1200px;
+    margin-bottom: 64px;
+
+    background-color: #f2f2f2;
+    background-image: linear-gradient(-3.9deg, #f2f2f2 87.6%, $white-color 87.6%);
+  }
+
+  .rates__container {
     max-width: 940px;
+    margin-top: 141px;
+    margin-bottom: 98px;
+  }
+
+  // обертки столбцов
+  .rates__wrapper {
+    min-width: 233px;
+    max-width: 233px;
+  }
+
+  // заголовки тарифа
+  .rates__header {
+    height: 98px;
+  }
+
+  .rates__title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .rates__price {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .rates__hit {
+    top: 16px;
+    left: 7px;
+  }
+
+  // элементы списка
+  .rates__item-wrapper {
+    min-width: 235px;
+    max-width: 235px;
+    height: 60px;
+  }
+
+  .rates__list-item--tablet {
+    height: 60px;
+    padding-left: 21px;
+
+    font-size: 18px;
+    line-height: 30px;
   }
 }

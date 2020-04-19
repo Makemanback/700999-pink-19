@@ -4,12 +4,13 @@
   height: 817px;
 
   margin: 0 auto;
+  margin-bottom: 42px;
 
   background-color: #f2f2f2;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-image: url("../img/iphone-screen-mobile@1x.png"), linear-gradient(-5.4deg, #f2f2f2 92.7%, $white-color 92.7%);
   background-repeat: no-repeat;
 
-  background-position: center 539px;
+  background-position: center 539px, 0 0;
 }
 
 // слоган преимуществ
@@ -40,7 +41,6 @@
   max-width: 280px;
   margin: 0 auto;
   padding-top: 113px;
-  // background-color: #f2f2f2;
 }
 
 // обнуление стилей списка преимуществ
@@ -89,6 +89,8 @@
   // слоган преимуществ
   .preferences {
     max-width: 660px;
+    min-height: 860px;
+    margin-bottom: 96px;
 
     background-image: none;
   }
@@ -119,10 +121,9 @@
   // спискок преимуществ
   .preferences__wrapper {
     max-width: 660px;
-    padding-bottom: 8px;
 
-    background-image: url("../img/iphone-screen-3-tablet@1x.png");
-    background-position: 21px 42px;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png"), linear-gradient(-4deg, #f2f2f2 85%, $white-color 85%);
+    background-position: 21px 42px, 0 0;
     background-repeat: no-repeat;
   }
 
@@ -142,6 +143,10 @@
     margin-bottom: 34px;
   }
 
+  .preferences--list-item:last-of-type {
+    margin-bottom: 18px;
+  }
+
   .preferences__header,
   .preferences__description {
     text-align: left;
@@ -154,16 +159,15 @@
     flex-direction: row;
 
     max-width: 660px;
+    padding-top: 59px;
     margin: 0 auto;
-  }
 
-  .preferences--effect {
-    margin-top: 36px;
+    background-color: #ffffff;
   }
 
   .preferences__effect::before {
     position: absolute;
-    top: 77px;
+    top: 135px;
     left: 84px;
 
     content: "24";
@@ -239,9 +243,14 @@
 @media (min-width: $desktop-width) {
   .preferences {
     max-width: 1200px;
-    min-height: 1294px;
+    min-height: 1040px;
+
+    // временно для сетки
+    margin-bottom: 186px;
 
     background-color: #f2f2f2;
+    background-image: linear-gradient(-4.3deg, #f2f2f2 91.6%, $white-color 91.6%);
+    background-position: 0 0;
   }
 
   // слоган
@@ -281,28 +290,34 @@
 
   // список преимуществ
   .preferences__list {
-    max-width: 940px;
-  }
-
-  .preferences--list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    margin: 0 auto;
-    padding: 0;
-    padding-top: 357px;
+    min-width: 880px;
+    max-width: 940px;
+    margin: 0;
+  }
+
+  .preferences--list {
+    margin-top: 358px;
+    margin-bottom: 68px;
   }
 
   // элемент списка
-  .preferences--list-item {
-    width: 240px;
+  .preferences__list-item {
+    display: flex;
+    flex-direction: column;
 
-    margin-right: 60px;
+    width: 240px;
+  }
+
+  .preferences--list-item {
+    margin-bottom: 0;
   }
 
   .preferences--list-item:last-of-type {
-    margin-right: 0;
+    margin-bottom: 0;
   }
 
   // заголовок в списке
@@ -327,10 +342,9 @@
   .preferences__effect {
     max-width: 940px;
     margin: 0 auto;
-  }
+    padding: 0;
 
-  .preferences--effect {
-    margin-top: 32px;
+    background-color: #f2f2f2;
   }
 
   .preferences__effect-image {
