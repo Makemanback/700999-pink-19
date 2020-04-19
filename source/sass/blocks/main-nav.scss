@@ -63,7 +63,7 @@
   }
 
   .main-nav__list {
-    width: 621px;
+    min-width: 651px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

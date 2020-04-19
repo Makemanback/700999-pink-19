@@ -6,7 +6,7 @@
   background-color: #1d2631;
   background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-size: auto auto, cover;
+  background-size: auto auto, contain;
   background-position-x: left, center;
   background-position-y: 176px, 0;
 }
@@ -14,6 +14,8 @@
 // Заголовок на главной странице
 .app-download__header {
   margin: 0;
+  padding-right: 40px;
+  padding-left: 40px;
 
   font-size: 24px;
   line-height: 30px;
@@ -26,6 +28,7 @@
   margin-top: 89px;
   margin-bottom: 313px;
 }
+
 // кнопка скачать приложение
 .app-download__button {
   border: solid 3px $white-color;
@@ -104,7 +107,7 @@
   .app-download--container {
     margin-top: 202px;
     margin-left: 20px;
-    margin-bottom: 46px;
+    margin-bottom: 57px;
   }
   // заголовок
   .app-download__header {
@@ -135,6 +138,10 @@
   }
 
   // текстовое описание приложений
+  .app-download__description {
+    width: auto;
+  }
+
   .app-download--description {
     padding: 0;
 
@@ -150,26 +157,26 @@
     background-image: url("../../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto auto, auto auto;
-    background-position: 266px 209px, center 0;
+    background-position: 259px 209px, center 0;
   }
 
   // контейнер приложений
   .app-download--container {
     margin-top: 219px;
-    margin-left: 250px;
-    margin-bottom: 34px;
+    margin-left: 243px;
+    margin-bottom: 57px;
   }
 
   // заголовок
   .app-download__header {
-    width: 235px;
+    width: auto;
 
     font-size: 50px;
     line-height: 60px;
   }
 
   .app-download--header {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   // кнопка
