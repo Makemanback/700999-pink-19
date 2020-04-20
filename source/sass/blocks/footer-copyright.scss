@@ -24,27 +24,24 @@
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
-  .footer-copyright--margin {
-    margin-top: -14px;
-  }
-
-  .footer-copyright__description--margin {
-    margin-top: -6px;
+  .footer-copyright {
+    margin-top: 50px;
   }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {
+  .footer-copyright {
+    margin-top: 35px;
+  }
+
   .footer-copyright__description {
     font-size: 18px;
   }
 
   .footer-copyright__description--margin {
-    margin-right: 14px;
-  }
-
-  .footer-copyright__link {
-    margin-top: 5px;
+    margin-top: -10px;
+    margin-right: 13px;
   }
 }

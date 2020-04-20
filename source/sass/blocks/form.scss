@@ -9,6 +9,22 @@
   border: none;
 }
 
+// обнуление браузерных отступов
+.form__names,
+.form__contacts,
+.form__textarea,
+.form__radio,
+.form__achievement {
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+}
+
 // поле имен
 .form__names {
   display: flex;
@@ -16,6 +32,8 @@
 
   width: 276px;
   margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
 
   border: none;
 }
@@ -38,14 +56,14 @@
 // лейблы
 .form__names-descrition {
   display: flex;
-  padding-left: 20px;
+  padding-left: 22px;
   padding-bottom: 5px;
 }
 
 // инпуты
 .form__names-input,
 .form__contacts-input {
-  width: 276px;
+  width: 280px;
   height: 63px;
   padding-left: 20px;
 
@@ -62,14 +80,41 @@
 .form__contacts,
 .form__textarea {
   width: 320px;
+  margin: 0;
+  padding: 0;
 
   border: none;
 }
 
+.form__contacts-container {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.form__contacts-label {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 17px;
+}
+
+.form__contacts-label:last-of-type {
+  margin-bottom: 42px;
+}
+
+.form__contacts-description {
+  padding-left: 21px;
+  padding-bottom: 5px;
+}
 // текстаера лейбл
 .form__textarea-label {
   display: flex;
   justify-content: center;
+
+  width: 280px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 49px;
 }
 
 // плейсхолдеры инпутов
@@ -82,10 +127,17 @@
 .form__radio {
   display: flex;
   flex-direction: column;
+
   width: 320px;
+  padding: 0;
+  margin: 0;
 
   background-color: #f2f2f2;
-  border: 2px solid #e5e5e5;
+  border: none;
+}
+
+.form__achievement {
+  margin-bottom: 32px;
 }
 
 .form__achievement-container {
@@ -93,19 +145,43 @@
   flex-direction: column;
 }
 
+// радио
+.form__radio-label {
+  margin-bottom: 44px;
+}
+
+.form__radio-label:last-of-type {
+  margin-bottom: 48px;
+}
+
 // легенды
 .form__achievement-legend,
 .form__radio-legend,
 .form__textarea-description {
+  padding-top: 41px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+
   color: $pink-color;
+  background-color: #f2f2f2;
 }
 
-// блоии лейблов
+.form__achievement-legend {
+  padding-bottom: 41px;
+}
+
+.form__radio-legend {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 38px;
+  margin-bottom: 40px;
+}
+
+// блоки лейблов
 .form__achievement-label,
 .form__radio-label,
 .form__textarea-field {
@@ -116,16 +192,36 @@
   color: $darkblue-color;
 }
 
+.form__achievement-label {
+  margin-bottom: 51px;
+}
+
+// текстареа
 .form__textarea-field {
   width: 280px;
+  padding-left: 18px;
+  padding-top: 14px;
+  padding-right: 26px;
 
   border: 2px solid #e5e5e5;
 }
 
+.form__textarea-description {
+  padding-top: 38px;
+  margin-bottom: 16px;
+
+  background-color: $white-color;
+}
+
+
 // кнопка формы
 .form__button {
-  border-radius: 0;
+  height: 63px;
+  margin-bottom: 35px;
+
+  border-radius: 1px;
   background-color: #2aab6d;
+  border: none;
   color: $white-color;
   text-transform: uppercase;
 }
@@ -147,8 +243,18 @@
   color: $pink-color;
 }
 
+// подтягиваем футер на странице формы
+.form--submit {
+  margin-bottom: -26px;
+}
+
 // прячем легенду контактов
 .form__contacts-legend {
+  display: none;
+}
+
+// прячем сноску
+.form__required--desktop {
   display: none;
 }
 
@@ -157,6 +263,7 @@
 @media (min-width: $tablet-width) {
   .form {
     width: 620px;
+    margin-bottom: 50px;
   }
 
   // ордера
@@ -170,10 +277,12 @@
 
     order: 2;
     background-color: $white-color;
+    border: 2px solid #e5e5e5;
   }
 
   .form__contacts {
-    min-width: 620px;
+    width: 620px;
+    margin-bottom: 57px;
 
     order: 3;
     border: 2px solid #e5e5e5;
@@ -187,8 +296,12 @@
     background-color: $white-color;
   }
 
+  .form--achievement {
+    margin-bottom: 58px;
+  }
+
   .form__textarea {
-    min-width: 620px;
+    width: 620px;
 
     border: 2px solid #e5e5e5;
     order: 5;
@@ -205,6 +318,7 @@
   // обертка формы имен
   .form--names {
     padding: 0;
+    margin-bottom: 6px;
   }
 
   // обертки форм имен
@@ -222,6 +336,7 @@
     align-items: center;
     padding-left: 0;
     padding-right: 18px;
+    padding-top: 10px;
   }
 
   // контакты
@@ -229,10 +344,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin-bottom: 24px;
+  }
+
+  .form__contacts-label:last-of-type {
+    margin-bottom: 21px;
   }
 
   .form__contacts-description {
-    margin-left: 78px;
+    margin-left: 0;
+    padding-left: 19px;
 
     order: 2;
   }
@@ -240,13 +362,16 @@
   .form__contacts-input {
     width: 500px;
     margin: 0 auto;
-    margin-bottom: 21px;
+    margin-bottom: 10px;
 
     order: 1;
   }
 
   .form__contacts-legend {
     display: block;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 31px;
 
     font-size: 14px;
     line-height: 30px;
@@ -256,15 +381,32 @@
     color: $pink-color;
   }
 
+  // достижения
+  .form__achievement-legend {
+    padding: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 48px;
+
+    background-color: $white-color;
+  }
+
+  .form__achievement-label {
+    margin-bottom: 52px;
+  }
+
   // текстареа
+  .form--textarea {
+    margin-bottom: 67px;
+  }
+
   .form__textarea-label {
     flex-direction: column;
     flex-wrap: nowrap;
 
-    padding-top: 47px;
-    padding-bottom: 53px;
-    padding-right: 60px;
-    padding-left: 60px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 48px;
   }
 
   .form__textarea-field {
@@ -272,23 +414,60 @@
     height: 193px;
 
     padding: 20px;
+    padding-top: 14px;
+    padding-left: 19px;
   }
-
 
   .form__textarea-description {
     display: flex;
     justify-content: center;
+
     margin: 0 auto;
+    margin-bottom: 33px;
+    padding: 0;
+    padding-right: 38px;
+    padding-left: 38px;
+
+    background-color: $white-color;
+  }
+
+  // радио
+  .form--radio {
+    margin-bottom: 51px;
+  }
+
+  .form__radio-legend {
+    padding-top: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-bottom: 48px;
+
+    background-color: $white-color;
+  }
+
+  .form__radio-label:last-of-type {
+    margin-bottom: 61px;
+  }
+
+  // контакты
+  .form__contacts-container {
+    width: 500px;
   }
 
   // отправка формы
   .form__submit {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
-    width: 616px;
+    width: 620px;
     margin: 0 auto;
+  }
+
+  // кнопка отправки
+  .form__button {
+    width: 300px;
+    margin-bottom: 0;
   }
 }
 
@@ -302,15 +481,14 @@
     min-width: 940px;
   }
 
+  // имена
   .form__names {
     max-width: 433px;
     margin: 0;
   }
 
-  .form__radio {
-    width: 435px;
-    max-width: 435px;
-    margin: 0;
+  .form--names {
+    margin-top: 14px;
   }
 
   // контейнер контактов
@@ -318,6 +496,7 @@
     display: flex;
     justify-content: space-between;
     width: 820px;
+    height: 177px;
 
     margin: 0 auto;
   }
@@ -328,38 +507,71 @@
     flex-wrap: nowrap;
 
     min-width: 940px;
+    height: 177px;
     margin: 0;
+    margin-bottom: 57px;
+  }
+
+  .form__contacts-legend {
+    margin-bottom: 6px;
   }
 
   .form__contacts-input {
     width: 373px;
   }
 
-  .form__contacts-description {
-    margin-left: 20px;
-  }
-
   // радио
-  .form--radio {
+  .form__radio {
+    width: 435px;
+    max-width: 435px;
+    height: 309px;
     margin: 0;
   }
 
   // достижения
-  .form--achievement {
+  .form__achievement {
     min-width: 940px;
-    margin: 0;
+    height: 240px;
+    margin: 0 auto;
+  }
+
+  .form--achievement {
+    margin-bottom: 57px;
   }
 
   .form__achievement-container {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 820px;
+    margin: 0 auto;
   }
+
+  .form__achievement-label {
+    margin-right: 60px;
+  }
+
   // текстареа
+  .form__textarea {
+    height: 225px;
+  }
+
   .form--textarea {
     min-width: 940px;
 
     margin: 0;
     padding: 0;
+    margin-bottom: 65px;
+  }
+
+  .form__textarea-description {
+    margin-bottom: -2px;
+  }
+
+  .form__textarea-label {
+    width: 820px;
+    margin: 0 auto;
   }
 
   .form__textarea-field {
@@ -371,5 +583,27 @@
   .form__submit {
     min-width: 940px;
     margin: 0;
+  }
+
+  // обязательные поля
+  .form__required {
+    display: none;
+  }
+
+  // текст для дестопа
+  .form__required--desktop {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $darkblue-color;
+  }
+
+  .form__required--desktop::before {
+    content: "*";
+    color: $pink-color;
   }
 }

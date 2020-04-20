@@ -24,8 +24,9 @@
 }
 
 .uploader--slogan {
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 42px;
+  padding-top: 23px;
+  margin-bottom: 20px;
 }
 
 // обертка формы
@@ -65,7 +66,10 @@
     flex-direction: row;
     justify-content: space-between;
 
-    width: 100%;
+    width: 620px;
+
+    // временно для сетки
+    margin-bottom: 54px;
   }
 
   // обертка инструментов и кнопок
@@ -79,6 +83,12 @@
     font-size: 18px;
   }
 
+  .uploader--slogan {
+    margin-bottom: 57px;
+    padding-bottom: 69px;
+    padding-top: 46px;
+  }
+
   // фото
   .uploader--photo {
     // временно
@@ -90,8 +100,16 @@
 
 @media (min-width: $desktop-width) {
   .uploader {
-    // временно
     max-width: 940px;
-    height: 404px;
+  }
+
+  .uploader__form {
+    margin-bottom: 83px;
+  }
+
+  .uploader--slogan {
+    margin-bottom: 57px;
+    padding-bottom: 66px;
+    padding-top: 5px;
   }
 }
