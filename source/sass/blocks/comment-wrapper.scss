@@ -76,6 +76,7 @@
   .comment-wrapper__header {
     margin-bottom: -10px;
   }
+
   // счетчик лайков
   .comment-wrapper__like {
     margin-bottom: 0;
@@ -84,25 +85,32 @@
   // обертка комментария панорамы
   .comment-wrapper--panorama {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 620px;
+    margin-bottom: 50px;
+
     padding-top: 24px;
-    padding-right: 28px;
     padding-left: 27px;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
+    padding-right: 30px;
 
     background-color: #f2f2f2;
   }
 
-  .comment-wrapper__comment-text--panorama {
-    margin: 0;
+  // положения блоков для комментария в панораме
+  .comment-wrapper--panorama .comment-wrapper__header {
+    order: -3;
   }
 
-  .comment-wrapper__like--panorama {
-    margin: 0;
+  .comment-wrapper--panorama .comment-wrapper__like {
+    order: -2;
+  }
+
+  .comment-wrapper--panorama .comment-wrapper__like-icon {
+    order: -1;
   }
 }
 

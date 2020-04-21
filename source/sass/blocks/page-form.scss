@@ -153,3 +153,32 @@
     color: $darkblue-color;
   }
 }
+
+// АДАПТАЦИЯ ГРАФИКИ
+
+// мобильная
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .page-form__header {
+    background-image: url("../../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+// планшет
+@media (min-width: $tablet-width) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .page-form__header {
+      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
+  }
+}
+
+// десктоп
+@media (min-width: $desktop-width) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .page-form__header {
+      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+    }
+  }
+}
