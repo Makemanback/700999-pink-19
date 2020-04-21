@@ -241,12 +241,12 @@
 @media (min-width: $desktop-width) {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .photos {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: 2560px auto;
     }
 
     .photos__image-panorama {
-      background-image: url("../../img/panorama-desktop@2x.jpg");
+      background-image: url("../img/panorama-desktop@2x.jpg");
       background-size: 1200px auto;
     }
   }
