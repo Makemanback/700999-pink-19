@@ -214,11 +214,11 @@
 // мобильная
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .photos {
-    background-image: url("../../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 
   .photos__image-panorama {
-    background-image: url("../../img/panorama-mobile@2x.jpg");
+    background-image: url("../img/panorama-mobile@2x.jpg");
   }
 }
 
@@ -226,12 +226,12 @@
 @media (min-width: $tablet-width) {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .photos {
-      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
       background-size: 1200px auto;
     }
 
     .photos__image-panorama {
-      background-image: url("../../img/panorama-tablet@2x.jpg");
+      background-image: url("../img/panorama-tablet@2x.jpg");
       background-size: 700px auto;
     }
   }

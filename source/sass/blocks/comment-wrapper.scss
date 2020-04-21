@@ -1,3 +1,16 @@
+// блок комментария панорамы
+.comment-wrapper__panorama {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-top: 18px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+  padding-left: 17px;
+
+  background-color: #f2f2f2;
+}
+
 // стили комментариев
 .comment-wrapper {
   display: flex;
@@ -83,7 +96,7 @@
   }
 
   // обертка комментария панорамы
-  .comment-wrapper--panorama {
+  .comment-wrapper__panorama {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -101,15 +114,15 @@
   }
 
   // положения блоков для комментария в панораме
-  .comment-wrapper--panorama .comment-wrapper__header {
+  .comment-wrapper__panorama.comment-wrapper__header {
     order: -3;
   }
 
-  .comment-wrapper--panorama .comment-wrapper__like {
+  .comment-wrapper__panorama.comment-wrapper__like {
     order: -2;
   }
 
-  .comment-wrapper--panorama .comment-wrapper__like-icon {
+  .comment-wrapper__panorama.comment-wrapper__like-icon {
     order: -1;
   }
 }
@@ -118,7 +131,7 @@
 
 @media (min-width: $desktop-width) {
   // комментарий
-  .comment-wrapper--panorama {
+  .comment-wrapper__panorama {
     width: 940px;
     margin-right: auto;
     margin-left: auto;
