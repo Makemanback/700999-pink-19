@@ -2,10 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
     <title>Pink Photo Gallery</title>
   </head>
   <body>
@@ -57,32 +63,23 @@
         <h2 class="photos__header photos--header">Фотографии пользователей</h2>
         <p class="photos__description photos--description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
-
-        <div class="photos__wrapper--panorama">
-          <div class="photos__image--panorama"></div>
-          <div class="comment-wrapper--panorama">
+        <div class="photos__wrapper-panorama">
+          <div class="photos__image-panorama"></div>
+          <div class="comment-wrapper__panorama">
             <a class="comment-wrapper__header">Анна <span class="comment-wrapper__comment-time">(5 минут назад)</span></a>
+            <p class="comment-wrapper__comment-text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             <a class="comment-wrapper__like-icon"></a>
-            <span class="comment-wrapper__like comment-wrapper__like--panorama">Нравится: 215</span>
-            <p class="comment-wrapper__comment-text comment-wrapper__comment-text--panorama">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <span class="comment-wrapper__like">Нравится: 215</span>
           </div>
         </div>
 
         <div class="photos__wrapper">
-          <div class="photos__wrapper-inner photos__wrapper-inner--panorama">
-            <img class="photos__image" src="img/panorama-mobile@1x.jpg" alt="панорама с моста" width="320" height="137">
-            <div class="photos__wrapper-inner comment-wrapper">
-              <a class="comment-wrapper__header">Анна <span class="comment-wrapper__comment-time">(5 минут назад)</span></a>
-              <p class="comment-wrapper__comment-text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <a class="comment-wrapper__like-icon"></a>
-              <span class="comment-wrapper__like">Нравится: 215</span>
-            </div>
-          </div>
-
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-car-mobile@1x.jpg" alt="белый автомобиль" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-car-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-car-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="белый автомобиль" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Левон <span class="comment-wrapper__comment-time">(5 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -92,9 +89,11 @@
           </div>
 
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-drumset-mobile@1x.jpg" alt="барабанная установка" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-drumset-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-drumset-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="барабанная установка" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Антон <span class="comment-wrapper__comment-time">(12 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Соседи будут рады!</p>
@@ -104,9 +103,11 @@
           </div>
 
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-window-mobile@1x.jpg" alt="окно в офисном здании" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-window-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-window-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="окно в офисном здании" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Борис <span class="comment-wrapper__comment-time">(20 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -116,9 +117,11 @@
           </div>
 
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-fair-mobile@1x.jpg" alt="рынок под навесом" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-fair-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-fair-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="рынок под навесом" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Сергей <span class="comment-wrapper__comment-time">(25 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Самая кубанская в мире!</p>
@@ -128,9 +131,11 @@
           </div>
 
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-pov-mobile@1x.jpg" alt="мужские ноги на природе" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-pov-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-pov-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="мужские ноги на природе" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Максим <span class="comment-wrapper__comment-time">(40 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Где снег-то?</p>
@@ -140,9 +145,11 @@
           </div>
 
           <div class="photos__wrapper-inner">
-            <img class="photos__image" src="img/photo-wing-mobile@1x.jpg" alt="крыло самолёта" width="280" height="180">
-            <img class="photos__image--tablet" src="img/photo-wing-tablet@1x.jpg" alt="белый автомобиль" width="300" height="300">
-            <img class="photos__image--desktop" src="img/photo-wing-desktop@1x.jpg" alt="белый автомобиль" width="300" height="400">
+            <picture class="photos__picture">
+              <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+              <img class="photos__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="крыло самолёта" width="280" height="180">
+            </picture>
             <div class="photos__wrapper-inner comment-wrapper">
               <a class="comment-wrapper__header">Надежда <span class="comment-wrapper__comment-time">(45 часов назад)</span></a>
               <p class="comment-wrapper__comment-text">Всем GM и взаимные лайки!</p>

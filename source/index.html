@@ -2,10 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
@@ -141,11 +147,11 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="rates__container">
 
-          <dl class="rates__item-wrapper--tablet">
-            <dd class="rates__list-item--tablet">Розовый фильтр</dd>
-            <dd class="rates__list-item--tablet">Смайлики</dd>
-            <dd class="rates__list-item--tablet">Комментарии</dd>
-          </dl>
+          <ul class="rates__item-wrapper--tablet">
+            <li class="rates__list-item--tablet">Розовый фильтр</li>
+            <li class="rates__list-item--tablet">Смайлики</li>
+            <li class="rates__list-item--tablet">Комментарии</li>
+          </ul>
 
           <dl class="rates__wrapper">
             <div class="rates__header">
@@ -153,15 +159,15 @@
               <span class="rates__price">1,99 USD</span>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Розовый фильтр</dd>
+              <dt class="rates__list-item">Розовый фильтр</dt>
               <dd class="rates__list-item">да</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Смайлики</dd>
+              <dt class="rates__list-item">Смайлики</dt>
               <dd class="rates__list-item">нет</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Комментарии</dd>
+              <dt class="rates__list-item">Комментарии</dt>
               <dd class="rates__list-item">нет</dd>
             </div>
           </dl>
@@ -173,15 +179,15 @@
               <span class="rates__hit">хит</span>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Розовый фильтр</dd>
+              <dt class="rates__list-item">Розовый фильтр</dt>
               <dd class="rates__list-item">да</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Смайлики</dd>
+              <dt class="rates__list-item">Смайлики</dt>
               <dd class="rates__list-item">да</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Комментарии</dd>
+              <dt class="rates__list-item">Комментарии</dt>
               <dd class="rates__list-item">нет</dd>
             </div>
           </dl>
@@ -192,15 +198,15 @@
               <span class="rates__price">9,99 USD</span>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Розовый фильтр</dd>
+              <dt class="rates__list-item">Розовый фильтр</dt>
               <dd class="rates__list-item">да</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Смайлики</dd>
+              <dt class="rates__list-item">Смайлики</dt>
               <dd class="rates__list-item">да</dd>
             </div>
             <div class="rates__item-wrapper">
-              <dd class="rates__list-item">Комментарии</dd>
+              <dt class="rates__list-item">Комментарии</dt>
               <dd class="rates__list-item">да</dd>
             </div>
           </dl>

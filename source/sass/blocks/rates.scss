@@ -197,6 +197,11 @@
     min-width: 154px;
     max-width: 154px;
     height: 47px;
+
+    // свг иконки
+    // background-image: url(../../img/icon-yes.svg);
+    // background-repeat: no-repeat;
+    // background-size: 20px;
   }
 
   .rates__list-item:first-of-type {
@@ -210,6 +215,8 @@
 
   // показываем панель для планшета
   .rates__item-wrapper--tablet {
+    @include list-reset;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

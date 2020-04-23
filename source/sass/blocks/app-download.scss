@@ -214,3 +214,47 @@
     margin-bottom: 53px;
   }
 }
+
+// АДАПТАЦИЯ ГРАФИКИ
+
+// мобильная
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .app-download {
+    background-image: url("../../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 258px auto, contain;
+    background-position-x: left, center;
+    background-position-y: 176px, 0;
+  }
+}
+
+// планшет
+@media (min-width: $tablet-width) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .app-download {
+      background-image: url("../../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 700px auto, cover;
+      background-position: center 184px, center 0;
+    }
+  }
+}
+
+// десктоп
+@media (min-width: $desktop-width) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .app-download {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 0;
+    }
+
+    .app-download__container {
+      background-image: url("../../img/iphone-hand-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: 16px 0;
+      background-size: 1050px auto;
+    }
+  }
+}
