@@ -11,7 +11,7 @@
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="picturefill.js" async></script>
+    <script src="js/picturefill.js" async></script>
     <title>Pink Photo Gallery</title>
   </head>
   <body>
@@ -164,7 +164,11 @@
         <h2 class="visually-hidden">Загрузка фотографии</h2>
         <span class="uploader__slogan uploader--slogan">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</span>
         <form action="post" class="uploader__form">
-          <img class="uploader__photo uploader--photo" src="img/photo-road-mobile@1x.jpg" alt="Зимняя дорога" width="280" height="374">
+          <picture class="photos__picture">
+            <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img class="uploader__photo uploader--photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога" width="280" height="374">
+          </picture>
           <div class="uploader__wrapper">
             <div class="uploader__filter">
               <span class="uploader__tool"></span>

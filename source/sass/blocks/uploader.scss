@@ -34,6 +34,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-bottom: 41px;
 }
 
 // фото формы
@@ -67,9 +69,7 @@
     justify-content: space-between;
 
     width: 620px;
-
-    // временно для сетки
-    margin-bottom: 54px;
+    margin-bottom: 79px;
   }
 
   // обертка инструментов и кнопок
@@ -90,6 +90,11 @@
   }
 
   // фото
+  .uploader__photo {
+    width: 300px;
+    height: 400px;
+  }
+
   .uploader--photo {
     // временно
     margin-bottom: 0;
@@ -101,10 +106,14 @@
 @media (min-width: $desktop-width) {
   .uploader {
     max-width: 940px;
+    margin-bottom: 28px;
   }
 
   .uploader__form {
-    margin-bottom: 83px;
+    width: 820px;
+    margin-left: 100px;
+    margin-right: 60px;
+    margin-bottom: 57px;
   }
 
   .uploader--slogan {

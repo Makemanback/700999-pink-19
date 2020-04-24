@@ -104,6 +104,10 @@
     margin-bottom: 49px;
   }
 
+  .contacts__wrapper-inner:last-of-type {
+    margin-bottom: 28px;
+  }
+
   // контакты
   .contacts--phone-header,
   .contacts--mail-header,
@@ -147,6 +151,10 @@
     margin-bottom: 26px;
   }
 
+  .contacts__wrapper-inner {
+    margin-bottom: 22px;
+  }
+
   .contacts__wrapper-inner:first-of-type {
     margin-right: 112px;
     margin-left: 48px;
@@ -157,6 +165,7 @@
   .contacts__wrapper-inner:nth-of-type(3) {
     margin-right: 95px;
     order: 2;
+    margin-bottom: 22px;
   }
 
   .contacts__wrapper-inner:nth-of-type(2) {
