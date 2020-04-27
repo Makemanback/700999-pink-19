@@ -20,6 +20,18 @@
   padding: 0;
 }
 
+.footer-copyright__link-image {
+  color: $pink-color;
+
+  &:hover {
+    color: $darkblue-color;
+  }
+
+  &:active {
+    color: $darkblue-color;
+    opacity: 0.3;
+  }
+}
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 

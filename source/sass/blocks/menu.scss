@@ -1,8 +1,28 @@
 .menu {
   padding: 0;
+  margin-right: 20px;
+  margin-top: 21px;
+  margin-bottom: 21px;
 
   background-color: transparent;
   border: none;
+
+  fill: $white-color;
+
+  &:hover {
+    fill: $pink-color;
+  }
+
+  &:active {
+    fill: $pink-color;
+    opacity: 0.3;
+  }
+}
+
+// иконки закрытия/открытия
+.menu--open-js,
+.menu--close-js {
+  display: none;
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА

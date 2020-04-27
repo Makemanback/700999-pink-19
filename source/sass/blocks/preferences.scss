@@ -230,11 +230,6 @@
     color: $pink-color;
     text-decoration: underline;
   }
-
-  // прячем будильник для десктопа
-  .preferences__effect-image--desktop {
-    display: none;
-  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
@@ -351,13 +346,9 @@
   }
 
   // прячем планшет
-  .preferences__effect-image--tablet {
-    display: none;
-  }
-
-  // показываем декстоп
-  .preferences__effect-image--desktop {
-    display: flex;
+  .preferences__effect-image--inside {
+    width: 298px;
+    height: 345px;
   }
 
   // обертка текста
