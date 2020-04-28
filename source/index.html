@@ -12,20 +12,18 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async></script>
+    <script src="js/svg4everybody.js"></script>
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
 
     <header class="page-header page-header--paddings">
       <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
-          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Пинк">
-        </picture>
-          <!-- <svg class="page-header__mobile"><use xlink:href="#logo-mobile"></use></svg>
-          <svg class="page-header__tablet"><use xlink:href="#logo-tablet"></use></svg>
-          <svg class="page-header__desktop"><use xlink:href="#logo-desktop"></use></svg> -->
+          <svg class="page-header__logo-image" role="img" aria-labelledby="pink-logo1 pink-logo1" width="75px" height="25px">
+            <title id="pink-logo1">логотип pink</title>
+            <desc id="pink-logo1">ссылка на главную pink</desc>
+            <use xlink:href="img/sprite.svg#pink-logo"></use>
+          </svg>
       </a>
 
       <button class="menu" type="button" aria-label="Открыть меню">
@@ -253,8 +251,11 @@
 
     <footer class="page-footer page-footer--margins page-footer--main">
       <a class="page-footer__logo page-footer--logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Pink">
-        <img class="page-footer__logo-image--desktop" src="img/logo-pink-blue-desktop.svg" width="147" height="40" alt="Логотип Pink">
+        <svg class="page-footer__logo-image" role="img" aria-labelledby="pink-footer-logo1 pink-footer-logo1" width="147px" height="40px">
+          <title id="pink-footer-logo1">логотип pink</title>
+          <desc id="pink-footer-logo1">ссылка на главную pink</desc>
+          <use xlink:href="img/sprite.svg#pink-logo-footer"></use>
+        </svg>
       </a>
 
       <div class="footer-socials footer-socials--margin">

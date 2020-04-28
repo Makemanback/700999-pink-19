@@ -68,7 +68,7 @@
 
     width: auto;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
   }
 
   .main-nav__wrapper {
@@ -86,6 +86,7 @@
   }
 
   .main-nav__item {
+    position: relative;
     max-width: 132px;
 
     line-height: 18px;
@@ -106,7 +107,6 @@
     content: "";
     position: absolute;
     top: 54px;
-    left: auto;
     width: 107px;
     height: 2px;
     background-color: $white-color;
