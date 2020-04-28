@@ -4,29 +4,31 @@
   flex-direction: column;
   margin-top: -69px;
   background-color: #1d2631;
-  background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto auto, contain;
-  background-position-x: left, center;
-  background-position-y: 176px, 0;
 }
 
 // Заголовок на главной странице
 .app-download__header {
+  height: 551px;
   margin: 0;
   padding-right: 40px;
   padding-left: 40px;
+  padding-top: 178px;
 
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
   text-align: center;
   color: $white-color;
+
+  background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto auto, cover;
+  background-position-x: left, center;
+  background-position-y: 266px, 0;
 }
 
 .app-download--header {
-  margin-top: 89px;
-  margin-bottom: 313px;
+  margin-top: -89px;
 }
 
 // кнопка скачать приложение
@@ -122,14 +124,17 @@
   // заголовок
   .app-download__header {
     width: 300px;
+    height: auto;
 
     font-size: 40px;
     line-height: 48px;
+    background-image: none;
   }
 
   .app-download--header {
     margin: 0;
     margin-bottom: 2px;
+    margin-top: -178px;
   }
 
   // кнопка
@@ -194,13 +199,14 @@
   .app-download__header {
     width: 310px;
     padding-left: 30px;
+    padding-top: 187px;
 
     font-size: 50px;
     line-height: 60px;
   }
 
   .app-download--header {
-    margin-top: 10px;
+    margin-top: -176px;
     margin-bottom: 23px;
   }
 
@@ -228,12 +234,12 @@
 
 // мобильная
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .app-download {
+  .app-download__header {
     background-image: url("../../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-size: 258px auto, contain;
+    background-size: 258px auto, cover;
     background-position-x: left, center;
-    background-position-y: 176px, 0;
+    background-position-y: 266px, 0;
   }
 }
 
@@ -246,6 +252,10 @@
       background-size: 700px auto, cover;
       background-position: center 184px, center 0;
     }
+  }
+
+  .app-download__header {
+    background-image: none;
   }
 }
 

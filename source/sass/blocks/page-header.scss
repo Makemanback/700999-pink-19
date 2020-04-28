@@ -87,10 +87,11 @@
 
   .page-header__logo {
     margin: 0;
+    max-height: 55px;
   }
 
   .page-header__logo-image {
     height: 450px;
-    transform: translateY(-100px);
+    transform: translateY(-101px);
   }
 }
