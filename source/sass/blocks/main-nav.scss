@@ -1,12 +1,20 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-color: $darkblue-color;
+}
+
 // прячем форму на мобильном и планшете
 .main-nav__visually-hidden {
   display: none;
 }
 
 .main-nav__wrapper {
-  position: absolute;
-  top: 69px;
-  left: 0;
+  position: relative;
+  display: block;
 }
 
 .main-nav__list {
@@ -21,7 +29,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 320px;
+  width: 100%;
   height: 63px;
 
   text-align: center;
@@ -41,18 +49,26 @@
 
 .main-nav__item a {
   color: $white-color;
+
+  &:hover {
+    color: $pink-color;
+  }
+
+  &:active {
+    color: $pink-color;
+    opacity: 0.3;
+  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {
-  // показываем форму
-  .main-nav__visually-hidden {
-    display: flex;
-  }
-
   .main-nav {
     display: flex;
+
+    width: auto;
+
+    background-color: transparent;
   }
 
   .main-nav__wrapper {
@@ -70,6 +86,7 @@
   }
 
   .main-nav__item {
+    position: relative;
     max-width: 132px;
 
     line-height: 18px;
@@ -84,5 +101,21 @@
     margin-right: 0;
 
     border: none;
+  }
+
+  .main-nav__item--active::after {
+    content: "";
+    position: absolute;
+    top: 54px;
+    width: 107px;
+    height: 2px;
+    background-color: $white-color;
+  }
+
+  .main-nav__item a {
+    &:active {
+      color: $white-color;
+      opacity: 0.3;
+    }
   }
 }

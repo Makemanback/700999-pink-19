@@ -67,6 +67,17 @@
   color: $pink-color;
 }
 
+.contacts__mail-address {
+  &:hover {
+    color: $darkblue-color;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #ced0d2;
+    text-decoration: none;
+  }
+}
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {

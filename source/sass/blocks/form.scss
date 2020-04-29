@@ -74,6 +74,14 @@
   color: $darkblue-color;
 
   border: solid 2px #e5e5e5;
+
+  &:hover {
+    border-color: $darkblue-color;
+  }
+
+  &:active {
+    border-color: $pink-color;
+  }
 }
 
 // филдсет контактов и текстареа
@@ -148,6 +156,7 @@
 // радио
 .form__radio-label {
   margin-bottom: 44px;
+  padding-left: 89px;
 }
 
 .form__radio-label:last-of-type {
@@ -193,7 +202,12 @@
 }
 
 .form__achievement-label {
-  margin-bottom: 51px;
+  margin-bottom: 52px;
+  padding-left: 89px;
+}
+
+.form__achievement-label:last-of-type {
+  margin-bottom: 46px;
 }
 
 // текстареа
@@ -204,6 +218,16 @@
   padding-right: 26px;
 
   border: 2px solid #e5e5e5;
+
+  resize: none;
+
+  &:hover {
+    border-color: $darkblue-color;
+  }
+
+  &:active {
+    border-color: $pink-color;
+  }
 }
 
 .form__textarea-description {
@@ -224,11 +248,27 @@
   border: none;
   color: $white-color;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: #7dbd99;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: $white-color;
+  }
 }
 
 // подпись об обязательных полях
 .form__required {
   display: block;
+
+  margin-bottom: 41px;
 
   font-size: 14px;
   font-weight: 400;
@@ -258,8 +298,147 @@
   display: none;
 }
 
-// СТИЛИ ДЛЯ ПЛАНШЕТА
+// кастомные чекбоксы
+.form__achievement-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
+  &:checked + .form__check-box {
+    background-image: url('data:image/svg+xml,%3Csvg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve"%3E%3Cpath fill="%23d4345f" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/%3E%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+    background-position: 7px 9px;
+  }
+
+  &:hover + .form__check-box {
+    border-color: $darkblue-color;
+  }
+
+  &:active + .form__check-box {
+    border-color: $pink-color;
+  }
+
+  &:focus + .form__check-box {
+    outline: auto 5px -webkit-focus-ring-color;
+  }
+}
+
+.form__check-box {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  margin-left: -69px;
+  margin-top: -5px;
+
+  background-color: $white-color;
+  border: 2px solid #e5e5e5;
+}
+
+// кастомные радио
+.form__radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .form__radio-box {
+    box-shadow: 0 0 0 10px $white-color inset;
+    border-collapse: separate;
+    background-color: $pink-color;
+  }
+
+  &:hover + .form__radio-box {
+    border-color: $darkblue-color;
+  }
+
+  &:active + .form__radio-box {
+    border-color: $pink-color;
+  }
+
+  &:focus + .form__radio-box {
+    outline: auto 5px -webkit-focus-ring-color;
+  }
+}
+
+.form__radio-box {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  margin-left: -69px;
+  margin-top: -5px;
+
+  background-color: $white-color;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+// попап ошибки
+.form__popup-error {
+  position: absolute;
+  top: 1163px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 320px;
+  height: 289px;
+
+  background-color: $white-color;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  z-index: 2;
+}
+
+.form__popup-header {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 26px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form__popup-text {
+  margin: 0;
+  margin-bottom: 38px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form__popup-button {
+  width: 280px;
+  height: 63px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-color;
+
+  border: none;
+  background-color: #2aab6d;
+}
+
+// СТИЛИ ДЛЯ ПЛАНШЕТА
 @media (min-width: $tablet-width) {
   .form {
     width: 620px;
@@ -312,6 +491,7 @@
   }
 
   .form--required {
+    margin-bottom: 0;
     order: 7;
   }
 
@@ -395,6 +575,10 @@
     margin-bottom: 52px;
   }
 
+  .form__achievement-label:last-of-type {
+    margin-bottom: 53px;
+  }
+
   // текстареа
   .form--textarea {
     margin-bottom: 67px;
@@ -469,6 +653,44 @@
     width: 300px;
     margin-bottom: 0;
   }
+
+  // кастомы
+  .form__achievement-label,
+  .form__radio-label {
+    padding-left: 117px;
+  }
+
+  .form__check-box,
+  .form__radio-box {
+    margin-left: -59px;
+  }
+
+  // попап ошибки
+  .form__popup-error {
+    top: 905px;
+
+    width: 460px;
+    height: 363px;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  .form__popup-header {
+    width: 260px;
+    margin-top: 36px;
+    margin-bottom: 22px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .form__popup-text {
+    font-size: 18px;
+  }
+
+  .form__popup-button {
+    width: 300px;
+  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
@@ -530,6 +752,10 @@
     margin: 0;
   }
 
+  .form__radio-legend {
+    margin-bottom: 51px;
+  }
+
   // достижения
   .form__achievement {
     min-width: 940px;
@@ -542,16 +768,12 @@
   }
 
   .form__achievement-container {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
 
-    width: 820px;
+    width: 700px;
+    height: 200px;
     margin: 0 auto;
-  }
-
-  .form__achievement-label {
-    margin-right: 60px;
   }
 
   // текстареа
@@ -607,5 +829,28 @@
   .form__required--desktop::before {
     content: "*";
     color: $pink-color;
+  }
+
+  // кастом
+  .form__radio-label {
+    padding-left: 133px;
+  }
+
+  .form__achievement-label {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 52px;
+    margin-right: 115px;
+  }
+
+  .form__achievement-label:last-of-type {
+    margin: 0;
+    padding: 0;
+  }
+
+  // попап ошибки
+  .form__popup-error {
+    width: 780px;
+    height: 377px;
   }
 }

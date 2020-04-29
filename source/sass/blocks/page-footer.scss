@@ -17,7 +17,10 @@
 
 // логотип
 .page-footer__logo {
+  max-height: 45px;
   margin-bottom: 36px;
+
+  overflow: hidden;
 }
 
 // прячем футер на главной для мобильной
@@ -25,9 +28,22 @@
   display: none;
 }
 
-// прячем лого для десктопа
-.page-footer__logo-image--desktop {
-  display: none;
+.page-footer__logo-image {
+  width: 147px;
+  height: 100px;
+
+  transform: translateY(-50px);
+
+  fill: $darkblue-color;
+
+  &:hover {
+    fill: $pink-color;
+  }
+
+  &:active {
+    fill: $darkblue-color;
+    opacity: 0.3;
+  }
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
@@ -47,6 +63,7 @@
 
   .page-footer--margins {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   // показываем футер на главной
@@ -73,24 +90,18 @@
     margin: 0 auto;
   }
 
-  // прячем лого мобильного
-  .page-footer__logo-image {
-    display: none;
-  }
-
   .page-footer__logo {
     margin: 0;
     margin-top: 19px;
     margin-right: 239px;
   }
 
-  // лого десктопа
-  .page-footer__logo-image--desktop {
-    display: flex;
-  }
-
   .page-footer--logo {
     margin-top: 69px;
     margin-right: 236px;
+  }
+
+  .page-footer__logo-image {
+    transform: none;
   }
 }

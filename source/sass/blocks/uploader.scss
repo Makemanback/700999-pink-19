@@ -48,6 +48,16 @@
 .uploader__button-submit {
   color: $pink-color;
   border: 3px solid $pink-color;
+
+  &:hover {
+    color: $white-color;
+    background-color: $pink-color;
+  }
+
+  &:active {
+    color: #d78195;
+    background-color: $pink-color;
+  }
 }
 
 .uploader--button-submit {
@@ -58,6 +68,17 @@
   color: $darkblue-color;
   border: 3px solid $darkblue-color;
   opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: #cdd0d3;
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+    opacity: 1;
+  }
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
