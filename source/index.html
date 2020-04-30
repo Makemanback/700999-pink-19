@@ -13,6 +13,8 @@
     </script>
     <script src="js/picturefill.js" async></script>
     <script src="js/svg4everybody.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7887f4a1-e358-4057-b8e2-754d46a84bc4&lang=ru_RU" type="text/javascript">
+    </script>
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
@@ -145,9 +147,24 @@
           </blockquote>
         </div>
         <div class="reviews__button-wrapper">
+          <button class="reviews__button reviews__button--active" type="button"></button>
           <button class="reviews__button" type="button"></button>
           <button class="reviews__button" type="button"></button>
-          <button class="reviews__button" type="button"></button>
+        </div>
+
+        <div class="reviews__slider">
+          <button class="reviews__slider-button">
+            <svg class="reviews__slider-image" role="button" aria-labelledby="slider-button-left" width="22" height="41">
+              <title id="slider-button-right">левая кнопка слайдера</title>
+              <use xlink:href="img/sprite.svg#left-arrow"></use>
+            </svg>
+          </button>
+          <button class="reviews__slider-button">
+            <svg class="reviews__slider-image" aria-labelledby="slider-button-right" role="button" width="22" height="41">
+              <title id="slider-button-left">правая кнопка слайдера</title>
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -168,15 +185,15 @@
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item">нет</dd>
+              <dd class="rates__list-item rates__list-item--no">нет</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item">нет</dd>
+              <dd class="rates__list-item rates__list-item--no">нет</dd>
             </div>
           </dl>
 
@@ -188,15 +205,15 @@
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item">нет</dd>
+              <dd class="rates__list-item rates__list-item--no">нет</dd>
             </div>
           </dl>
 
@@ -207,22 +224,22 @@
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
             <div class="rates__item-wrapper">
               <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item">да</dd>
+              <dd class="rates__list-item rates__list-item--yes">да</dd>
             </div>
           </dl>
 
         </div>
         <div class="rates__button-wrapper">
           <button class="rates__button" type="button"></button>
-          <button class="rates__button" type="button"></button>
+          <button class="rates__button rates__button--active" type="button"></button>
           <button class="rates__button" type="button"></button>
         </div>
       </section>
@@ -245,7 +262,9 @@
             </div>
           </div>
         </div>
-        <div class="map"></div>
+        <div class="map">
+          <div class="map__frame" id="map"></div>
+        </div>
       </section>
     </main>
 
@@ -294,5 +313,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/map-script.js"></script>
   </body>
 </html>

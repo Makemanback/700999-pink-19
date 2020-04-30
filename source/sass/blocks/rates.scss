@@ -93,12 +93,12 @@
 
 // элемент списка
 .rates__list-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   height: 61px;
-
   margin-left: 0;
 
   font-size: 14px;
@@ -108,13 +108,45 @@
   color: $darkblue-color;
 }
 
+.rates__list-item--yes {
+  &::after {
+    position: absolute;
+    left: -13px;
+    top: 21px;
+
+    content: url("../img/icon-yes.svg");
+    width: 31px;
+    height: 21px;
+
+    background-color: $white-color;
+    z-index: 2;
+  }
+}
+
+.rates__list-item--no {
+  &::after {
+    position: absolute;
+    left: -4px;
+    top: 16px;
+
+    content: url("../img/icon-no.svg");
+    width: 31px;
+    height: 21px;
+
+    background-color: $white-color;
+    z-index: 2;
+  }
+}
+
 // плашка с хитом
 .rates__hit {
   position: absolute;
-  top: 16px;
-  left: 9px;
+  top: 10px;
+  left: 3px;
 
   display: block;
+  width: 74px;
+  height: 73px;
 
   font-size: 14px;
   line-height: 21px;
@@ -123,6 +155,24 @@
   text-transform: uppercase;
   color: $white-color;
   transform: rotate(-45deg);
+
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    left: 3px;
+    top: -10px;
+
+    content: "";
+    width: 74px;
+    height: 73px;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+
+    transform: rotate(45deg);
+    z-index: -1;
+  }
 }
 
 // обертка кнопок слайдера
@@ -132,9 +182,40 @@
   align-items: center;
 
   width: 60px;
-  height: 99px;
+  height: 94px;
 
   margin: 0 auto;
+  margin-bottom: 6px;
+}
+
+// кнопки слайдера
+.rates__button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background-color: $darkblue-color;
+  opacity: 0.3;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid $darkblue-color;
+    background-color: $white-color;
+    opacity: 1;
+  }
 }
 
 // прячем панель для планшета
@@ -176,6 +257,10 @@
     height: 79px;
   }
 
+  .rates__wrapper:first-of-type .rates__header {
+    box-shadow: -2px 0 0 $darkblue-color;
+  }
+
   .rates__title {
     font-size: 16px;
   }
@@ -185,26 +270,34 @@
   }
 
   .rates__hit {
-    top: 8px;
-    left: 5px;
+    top: 0;
+    left: -1px;
+
+    &::after {
+      left: 8.5px;
+      top: -4px;
+
+      content: "";
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
   }
 
   // обертка
   .rates__item-wrapper {
+    position: relative;
+
     justify-content: center;
     align-items: center;
 
     min-width: 154px;
     max-width: 154px;
     height: 47px;
-
-    // свг иконки
-    // background-image: url(../../img/icon-yes.svg);
-    // background-repeat: no-repeat;
-    // background-size: 20px;
   }
 
-  .rates__list-item:first-of-type {
+  .rates__item-wrapper .rates__list-item:first-child {
     display: none;
   }
 
@@ -266,12 +359,12 @@
     margin-bottom: 64px;
 
     background-color: #f2f2f2;
-    background-image: linear-gradient(-3.9deg, #f2f2f2 87.6%, $white-color 87.6%);
+    background-image: linear-gradient(-3.9deg, #f2f2f2 85.6%, $white-color 85.6%);
   }
 
   .rates__container {
     max-width: 940px;
-    margin-top: 141px;
+    margin-top: 153px;
     margin-bottom: 98px;
   }
 
@@ -284,6 +377,11 @@
   // заголовки тарифа
   .rates__header {
     height: 98px;
+    box-shadow: 0 3px 0 $darkblue-color;
+  }
+
+  .rates__wrapper:first-of-type .rates__header {
+    box-shadow: 0 3px 0 $darkblue-color;
   }
 
   .rates__title {
@@ -297,8 +395,20 @@
   }
 
   .rates__hit {
-    top: 16px;
-    left: 7px;
+    top: 9px;
+    left: 1px;
+
+    &::after {
+      position: absolute;
+      left: 8.5px;
+      top: -10px;
+
+      content: "";
+      width: 74px;
+      height: 73px;
+
+      background-image: url("../img/bg-hit.svg");
+    }
   }
 
   // элементы списка

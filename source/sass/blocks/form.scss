@@ -436,6 +436,49 @@
 
   border: none;
   background-color: #2aab6d;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: #7dbd99;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: $white-color;
+  }
+}
+
+// попап подтверждения
+.form__popup-submit {
+  position: absolute;
+  top: 1639px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 320px;
+  height: 340px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: $white-color;
+  background-image: linear-gradient($white-color 63.8%, #f2f2f2 63.8%);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  z-index: 2;
+}
+
+.form__submit-text {
+  margin-bottom: 79px;
+}
+
+// прячем попапы
+.form__not-visible {
+  display: none;
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
@@ -521,15 +564,37 @@
 
   // контакты
   .form__contacts-label {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     margin-bottom: 24px;
+
+    &::after {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      content: url("../img/icon-phone.svg");
+      padding-top: 19px;
+      padding-left: 20px;
+
+      width: 60px;
+      height: 59px;
+
+      background-color: #e5e5e5;
+    }
   }
 
   .form__contacts-label:last-of-type {
     margin-bottom: 21px;
+
+    &::after {
+      content: url("../img/icon-mail.svg");
+      padding-top: 16px;
+      padding-left: 21px;
+    }
   }
 
   .form__contacts-description {
@@ -543,6 +608,7 @@
     width: 500px;
     margin: 0 auto;
     margin-bottom: 10px;
+    padding-right: 70px;
 
     order: 1;
   }
@@ -691,6 +757,21 @@
   .form__popup-button {
     width: 300px;
   }
+
+  .form__popup-submit {
+    top: 1379px;
+
+    width: 460px;
+    height: 432px;
+    padding-right: 70px;
+    padding-left: 70px;
+
+    background-image: linear-gradient(#ffffff 62%, #f2f2f2 62%);
+  }
+
+  .form__submit-text {
+    margin-bottom: 82px;
+  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
@@ -738,6 +819,20 @@
 
   .form__contacts-legend {
     margin-bottom: 6px;
+  }
+
+  .form__contacts-label {
+    &::after {
+      top: 25px;
+      width: 58px;
+    }
+  }
+
+  .form__contacts-label:last-of-type {
+    &::after {
+      top: 26px;
+      width: 60px;
+    }
   }
 
   .form__contacts-input {
@@ -850,7 +945,50 @@
 
   // попап ошибки
   .form__popup-error {
+    top: 707px;
+    left: 0;
+    right: 0;
+
     width: 780px;
     height: 377px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 200px;
+    padding-left: 200px;
+
+    background-image: linear-gradient($white-color 56.7%, #f2f2f2 56.7%);
+  }
+
+  .form__popup-header {
+    width: auto;
+    margin-top: 42px;
+  }
+
+  .form__popup-text {
+    margin-bottom: 109px;
+  }
+
+  .form__popup-submit {
+    top: 1164px;
+    left: 0;
+    right: 0;
+
+    width: 780px;
+    height: 377px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 100px;
+    padding-left: 100px;
+
+    background-image: linear-gradient(#ffffff 56.8%, #f2f2f2 56.8%);
+  }
+
+  .form__submit-text {
+    width: 400px;
+    margin-bottom: 86px;
+  }
+
+  .form__submit-button {
+    width: 460px;
   }
 }

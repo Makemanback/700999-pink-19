@@ -38,16 +38,95 @@
   margin-bottom: 41px;
 }
 
+// обертка инструментов
+.uploader__list {
+  @include list-reset;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 93px;
+}
+
+.uploader__list-item {
+  display: inline-block;
+  width: 60px;
+  margin-right: -17px;
+}
+
+// прячем ренджи
+.uploader__list-item:nth-child(n+2) .uploader__range {
+  display: none;
+}
+
+// инструменты формы
+.uploader__tool {
+  display: inline-block;
+
+  width: 44px;
+  height: 44px;
+}
+
+.uploader__tool-image {
+  width: 44px;
+  height: 44px;
+
+  fill: $darkblue-color;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    fill: $pink-color;
+    opacity: 1;
+  }
+}
+
+// range
+.uploader__range {
+  position: relative;
+  top: 23px;
+  left: -19px;
+
+  display: inline-block;
+  width: 240px;
+  height: 2px;
+
+  background-color: #000000;
+
+  &::after {
+    position: absolute;
+    top: -6px;
+    left: 190px;
+
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 3px solid $pink-color;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+
+    z-index: 2;
+  }
+}
+
 // фото формы
 .uploader--photo {
   // временно
-  margin-bottom: 200px;
+  margin-bottom: 42px;
 }
 
 // кнопки формы
 .uploader__button-submit {
   color: $pink-color;
   border: 3px solid $pink-color;
+  background-color: transparent;
 
   &:hover {
     color: $white-color;
@@ -88,15 +167,18 @@
   .uploader__form {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 
     width: 620px;
-    margin-bottom: 79px;
+    margin-bottom: 54px;
   }
 
   // обертка инструментов и кнопок
   .uploader__wrapper {
     display: flex;
     flex-direction: column;
+
+    margin-right: 13px;
   }
 
   // слоган
@@ -106,7 +188,7 @@
 
   .uploader--slogan {
     margin-bottom: 57px;
-    padding-bottom: 69px;
+    padding-bottom: 68px;
     padding-top: 46px;
   }
 
@@ -119,6 +201,80 @@
   .uploader--photo {
     // временно
     margin-bottom: 0;
+  }
+
+  // фильтр
+  .uploader__list {
+    flex-direction: column;
+
+    width: 260px;
+    margin-bottom: 50px;
+  }
+
+  .uploader__list-item {
+    margin-top: 5px;
+    margin-bottom: 23px;
+  }
+
+  // инструменты фильтры
+  .uploader__tool {
+    width: 270px;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  .uploader__tool-image {
+    width: 25px;
+    height: 25px;
+
+    fill: $pink-color;
+    opacity: 1;
+
+    &:hover {
+      fill: $darkblue-color;
+      opacity: 0.5;
+    }
+  }
+
+  .uploader__range {
+    position: absolute;
+    top: 19px;
+    left: 53px;
+
+    width: 202px;
+
+    &::after {
+      left: 146px;
+    }
+  }
+
+  // показываем ренджи
+  .uploader__list-item:nth-child(n+2) .uploader__range {
+    display: inline-block;
+  }
+
+  .uploader__list-item:nth-of-type(2) .uploader__range {
+    top: 92px;
+
+    &::after {
+      left: 24px;
+    }
+  }
+
+  .uploader__list-item:nth-of-type(3) .uploader__range {
+    top: 162px;
+
+    &::after {
+      left: 95px;
+    }
+  }
+  // кнопки формы
+  .uploader__button-submit,
+  .uploader__button-reset {
+    width: 260px;
+  }
+
+  .uploader--button-submit {
+    margin-bottom: 24px;
   }
 }
 
@@ -134,12 +290,82 @@
     width: 820px;
     margin-left: 100px;
     margin-right: 60px;
-    margin-bottom: 57px;
+    margin-bottom: 33px;
   }
 
   .uploader--slogan {
     margin-bottom: 57px;
     padding-bottom: 66px;
     padding-top: 5px;
+  }
+
+  // инструменты формы
+  .uploader__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 410px;
+    margin-right: 20px;
+  }
+
+  .uploader__list {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 0;
+    margin-bottom: 129px;
+  }
+
+  .uploader__list-item {
+    width: 410px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  .uploader__tool {
+    border-bottom: none;
+  }
+
+  .uploader__tool-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .uploader__range {
+    top: 19px;
+    left: 92px;
+    width: 288px;
+
+    &::after {
+      left: 71px;
+    }
+  }
+
+  .uploader__list-item:nth-child(2) .uploader__range {
+    top: 92px;
+
+    &::after {
+      left: 246px;
+    }
+  }
+
+  .uploader__list-item:nth-child(3) .uploader__range {
+    top: 162px;
+
+    &::after {
+      left: 160px;
+    }
+  }
+
+  .uploader__button-submit,
+  .uploader__button-reset {
+    width: 183px;
+    border-radius: 30px 30px;
+  }
+
+  .uploader--button-submit {
+    margin-right: 44px;
   }
 }
