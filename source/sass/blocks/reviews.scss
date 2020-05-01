@@ -8,7 +8,7 @@
 }
 
 .reviews--margins {
-  margin-bottom: 41px;
+  margin-bottom: 44px;
 }
 
 // обертка комментария
@@ -54,15 +54,49 @@
 .reviews__button-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 60px;
 
   margin: 0 auto;
 }
 
 // кнопки слайдера
+.reviews__button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background-color: $darkblue-color;
+  opacity: 0.3;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid $darkblue-color;
+    background-color: $white-color;
+    opacity: 1;
+  }
+}
 
 // прячем нижнюю подпись
 .reviews__cite-sub {
+  display: none;
+}
+
+// прячем стрелки слайдера
+.reviews__slider {
   display: none;
 }
 
@@ -74,7 +108,7 @@
   }
 
   .reviews--margins {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 
   // обертка
@@ -136,10 +170,25 @@
 
   .reviews__wrapper {
     max-width: 690px;
+    margin-bottom: 36px;
   }
 
   .reviews__blockquote {
+    position: relative;
     max-width: 690px;
+
+    &::before {
+      position: absolute;
+      top: -114px;
+      left: 308px;
+      content: "";
+      width: 79px;
+      height: 63px;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78.672' height='63.789'%3E%3Cpath fill='%23efefef' d='M34.967 7.063L30.713 0C28.272 1.495 0 12.207 0 39.617c0 7.231.336 24.172 18.9 24.172 11.187 0 13.94-10.279 13.94-13.584 0-21.977-21.382-14.177-21.382-14.177 0-18.071 19.805-26.844 23.509-28.965zM78.672 7.063L74.418 0c-2.44 1.495-30.713 12.207-30.713 39.617 0 7.231.337 24.172 18.9 24.172 11.187 0 13.939-10.279 13.939-13.584 0-21.977-21.381-14.177-21.381-14.177.002-18.071 19.806-26.844 23.509-28.965z'/%3E%3C/svg%3E%0A");
+      background-size: 79px 63px;
+      background-repeat: no-repeat;
+    }
   }
 
   // блок заголовка
@@ -155,5 +204,48 @@
     max-width: 225px;
 
     font-size: 18px;
+  }
+
+  // прячем кнопки
+  .reviews__button-wrapper {
+    display: none;
+  }
+
+  // показываем кнопки слайдера
+  .reviews__slider {
+    display: block;
+    height: 0;
+  }
+
+  .reviews__slider-button {
+    position: relative;
+    top: -196px;
+    left: 0;
+    display: inline-block;
+
+    width: 22px;
+    height: 41px;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  .reviews__slider .reviews__slider-button:last-child {
+    left: 892px;
+  }
+
+  // картинки кнопок
+  .reviews__slider-image {
+    fill: $darkblue-color;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
