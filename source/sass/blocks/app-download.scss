@@ -21,7 +21,7 @@
   color: $white-color;
 
   background-color: $darkblue-color;
-  background-image: url("../../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto auto, cover;
   background-position-x: left, center;
@@ -97,7 +97,7 @@
     align-items: flex-start;
     margin-top: -111px;
 
-    background-image: url("../../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto auto, auto auto;
     background-position: center 184px, center 0;
@@ -185,7 +185,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    background-image: url("../../img/iphone-hand-desktop@1x.png");
+    background-image: url("../img/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 16px 0;
     background-size: 1050px auto;
@@ -237,7 +237,7 @@
 // мобильная
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .app-download__header {
-    background-image: url("../../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: 258px auto, cover;
     background-position-x: left, center;
@@ -249,7 +249,7 @@
 @media (min-width: $tablet-width) {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .app-download {
-      background-image: url("../../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
       background-repeat: no-repeat, no-repeat;
       background-size: 700px auto, cover;
       background-position: center 184px, center 0;
@@ -272,7 +272,7 @@
     }
 
     .app-download__container {
-      background-image: url("../../img/iphone-hand-desktop@2x.png");
+      background-image: url("../img/iphone-hand-desktop@2x.png");
       background-repeat: no-repeat;
       background-position: 16px 0;
       background-size: 1050px auto;
