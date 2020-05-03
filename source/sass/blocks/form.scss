@@ -821,10 +821,6 @@
   }
 
   .form--contacts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
     min-width: 940px;
     height: 177px;
     margin: 0;
@@ -833,8 +829,8 @@
 
   .form__contacts-legend {
     margin-bottom: 6px;
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .form__contacts-label {
