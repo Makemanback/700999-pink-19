@@ -223,15 +223,6 @@
   display: none;
 }
 
-.test {
-  background-color: teal;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* min-width: 660px; */
-  overflow: hidden;
-  height: 100%;
-}
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
