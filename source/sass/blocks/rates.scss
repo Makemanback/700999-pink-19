@@ -19,12 +19,14 @@
 .rates__container {
   display: flex;
 
-  max-width: 660px;
+  max-width: 320px;
   margin-top: 91px;
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: $white-color;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 // обертка тарифа
@@ -39,7 +41,7 @@
   border-right: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
 
-  transform: translateX(-90px);
+  transform: translateX(-250px);
 }
 
 // блок заголовка тарифа
@@ -85,6 +87,7 @@
   padding-right: 18px;
   padding-left: 22px;
 
+  background-color: $white-color;
   border-bottom: 2px solid #f2f2f2;
 }
 
