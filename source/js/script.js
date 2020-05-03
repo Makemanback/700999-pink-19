@@ -49,9 +49,11 @@ let submitButton = document.querySelector(".form__submit-button");
 
 
 // удаляем атрибуты required
-surname.removeAttribute("required");
-name.removeAttribute("required");
-mail.removeAttribute("required");
+if (surname != null || name != null || mail != null) {
+  surname.removeAttribute("required");
+  name.removeAttribute("required");
+  mail.removeAttribute("required");
+}
 
 // открываем окно ошибки, если не все поля заполнены, в противном случае окно подтверждения
 form.addEventListener("submit", function(evt) {
