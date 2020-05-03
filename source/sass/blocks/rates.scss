@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   max-width: 660px;
   margin-bottom: 42px;
@@ -284,8 +285,8 @@
     left: -1px;
 
     &::after {
-      left: 8.5px;
-      top: -4px;
+      left: 6.6px;
+      top: -2.5px;
 
       content: "";
       width: 61px;
