@@ -27,8 +27,10 @@
       </a>
 
       <button class="menu" type="button" aria-label="Открыть меню">
-        <svg class="menu--open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite.svg#menu"></use></svg>
-        <svg class="menu--close menu--close-js" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#menu-close"></use>
+        <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite.svg#menu"></use>
+        </svg>
+        <svg class="menu__close menu__close--js" width="24" height="24" viewBox="0 0 24 24">
+          <use xlink:href="img/sprite.svg#menu-close"></use>
         </svg>
       </button>
 
@@ -57,8 +59,8 @@
       <h1 class="visually-hidden">Pink Photo Gallery</h1>
 
       <section class="photos">
-        <h2 class="photos__header photos--header">Фотографии пользователей</h2>
-        <p class="photos__description photos--description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <h2 class="photos__header photos__header--margins">Фотографии пользователей</h2>
+        <p class="photos__description photos__description--margins">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
         <div class="photos__wrapper-panorama">
           <div class="photos__image-wrapper">
@@ -75,10 +77,10 @@
               </picture>
             </a>
           </div>
-          <div class="comment-wrapper__panorama">
-            <a class="comment-wrapper__header">Анна <span class="comment-wrapper__comment-time">(5 минут назад)</span></a>
-            <p class="comment-wrapper__comment-text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <span class="comment-wrapper__like">Нравится: 215</span>
+          <div class="photos__comment-panorama">
+            <a class="photos__comment-header">Анна <span class="photos__comment-time">(5 минут назад)</span></a>
+            <p class="photos__comment-text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <span class="photos__like">Нравится: 215</span>
           </div>
         </div>
 
@@ -201,16 +203,16 @@
 
       <section class="uploader">
         <h2 class="visually-hidden">Загрузка фотографии</h2>
-        <span class="uploader__slogan uploader--slogan">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</span>
+        <span class="uploader__slogan uploader__slogan--margins">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</span>
         <form action="post" class="uploader__form">
-          <picture class="photos__picture">
+          <picture class="uploader__picture">
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
 
             <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-            <img class="uploader__photo uploader--photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога" width="280" height="374">
+            <img class="uploader__photo uploader__photo--margins" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога" width="280" height="374">
           </picture>
           <div class="uploader__wrapper">
             <ul class="uploader__list">
@@ -242,7 +244,7 @@
                 <span class="uploader__range"></span>
               </li>
             </ul>
-            <button class="button uploader__button-submit uploader--button-submit" type="submit">Запостить</button>
+            <button class="button uploader__button-submit uploader__button-submit--margins" type="submit">Запостить</button>
             <button class="button uploader__button-reset" type="reset">Отмена</button>
         </div>
       </form>
@@ -250,7 +252,7 @@
     </main>
 
     <footer class="page-footer page-footer--margins">
-      <a class="page-footer__logo page-footer--logo" href="index.html">
+      <a class="page-footer__logo page-footer__logo--margins" href="index.html">
           <svg class="page-footer__logo-image" role="img" aria-labelledby="pink-footer-logo1 pink-footer-logo2" width="147" height="40">
             <title id="pink-footer-logo1">логотип pink</title>
             <desc id="pink-footer-logo2">ссылка на главную pink</desc>

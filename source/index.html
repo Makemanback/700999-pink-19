@@ -30,9 +30,9 @@
       </a>
 
       <button class="menu" type="button" aria-label="Открыть меню">
-        <svg class="menu--open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite.svg#menu"></use>
+        <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite.svg#menu"></use>
         </svg>
-        <svg class="menu--close menu--close-js" width="24" height="24" viewBox="0 0 24 24">
+        <svg class="menu__close menu__close--js" width="24" height="24" viewBox="0 0 24 24">
           <use xlink:href="img/sprite.svg#menu-close"></use>
         </svg>
       </button>
@@ -57,15 +57,15 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main>
 
       <h1 class="visually-hidden">Pink</h1>
 
       <section class="app-download app-download--margin">
-        <div class="app-download__container app-download--container">
-          <h2 class="app-download__header app-download--header">Взгляните на жизнь иначе!</h2>
-          <div class="app-download__wrapper app-download--wrapper">
-            <a href="https://www.apple.com/ru/ios/app-store/" class="button app-download__button app-download--button">Скачать приложение</a>
+        <div class="app-download__container app-download__container--margins">
+          <h2 class="app-download__header app-download__header--margins">Взгляните на жизнь иначе!</h2>
+          <div class="app-download__wrapper app-download__wrapper--margins">
+            <a href="https://www.apple.com/ru/ios/app-store/" class="button app-download__button app-download__button--margins">Скачать приложение</a>
             <div class="app-download__wrapper-inner app-download__wrapper-inner--margin">
               <a href="https://www.apple.com/ru/ios/app-store/" class="app-download__link">
                 <svg role="img" aria-labelledby="apple1 apple2" width="46" height="57">
@@ -89,41 +89,41 @@
                 </svg>
               </a>
             </div>
-            <p class="app-download__description app-download--description">
+            <p class="app-download__description app-download__description--margins">
               Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
             </p>
           </div>
         </div>
       </section>
 
-      <div class="preferences--slogan">
-        <b class="preferences__slogan preferences__slogan--margin">Устали от серости мегаполиса?</b>
-        <b class="preferences__slogan preferences__slogan--padding">Нам есть, что вам предложить!</b>
+      <div class="slogan">
+        <b class="slogan__text slogan__text--margin">Устали от серости мегаполиса?</b>
+        <b class="slogan__text slogan__text--padding">Нам есть, что вам предложить!</b>
       </div>
 
       <section class="preferences">
         <h2 class="visually-hidden">Преимущества</h2>
 
         <div class="preferences__wrapper">
-          <ul class="preferences__list preferences--list">
-            <li class="preferences__list-item preferences--list-item">
-              <h3 class="preferences__header preferences--header">Поднимает настроение</h3>
+          <ul class="preferences__list preferences__list--margins">
+            <li class="preferences__list-item preferences__list-item--margins">
+              <h3 class="preferences__header">Поднимает настроение</h3>
               <p class="preferences__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="preferences__list-item preferences--list-item">
-              <h3 class="preferences__header preferences--header">Меняет мир вокруг</h3>
+            <li class="preferences__list-item preferences__list-item--margins">
+              <h3 class="preferences__header">Меняет мир вокруг</h3>
               <p class="preferences__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="preferences__list-item preferences--list-item">
-              <h3 class="preferences__header preferences--header">Заводит новых друзей</h3>
+            <li class="preferences__list-item preferences__list-item--margins">
+              <h3 class="preferences__header">Заводит новых друзей</h3>
               <p class="preferences__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </div>
-        <div class="preferences__effect preferences--effect">
+        <div class="preferences__effect">
           <div class="preferences__image-wrapper">
             <div class="preferences__effect-image">
-              <svg class="preferences__effect-image--inside" width="238" height="276" viewBox="0 0 298 345.097">
+              <svg class="preferences__effect-circle" width="238" height="276" viewBox="0 0 298 345.097">
                 <use xlink:href="img/sprite.svg#timer"></use>
               </svg>
             </div>
@@ -140,10 +140,10 @@
 
       <section class="reviews reviews--margins">
         <h2 class="visually-hidden">Комментарии</h2>
-        <div class="reviews__wrapper reviews--wrapper">
-          <cite class="reviews__cite reviews--cite">Николай Петров</cite>
+        <div class="reviews__wrapper reviews__wrapper--margins">
+          <cite class="reviews__cite reviews__cite--margins">Николай Петров</cite>
           <span class="reviews__cite-sub">25 лет, водитель трамвая</span>
-          <blockquote class="reviews__blockquote reviews--blockquote">
+          <blockquote class="reviews__blockquote reviews__blockquote--margins">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </blockquote>
         </div>
@@ -173,10 +173,10 @@
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="rates__container">
 
-          <ul class="rates__item-wrapper--tablet">
-            <li class="rates__list-item--tablet">Розовый фильтр</li>
-            <li class="rates__list-item--tablet">Смайлики</li>
-            <li class="rates__list-item--tablet">Комментарии</li>
+          <ul class="rates__item-tablet">
+            <li class="rates__list-tablet">Розовый фильтр</li>
+            <li class="rates__list-tablet">Смайлики</li>
+            <li class="rates__list-tablet">Комментарии</li>
           </ul>
 
           <dl class="rates__wrapper">
@@ -247,18 +247,18 @@
 
       <section class="contacts">
         <div class="contacts__wrapper contacts__wrapper--margins">
-          <span class="contacts__header contacts--header">Остались вопросы?<br> Свяжитесь с нами!</span>
+          <span class="contacts__header contacts__header--margins">Остались вопросы?<br> Свяжитесь с нами!</span>
           <div class="contacts__container-inner">
             <div class="contacts__wrapper-inner">
-              <h3 class="contacts__phone-header contacts--phone-header">Звоните:</h3>
+              <h3 class="contacts__phone-header contacts__phone-header--margins">Звоните:</h3>
               <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
             </div>
             <div class="contacts__wrapper-inner">
-              <h3 class="contacts__mail-header contacts--mail-header">Пишите:</h3>
+              <h3 class="contacts__mail-header contacts__mail-header--margins">Пишите:</h3>
               <a href="#" class="contacts__mail-address">mail@htmlacademy.ru</a>
             </div>
             <div class="contacts__wrapper-inner">
-              <h3 class="contacts__address-header contacts--address-header">Приезжайте в гости:</h3>
+              <h3 class="contacts__address-header contacts__address-header--margins">Приезжайте в гости:</h3>
               <span class="contacts__address">ул. Большая<br> Конюшенная, 19/8</span>
             </div>
           </div>
@@ -270,7 +270,7 @@
     </main>
 
     <footer class="page-footer page-footer--margins page-footer--main">
-      <a class="page-footer__logo page-footer--logo" href="index.html">
+      <a class="page-footer__logo page-footer__logo--margins" href="index.html">
         <svg class="page-footer__logo-image" role="img" aria-labelledby="pink-footer-logo1 pink-footer-logo2" width="147" height="40">
           <title id="pink-footer-logo1">логотип pink</title>
           <desc id="pink-footer-logo2">ссылка на главную pink</desc>

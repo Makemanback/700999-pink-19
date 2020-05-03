@@ -12,28 +12,6 @@
   background-position: center 539px, 0 0;
 }
 
-// слоган преимуществ
-.preferences__slogan {
-  display: flex;
-  flex-direction: column;
-
-  max-width: 210px;
-  margin: 0 auto;
-
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-  text-align: center;
-  color: $darkblue-color;
-}
-
-.preferences--slogan {
-  margin-top: 40px;
-}
-
-.preferences__slogan--margin {
-  margin-bottom: 29px;
-}
 
 // Обертка списка преимуществ
 .preferences__wrapper {
@@ -50,7 +28,7 @@
 }
 
 // элементы списка
-.preferences--list-item {
+.preferences__list-item--margins {
   margin-bottom: 31px;
 }
 
@@ -85,36 +63,13 @@
 
 @media (min-width: $tablet-width) {
 
-  // слоган преимуществ
+  // преимущества
   .preferences {
     max-width: 660px;
     min-height: 860px;
     margin-bottom: 96px;
 
     background-image: none;
-  }
-
-  .preferences--slogan {
-    margin-top: 49px;
-    margin-bottom: 9px;
-  }
-
-  .preferences__slogan {
-    max-width: 590px;
-
-    margin: 0 auto;
-
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  .preferences__slogan--margin {
-    margin-bottom: 0;
-  }
-
-  .preferences__slogan--padding {
-    padding-right: 40px;
-    padding-left: 40px;
   }
 
   // спискок преимуществ
@@ -133,12 +88,12 @@
     max-width: 300px;
   }
 
-  .preferences--list {
+  .preferences__list--margins {
     margin-left: 330px;
     margin-right: 20px;
   }
 
-  .preferences--list-item {
+  .preferences__list-item--margins {
     margin-bottom: 34px;
   }
 
@@ -238,36 +193,11 @@
   .preferences {
     max-width: 1200px;
     min-height: 1040px;
-
-    // временно для сетки
     margin-bottom: 186px;
 
     background-color: #f2f2f2;
     background-image: linear-gradient(-4.3deg, #f2f2f2 91.6%, $white-color 91.6%);
     background-position: 0 0;
-  }
-
-  // слоган
-  .preferences__slogan {
-    max-width: 750px;
-
-    font-size: 50px;
-    line-height: 60px;
-  }
-
-  .preferences--slogan {
-    margin-top: 67px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 75px;
-
-    background-color: #ffffff;
-  }
-
-  .preferences__slogan--padding {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   // обертка преимуществ
@@ -293,7 +223,7 @@
     margin: 0;
   }
 
-  .preferences--list {
+  .preferences__list--margins {
     margin-top: 358px;
     margin-bottom: 68px;
   }
@@ -306,7 +236,7 @@
     width: 240px;
   }
 
-  .preferences--list-item {
+  .preferences__list-item--margins {
     margin-bottom: 0;
   }
 
@@ -346,7 +276,7 @@
   }
 
   // прячем планшет
-  .preferences__effect-image--inside {
+  .preferences__effect-circle {
     width: 298px;
     height: 345px;
   }

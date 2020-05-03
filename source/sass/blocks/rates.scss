@@ -228,7 +228,7 @@
 }
 
 // прячем панель для планшета
-.rates__item-wrapper--tablet {
+.rates__item-tablet {
   display: none;
 }
 
@@ -318,7 +318,7 @@
   }
 
   // показываем панель для планшета
-  .rates__item-wrapper--tablet {
+  .rates__item-tablet {
     @include list-reset;
 
     display: flex;
@@ -331,7 +331,7 @@
     background-color: #f2f2f2;
   }
 
-  .rates__list-item--tablet {
+  .rates__list-tablet {
     display: flex;
     align-items: center;
 
@@ -430,7 +430,7 @@
     height: 60px;
   }
 
-  .rates__list-item--tablet {
+  .rates__list-tablet {
     height: 60px;
     padding-left: 21px;
 

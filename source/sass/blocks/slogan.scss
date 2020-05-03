@@ -1,0 +1,65 @@
+.slogan {
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 49px;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 67px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 75px;
+
+    background-color: #ffffff;
+  }
+}
+
+.slogan__text {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 210px;
+  margin: 0 auto;
+
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  color: $darkblue-color;
+
+  &--margin {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 590px;
+    margin: 0 auto;
+
+    font-size: 40px;
+    line-height: 48px;
+
+    &--margin {
+      margin-bottom: 0;
+    }
+
+    &--padding {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 750px;
+
+    font-size: 50px;
+    line-height: 60px;
+
+    &--padding {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

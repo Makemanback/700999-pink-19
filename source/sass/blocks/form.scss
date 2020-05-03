@@ -49,7 +49,7 @@
   color: $pink-color;
 }
 
-.form__names--label {
+.form__names-label--margins {
   margin-bottom: 17px;
 }
 
@@ -286,7 +286,7 @@
 }
 
 // подтягиваем футер на странице формы
-.form--submit {
+.form__submit--margins {
   margin-bottom: -26px;
 }
 
@@ -296,7 +296,7 @@
 }
 
 // прячем сноску
-.form__required--desktop {
+.form__required-desktop {
   display: none;
 }
 
@@ -523,7 +523,7 @@
     background-color: $white-color;
   }
 
-  .form--achievement {
+  .form__achievement--margins {
     margin-bottom: 58px;
   }
 
@@ -534,23 +534,23 @@
     order: 5;
   }
 
-  .form--submit {
+  .form__submit--margins {
     order: 6;
   }
 
-  .form--required {
+  .form__required--margins {
     margin-bottom: 0;
     order: 7;
   }
 
   // обертка формы имен
-  .form--names {
+  .form__names--margins {
     padding: 0;
     margin-bottom: 6px;
   }
 
   // обертки форм имен
-  .form__names--label {
+  .form__names-label--margins {
     display: flex;
     margin-bottom: 52px;
   }
@@ -656,7 +656,7 @@
   }
 
   // текстареа
-  .form--textarea {
+  .form__textarea--margins {
     margin-bottom: 67px;
   }
 
@@ -692,7 +692,7 @@
   }
 
   // радио
-  .form--radio {
+  .form__radio--margins {
     margin-bottom: 51px;
   }
 
@@ -808,7 +808,7 @@
     margin: 0;
   }
 
-  .form--names {
+  .form__names--margins {
     margin-top: 14px;
   }
 
@@ -822,7 +822,7 @@
     margin: 0 auto;
   }
 
-  .form--contacts {
+  .form__contacts--margins {
     min-width: 940px;
     height: 177px;
     margin: 0;
@@ -872,7 +872,7 @@
     margin: 0 auto;
   }
 
-  .form--achievement {
+  .form__achievement--margins {
     margin-bottom: 57px;
   }
 
@@ -890,7 +890,7 @@
     height: 225px;
   }
 
-  .form--textarea {
+  .form__textarea--margins {
     min-width: 940px;
 
     margin: 0;
@@ -924,7 +924,7 @@
   }
 
   // текст для дестопа
-  .form__required--desktop {
+  .form__required-desktop {
     display: block;
 
     font-size: 14px;
@@ -935,7 +935,7 @@
     color: $darkblue-color;
   }
 
-  .form__required--desktop::before {
+  .form__required-desktop::before {
     content: "*";
     color: $pink-color;
   }
