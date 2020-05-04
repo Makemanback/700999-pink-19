@@ -817,35 +817,38 @@
   .form__contacts-container {
     display: flex;
     justify-content: space-between;
-    width: 820px;
-    height: 177px;
+    flex-wrap: wrap;
 
+    width: 820px;
     margin: 0 auto;
   }
 
   .form__contacts--margins {
     min-width: 940px;
-    height: 177px;
     margin: 0;
     margin-bottom: 57px;
   }
 
   .form__contacts-legend {
-    margin-bottom: 6px;
+    margin-bottom: 28px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .form__contacts-label {
+    margin-bottom: 9px;
+
     &::after {
-      top: 25px;
+      top: 2px;
       width: 58px;
     }
   }
 
   .form__contacts-label:last-of-type {
+    margin-bottom: 9px;
+
     &::after {
-      top: 26px;
+      top: 2px;
       width: 60px;
     }
   }
@@ -858,18 +861,26 @@
   .form__radio {
     width: 435px;
     max-width: 435px;
-    height: 309px;
+    min-height: 309px;
     margin: 0;
+  }
+
+  .form__radio--margins {
+    margin-bottom: 51px;
   }
 
   .form__radio-legend {
     margin-bottom: 51px;
   }
 
+  .form__radio-label:last-of-type {
+    margin-bottom: 55px;
+  }
+
   // достижения
   .form__achievement {
     min-width: 940px;
-    height: 240px;
+
     margin: 0 auto;
   }
 
@@ -878,12 +889,13 @@
   }
 
   .form__achievement-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
 
-    width: 700px;
-    height: 200px;
     margin: 0 auto;
+    margin-left: 118px;
+    margin-bottom: 8px;
   }
 
   // текстареа
@@ -950,12 +962,38 @@
     padding: 0;
     margin: 0;
     margin-bottom: 52px;
-    margin-right: 115px;
+    margin-right: 64px;
+  }
+
+  // ордера
+
+  .form__achievement-label:first-of-type {
+    order: -6;
+  }
+
+  .form__achievement-label:nth-of-type(2) {
+    order: -3;
+    margin-right: 51px;
+  }
+
+  .form__achievement-label:nth-of-type(3) {
+    order: -5;
+    margin-right: 63px;
+  }
+
+  .form__achievement-label:nth-of-type(4) {
+    order: -2;
+    margin-right: 20px;
+  }
+
+  .form__achievement-label:nth-of-type(5) {
+    order: -4;
   }
 
   .form__achievement-label:last-of-type {
-    margin: 0;
-    padding: 0;
+    order: -1;
+    margin-right: 59px;
+    margin-bottom: 52px;
   }
 
   // попап ошибки
