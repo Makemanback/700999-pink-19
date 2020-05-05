@@ -8,6 +8,58 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
+var svgstore = require("gulp-svgstore");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var svgmin = require("gulp-svgmin");
+var csso = require("gulp-csso");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+var del = require("del");
+
+
+
+// вставляем спрайт в разметку команда выполняется во время билда, до нее в разметке нет иконок
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+  .pipe(posthtml([
+    include()
+  ]))
+  .pipe(gulp.dest("build"));
+});
+
+// оптимизация свг за исключением спрайта
+gulp.task("svgmin", function() {
+  return gulp.src("source/img/*.svg, !source/img/sprite-min.svg")
+    .pipe(svgmin({
+      plugins: [{
+        moveGroupAttrsToElems: false
+      }
+    ]
+    }))
+    .pipe(gulp.dest("source/img"));
+});
+
+// оптимизация png, jpg
+gulp.task("images", function () {
+  return gulp.src("source/img/*.{png,jpg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({progressive: true})
+    ]))
+    .pipe(gulp.dest("build/img"));
+});
+
+// сборка спрайта
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite-min.svg"))
+    .pipe(gulp.dest("source/img"));
+});
+
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -16,9 +68,29 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+// очищаем папку build перед копированием
+gulp.task("clean", function () {
+  return del("build");
+});
+
+// копируем файлы в папку build
+gulp.task("copy", function() {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("server", function () {
@@ -35,3 +107,12 @@ gulp.task("server", function () {
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+// запуск build
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "images",
+  "css",
+  "html"
+));

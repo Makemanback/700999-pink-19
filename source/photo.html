@@ -6,7 +6,7 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.js" async></script>
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
@@ -17,20 +17,25 @@
     <title>Pink Photo Gallery</title>
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite-min.svg"></include>
+    </div>
+
     <header class="page-header page-header--paddings">
       <a class="page-header__logo" href="index.html">
         <svg class="page-header__logo-image" role="img" aria-labelledby="pink-logo1 pink-logo2" width="75" height="25">
           <title id="pink-logo1">логотип pink</title>
           <desc id="pink-logo2">ссылка на главную pink</desc>
-          <use xlink:href="img/sprite.svg#pink-logo"></use>
+          <use xlink:href="#icon-logo-header-pink"></use>
         </svg>
       </a>
 
       <button class="menu" type="button" aria-label="Открыть меню">
-        <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite.svg#menu"></use>
+        <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="#icon-menu-burger"></use>
         </svg>
         <svg class="menu__close menu__close--js" width="24" height="24" viewBox="0 0 24 24">
-          <use xlink:href="img/sprite.svg#menu-close"></use>
+          <use xlink:href="#icon-menu-cross"></use>
         </svg>
       </button>
 
@@ -256,7 +261,7 @@
           <svg class="page-footer__logo-image" role="img" aria-labelledby="pink-footer-logo1 pink-footer-logo2" width="147" height="40">
             <title id="pink-footer-logo1">логотип pink</title>
             <desc id="pink-footer-logo2">ссылка на главную pink</desc>
-            <use xlink:href="img/sprite.svg#pink-logo-footer"></use>
+            <use xlink:href="#icon-logo-pink-footer"></use>
           </svg>
       </a>
 
@@ -265,21 +270,21 @@
           <svg class="footer-socials__link-twitter" role="img" aria-labelledby="twitter1 twitter2" width="18" height="15">
             <title id="twitter1">логотип twitter</title>
             <desc id="twitter2">ссылка на twitter</desc>
-            <use xlink:href="img/sprite.svg#twitter"></use>
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
         <a class="footer-socials__link" href="#">
           <svg class="footer-socials__link-facebook" role="img" aria-labelledby="facebook1 facebook2" width="9" height="19">
             <title id="facebook1">логотип facebook</title>
             <desc id="facebook2">ссылка на facebook</desc>
-            <use xlink:href="img/sprite.svg#facebook"></use>
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
         <a class="footer-socials__link" href="#">
           <svg class="footer-socials__link-youtube" role="img" aria-labelledby="youtube1 youtube2" width="15" height="14">
             <title id="youtube1">логотип youtube</title>
             <desc id="youtube2">ссылка на youtube</desc>
-            <use xlink:href="img/sprite.svg#youtube"></use>
+            <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
       </div>
@@ -289,7 +294,7 @@
           <svg class="footer-copyright__link-image" role="img" aria-labelledby="academy1 academy2" width="27" height="35">
             <title id="academy1">логотип академии</title>
             <desc id="academy2">ссылка на сайт академии</desc>
-            <use xlink:href="img/sprite.svg#academy"></use>
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
