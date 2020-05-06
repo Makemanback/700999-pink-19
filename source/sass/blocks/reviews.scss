@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.reviews--cite {
+.reviews__cite--margins {
   margin-bottom: 14px;
 }
 
@@ -46,7 +46,7 @@
   color: $darkblue-color;
 }
 
-.reviews--blockquote {
+.reviews__blockquote--margins {
   margin-bottom: 30px;
 }
 
@@ -116,7 +116,7 @@
     max-width: 620px;
   }
 
-  .reviews--wrapper {
+  .reviews__wrapper--margins {
     margin-bottom: 33px;
   }
 
@@ -128,7 +128,7 @@
     order: 1;
   }
 
-  .reviews--blockquote {
+  .reviews__blockquote--margins {
     margin-bottom: 35px;
   }
 
@@ -138,7 +138,7 @@
     order: 2;
   }
 
-  .reviews--cite {
+  .reviews__cite--margins {
     margin-bottom: 2px;
   }
 
@@ -169,7 +169,7 @@
   }
 
   .reviews__wrapper {
-    max-width: 690px;
+    max-width: 940px;
     margin-bottom: 36px;
   }
 
@@ -196,7 +196,7 @@
     font-size: 24px;
   }
 
-  .reviews--cite {
+  .reviews__cite--margins {
     margin-bottom: 2px;
   }
 

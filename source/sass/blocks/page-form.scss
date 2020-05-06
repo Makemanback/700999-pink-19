@@ -20,7 +20,7 @@
   background-position-x: center;
 }
 
-.page-form--header {
+.page-form__header--margins {
   margin: 0;
   margin-top: -71px;
   padding-top: 95px;
@@ -44,7 +44,7 @@
   color: $darkblue-color;
 }
 
-.page-form--slogan {
+.page-form__slogan--margins {
   margin-top: 45px;
   margin-bottom: 34px;
 }
@@ -55,7 +55,7 @@
 }
 
 // прячем слогана для десктопа
-.page-form__slogan--desktop {
+.page-form__slogan-desktop {
   display: none;
 }
 
@@ -63,7 +63,7 @@
 
 @media (min-width: $tablet-width) {
   // заголовок главный
-  .page-form--header {
+  .page-form__header--margins {
     margin-top: -115px;
     padding-top: 180px;
     padding-bottom: 80px;
@@ -85,7 +85,7 @@
     font-size: 18px;
   }
 
-  .page-form--slogan {
+  .page-form__slogan--margins {
     margin-bottom: 0;
     margin-top: 92px;
   }
@@ -103,7 +103,7 @@
     color: $darkblue-color;
   }
 
-  .page-form__slogan--tablet {
+  .page-form__slogan-tablet--margins {
     margin-bottom: 71px;
   }
 }
@@ -123,7 +123,7 @@
     background-position-x: center;
   }
 
-  .page-form--header {
+  .page-form__header--margins {
     display: flex;
     justify-content: center;
 
@@ -135,11 +135,11 @@
 
   // слоган
   .page-form__slogan,
-  .page-form__slogan--tablet {
+  .page-form__slogan-tablet--margins {
     display: none;
   }
 
-  .page-form__slogan--desktop {
+  .page-form__slogan-desktop {
     display: block;
     width: 760px;
     margin: 0 auto;

@@ -103,13 +103,8 @@
     border: none;
   }
 
-  .main-nav__item--active::after {
-    content: "";
-    position: absolute;
-    top: 54px;
-    width: 107px;
-    height: 2px;
-    background-color: $white-color;
+  .main-nav__item--active a {
+    box-shadow: 7px 24px 0 -8px $white-color, -6px 24px 0 -8px $white-color;
   }
 
   .main-nav__item a {

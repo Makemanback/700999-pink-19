@@ -23,9 +23,15 @@
   }
 
   &:active {
-    border-color: #e9ebec;
-    color: #f1becc;
+    border-color: $darkblue-color;
+    opacity: 0.1;
   }
+}
+
+.footer-socials__link-twitter,
+.footer-socials__link-facebook,
+.footer-socials__link-youtube {
+  fill: $pink-color;
 }
 
 // позиционирование свг иконок

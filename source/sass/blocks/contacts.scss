@@ -25,7 +25,7 @@
   color: $darkblue-color;
 }
 
-.contacts--header {
+.contacts__header--margins {
   margin-bottom: 37px;
 }
 
@@ -49,9 +49,9 @@
   color: $darkblue-color;
 }
 
-.contacts--phone-header,
-.contacts--mail-header,
-.contacts--address-header {
+.contacts__phone-header--margins,
+.contacts__mail-header--margins,
+.contacts__address-header--margins {
   margin: 0;
   margin-bottom: 4px;
 }
@@ -83,6 +83,7 @@
 @media (min-width: $tablet-width) {
   .contacts {
     max-width: 660px;
+    overflow: hidden;
   }
 
   .contacts--margins {
@@ -107,7 +108,7 @@
     line-height: 50px;
   }
 
-  .contacts--header {
+  .contacts__header--margins {
     margin-bottom: 43px;
   }
 
@@ -120,9 +121,9 @@
   }
 
   // контакты
-  .contacts--phone-header,
-  .contacts--mail-header,
-  .contacts--address-header {
+  .contacts__phone-header--margins,
+  .contacts__mail-header--margins,
+  .contacts__address-header--margins {
     margin: 0;
     margin-bottom: 8px;
   }
@@ -146,7 +147,7 @@
     line-height: 60px;
   }
 
-  .contacts--header {
+  .contacts__header--margins {
     margin-bottom: 59px;
   }
 
@@ -156,9 +157,9 @@
     justify-content: flex-start;
   }
 
-  .contacts--phone-header,
-  .contacts--mail-header,
-  .contacts--address-header {
+  .contacts__phone-header--margins,
+  .contacts__mail-header--margins,
+  .contacts__address-header--margins {
     margin-bottom: 26px;
   }
 

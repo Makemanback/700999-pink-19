@@ -5,9 +5,9 @@ let menu = document.querySelector(".main-nav");
 // шапка
 let header = document.querySelector(".page-header")
 // иконка открытия
-let open = document.querySelector(".menu--open");
+let open = document.querySelector(".menu__open");
 // иконка закрытия
-let close = document.querySelector(".menu--close");
+let close = document.querySelector(".menu__close");
 
 // прячем меню
 menu.classList.add("main-nav__visually-hidden");
@@ -18,8 +18,8 @@ button.addEventListener("click", function(evt) {
 evt.preventDefault();
 menu.classList.toggle("main-nav__visually-hidden");
 header.classList.toggle("page-header--background-js");
-open.classList.toggle("menu--open-js");
-close.classList.toggle("menu--close-js");
+open.classList.toggle("menu__open--js");
+close.classList.toggle("menu__close--js");
 });
 
 
@@ -49,9 +49,11 @@ let submitButton = document.querySelector(".form__submit-button");
 
 
 // удаляем атрибуты required
-surname.removeAttribute("required");
-name.removeAttribute("required");
-mail.removeAttribute("required");
+if (surname != null || name != null || mail != null) {
+  surname.removeAttribute("required");
+  name.removeAttribute("required");
+  mail.removeAttribute("required");
+}
 
 // открываем окно ошибки, если не все поля заполнены, в противном случае окно подтверждения
 form.addEventListener("submit", function(evt) {

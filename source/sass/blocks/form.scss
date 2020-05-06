@@ -49,7 +49,7 @@
   color: $pink-color;
 }
 
-.form__names--label {
+.form__names-label--margins {
   margin-bottom: 17px;
 }
 
@@ -233,6 +233,8 @@
 .form__textarea-description {
   padding-top: 38px;
   margin-bottom: 16px;
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: $white-color;
 }
@@ -284,7 +286,7 @@
 }
 
 // подтягиваем футер на странице формы
-.form--submit {
+.form__submit--margins {
   margin-bottom: -26px;
 }
 
@@ -294,7 +296,7 @@
 }
 
 // прячем сноску
-.form__required--desktop {
+.form__required-desktop {
   display: none;
 }
 
@@ -312,9 +314,10 @@
   overflow: hidden;
 
   &:checked + .form__check-box {
-    background-image: url('data:image/svg+xml,%3Csvg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve"%3E%3Cpath fill="%23d4345f" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/%3E%3C/svg%3E%0A');
+    background-image: url("../img/icon-check.svg");
     background-repeat: no-repeat;
-    background-position: 7px 9px;
+    background-position: 5px 10px;
+    background-size: 24px;
   }
 
   &:hover + .form__check-box {
@@ -495,6 +498,7 @@
   }
 
   .form__radio {
+    display: block;
     width: 620px;
 
     order: 2;
@@ -503,6 +507,7 @@
   }
 
   .form__contacts {
+    display: block;
     width: 620px;
     margin-bottom: 57px;
 
@@ -511,6 +516,7 @@
   }
 
   .form__achievement {
+    display: block;
     min-width: 620px;
 
     order: 4;
@@ -518,7 +524,7 @@
     background-color: $white-color;
   }
 
-  .form--achievement {
+  .form__achievement--margins {
     margin-bottom: 58px;
   }
 
@@ -529,23 +535,23 @@
     order: 5;
   }
 
-  .form--submit {
+  .form__submit--margins {
     order: 6;
   }
 
-  .form--required {
+  .form__required--margins {
     margin-bottom: 0;
     order: 7;
   }
 
   // обертка формы имен
-  .form--names {
+  .form__names--margins {
     padding: 0;
     margin-bottom: 6px;
   }
 
   // обертки форм имен
-  .form__names--label {
+  .form__names-label--margins {
     display: flex;
     margin-bottom: 52px;
   }
@@ -615,9 +621,12 @@
 
   .form__contacts-legend {
     display: block;
+
     padding-right: 30px;
     padding-left: 30px;
     margin-bottom: 31px;
+    margin-right: auto;
+    margin-left: auto;
 
     font-size: 14px;
     line-height: 30px;
@@ -633,6 +642,8 @@
     padding-right: 30px;
     padding-left: 30px;
     margin-bottom: 48px;
+    margin-right: auto;
+    margin-left: auto;
 
     background-color: $white-color;
   }
@@ -646,7 +657,7 @@
   }
 
   // текстареа
-  .form--textarea {
+  .form__textarea--margins {
     margin-bottom: 67px;
   }
 
@@ -682,7 +693,7 @@
   }
 
   // радио
-  .form--radio {
+  .form__radio--margins {
     margin-bottom: 51px;
   }
 
@@ -691,6 +702,8 @@
     padding-right: 25px;
     padding-left: 25px;
     margin-bottom: 48px;
+    margin-right: auto;
+    margin-left: auto;
 
     background-color: $white-color;
   }
@@ -724,6 +737,10 @@
   .form__achievement-label,
   .form__radio-label {
     padding-left: 117px;
+  }
+
+  .form__radio-label {
+    display: block;
   }
 
   .form__check-box,
@@ -792,7 +809,7 @@
     margin: 0;
   }
 
-  .form--names {
+  .form__names--margins {
     margin-top: 14px;
   }
 
@@ -800,37 +817,38 @@
   .form__contacts-container {
     display: flex;
     justify-content: space-between;
-    width: 820px;
-    height: 177px;
+    flex-wrap: wrap;
 
+    width: 820px;
     margin: 0 auto;
   }
 
-  .form--contacts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
+  .form__contacts--margins {
     min-width: 940px;
-    height: 177px;
     margin: 0;
     margin-bottom: 57px;
   }
 
   .form__contacts-legend {
-    margin-bottom: 6px;
+    margin-bottom: 28px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .form__contacts-label {
+    margin-bottom: 9px;
+
     &::after {
-      top: 25px;
+      top: 2px;
       width: 58px;
     }
   }
 
   .form__contacts-label:last-of-type {
+    margin-bottom: 9px;
+
     &::after {
-      top: 26px;
+      top: 2px;
       width: 60px;
     }
   }
@@ -843,32 +861,41 @@
   .form__radio {
     width: 435px;
     max-width: 435px;
-    height: 309px;
+    min-height: 309px;
     margin: 0;
+  }
+
+  .form__radio--margins {
+    margin-bottom: 51px;
   }
 
   .form__radio-legend {
     margin-bottom: 51px;
   }
 
+  .form__radio-label:last-of-type {
+    margin-bottom: 55px;
+  }
+
   // достижения
   .form__achievement {
     min-width: 940px;
-    height: 240px;
+
     margin: 0 auto;
   }
 
-  .form--achievement {
+  .form__achievement--margins {
     margin-bottom: 57px;
   }
 
   .form__achievement-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
 
-    width: 700px;
-    height: 200px;
     margin: 0 auto;
+    margin-left: 118px;
+    margin-bottom: 8px;
   }
 
   // текстареа
@@ -876,7 +903,7 @@
     height: 225px;
   }
 
-  .form--textarea {
+  .form__textarea--margins {
     min-width: 940px;
 
     margin: 0;
@@ -910,7 +937,7 @@
   }
 
   // текст для дестопа
-  .form__required--desktop {
+  .form__required-desktop {
     display: block;
 
     font-size: 14px;
@@ -921,7 +948,7 @@
     color: $darkblue-color;
   }
 
-  .form__required--desktop::before {
+  .form__required-desktop::before {
     content: "*";
     color: $pink-color;
   }
@@ -935,12 +962,38 @@
     padding: 0;
     margin: 0;
     margin-bottom: 52px;
-    margin-right: 115px;
+    margin-right: 64px;
+  }
+
+  // ордера
+
+  .form__achievement-label:first-of-type {
+    order: -6;
+  }
+
+  .form__achievement-label:nth-of-type(2) {
+    order: -3;
+    margin-right: 51px;
+  }
+
+  .form__achievement-label:nth-of-type(3) {
+    order: -5;
+    margin-right: 63px;
+  }
+
+  .form__achievement-label:nth-of-type(4) {
+    order: -2;
+    margin-right: 20px;
+  }
+
+  .form__achievement-label:nth-of-type(5) {
+    order: -4;
   }
 
   .form__achievement-label:last-of-type {
-    margin: 0;
-    padding: 0;
+    order: -1;
+    margin-right: 59px;
+    margin-bottom: 52px;
   }
 
   // попап ошибки

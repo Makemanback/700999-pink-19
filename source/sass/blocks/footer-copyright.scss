@@ -21,14 +21,17 @@
 }
 
 .footer-copyright__link-image {
-  color: $pink-color;
+  width: 27px;
+  height: 34px;
+
+  fill: $pink-color;
 
   &:hover {
-    color: $darkblue-color;
+    fill: $darkblue-color;
   }
 
   &:active {
-    color: $darkblue-color;
+    fill: $darkblue-color;
     opacity: 0.3;
   }
 }

@@ -2,6 +2,8 @@
 .rates {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   max-width: 660px;
   margin-bottom: 42px;
@@ -10,18 +12,22 @@
 
   background-color: #f2f2f2;
   background-image: linear-gradient(-4deg, #f2f2f2 95%, $white-color 95%);
+
+  overflow: hidden;
 }
 
 // обертка всех тарифов
 .rates__container {
   display: flex;
-  justify-content: center;
 
-  max-width: 660px;
+  max-width: 320px;
   margin-top: 91px;
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: $white-color;
-  overflow: hidden;
+
+  overflow: visible;
 }
 
 // обертка тарифа
@@ -35,6 +41,8 @@
 
   border-right: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
+
+  transform: translateX(-250px);
 }
 
 // блок заголовка тарифа
@@ -80,6 +88,7 @@
   padding-right: 18px;
   padding-left: 22px;
 
+  background-color: $white-color;
   border-bottom: 2px solid #f2f2f2;
 }
 
@@ -219,7 +228,7 @@
 }
 
 // прячем панель для планшета
-.rates__item-wrapper--tablet {
+.rates__item-tablet {
   display: none;
 }
 
@@ -231,6 +240,7 @@
     max-width: 660px;
     margin: 0 auto;
     margin-bottom: 45px;
+    padding-left: 20px;
 
     background-image: linear-gradient(-4.3deg, #f2f2f2 88.4%, #ffffff 86%);
   }
@@ -240,12 +250,13 @@
     margin-top: 87px;
     margin-bottom: 68px;
     margin-right: auto;
-    margin-left: auto;
   }
 
   .rates__wrapper {
     min-width: 154px;
     max-width: 154px;
+
+    transform: none;
   }
 
   .rates__wrapper:last-of-type .rates__item-wrapper {
@@ -274,8 +285,8 @@
     left: -1px;
 
     &::after {
-      left: 8.5px;
-      top: -4px;
+      left: 6.6px;
+      top: -2.5px;
 
       content: "";
       width: 61px;
@@ -307,7 +318,7 @@
   }
 
   // показываем панель для планшета
-  .rates__item-wrapper--tablet {
+  .rates__item-tablet {
     @include list-reset;
 
     display: flex;
@@ -320,7 +331,7 @@
     background-color: #f2f2f2;
   }
 
-  .rates__list-item--tablet {
+  .rates__list-tablet {
     display: flex;
     align-items: center;
 
@@ -357,6 +368,7 @@
   .rates {
     max-width: 1200px;
     margin-bottom: 64px;
+    padding-left: 126px;
 
     background-color: #f2f2f2;
     background-image: linear-gradient(-3.9deg, #f2f2f2 85.6%, $white-color 85.6%);
@@ -418,7 +430,7 @@
     height: 60px;
   }
 
-  .rates__list-item--tablet {
+  .rates__list-tablet {
     height: 60px;
     padding-left: 21px;
 
