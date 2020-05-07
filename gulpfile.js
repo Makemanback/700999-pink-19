@@ -71,8 +71,8 @@ gulp.task("svgmin", function() {
 gulp.task("images", function () {
   return gulp.src("source/img/*.{png,jpg}")
     .pipe(imagemin([
-      // imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true})
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({quality: 75, progressive: true})
     ]))
     .pipe(gulp.dest("build/img"));
 });
@@ -114,7 +114,8 @@ gulp.task("copy", function() {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/*.html"
   ], {
     base: "source"
   })
@@ -126,10 +127,9 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  // "compress-js",
-  // "images",
-  // "svgmin",
-  "html",
+  "compress-js",
+  "images",
+  "svgmin",
   "HM",
 ));
 
