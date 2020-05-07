@@ -16,8 +16,35 @@ var csso = require("gulp-csso");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var rigger = require("gulp-rigger");
+var uglify = require("gulp-uglify-es").default;
+var pipeline = require("readable-stream").pipeline;
+var htmlnano = require("gulp-htmlnano");
 
+// минификация js
+gulp.task("compress-js", function () {
+  return pipeline(
+        gulp.src("source/js/*.js"),
+        uglify(),
+        gulp.dest("build/js")
+  );
+});
 
+// склеиванием js в один файл
+gulp.task("js-concat", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(rigger())
+    .pipe(gulp.dest("source"));
+});
+
+// минификация html
+gulp.task("HM", function() {
+  return gulp.src("source/index.html")
+      .pipe(htmlnano({
+        collapseWhitespace: 'conservative'}))
+      .pipe(gulp.dest("build"));
+});
 
 // вставляем спрайт в разметку команда выполняется во время билда, до нее в разметке нет иконок
 gulp.task("html", function () {
@@ -44,7 +71,7 @@ gulp.task("svgmin", function() {
 gulp.task("images", function () {
   return gulp.src("source/img/*.{png,jpg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      // imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true})
     ]))
     .pipe(gulp.dest("build/img"));
@@ -60,6 +87,7 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+// sass в css
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -97,9 +125,12 @@ gulp.task("copy", function() {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "images",
   "css",
-  "html"
+  // "compress-js",
+  // "images",
+  // "svgmin",
+  "html",
+  "HM",
 ));
 
 gulp.task("server", function () {
