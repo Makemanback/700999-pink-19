@@ -18,6 +18,8 @@
 
 // обертка всех тарифов
 .rates__container {
+  position: relative;
+
   display: flex;
 
   max-width: 320px;
@@ -30,8 +32,56 @@
   overflow: visible;
 }
 
+// хит
+.rates__container::before {
+  position: absolute;
+  top: 17px;
+  left: 42px;
+
+  width: 20px;
+  height: 20px;
+  content: "хит";
+
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $white-color;
+
+  transform: rotate(-45deg);
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    left: 317px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 480px;
+  }
+}
+
+.rates__container::after {
+  position: absolute;
+  top: 0;
+  left: 29px;
+
+  content: url("../img/bg-hit.svg");
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    left: 313px;
+    content: url("../img/bg-hit-tablet.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 475px;
+  }
+}
+
 // обертка тарифа
 .rates__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -39,8 +89,8 @@
   max-width: 278px;
   margin: 0;
 
-  border-right: 1px solid #f2f2f2;
-  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
 
   transform: translateX(-250px);
 }
@@ -89,7 +139,7 @@
   padding-left: 22px;
 
   background-color: $white-color;
-  border-bottom: 2px solid #f2f2f2;
+  border-bottom: 2px solid #e5e5e5;
 }
 
 // список фишек
@@ -144,43 +194,6 @@
 
     background-color: $white-color;
     z-index: 2;
-  }
-}
-
-// плашка с хитом
-.rates__hit {
-  position: absolute;
-  top: 10px;
-  left: 3px;
-
-  display: block;
-  width: 74px;
-  height: 73px;
-
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: $white-color;
-  transform: rotate(-45deg);
-
-  z-index: 2;
-
-  &::after {
-    position: absolute;
-    left: 3px;
-    top: -10px;
-
-    content: "";
-    width: 74px;
-    height: 73px;
-
-    background-image: url("../img/bg-hit.svg");
-    background-repeat: no-repeat;
-
-    transform: rotate(45deg);
-    z-index: -1;
   }
 }
 
@@ -260,12 +273,13 @@
   }
 
   .rates__wrapper:last-of-type .rates__item-wrapper {
-    border-right: 3px solid #f2f2f2;
+    border-right: 3px solid #e5e5e5;
   }
 
   // хедер тарифа
   .rates__header {
     height: 79px;
+    border-right: none;
   }
 
   .rates__wrapper:first-of-type .rates__header {
@@ -280,22 +294,6 @@
     font-size: 18px;
   }
 
-  .rates__hit {
-    top: 0;
-    left: -1px;
-
-    &::after {
-      left: 6.6px;
-      top: -2.5px;
-
-      content: "";
-      width: 61px;
-      height: 61px;
-
-      background-image: url("../img/bg-hit-tablet.svg");
-    }
-  }
-
   // обертка
   .rates__item-wrapper {
     position: relative;
@@ -306,6 +304,8 @@
     min-width: 154px;
     max-width: 154px;
     height: 47px;
+
+    border-right: 3px solid #e5e5e5;
   }
 
   .rates__item-wrapper .rates__list-item:first-child {
@@ -347,8 +347,8 @@
     text-transform: none;
     color: $darkblue-color;
 
-    border: 1px solid #f2f2f2;
-    border-left: 2px solid #f2f2f2;
+    border: 1px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
     background-color: #ffffff;
   }
 
@@ -404,23 +404,6 @@
   .rates__price {
     font-size: 24px;
     line-height: 30px;
-  }
-
-  .rates__hit {
-    top: 9px;
-    left: 1px;
-
-    &::after {
-      position: absolute;
-      left: 8.5px;
-      top: -10px;
-
-      content: "";
-      width: 74px;
-      height: 73px;
-
-      background-image: url("../img/bg-hit.svg");
-    }
   }
 
   // элементы списка

@@ -20,7 +20,6 @@ var htmlmin = require("gulp-htmlmin");
 var rigger = require("gulp-rigger");
 var uglify = require("gulp-uglify-es").default;
 var pipeline = require("readable-stream").pipeline;
-var htmlnano = require("gulp-htmlnano");
 
 // минификация js
 gulp.task("compress-js", function () {
@@ -41,8 +40,8 @@ gulp.task("js-concat", function () {
 // минификация html
 gulp.task("HM", function() {
   return gulp.src("source/index.html")
-      .pipe(htmlnano({
-        collapseWhitespace: 'conservative'}))
+      .pipe(htmlmin({
+        collapseWhitespace: true}))
       .pipe(gulp.dest("build"));
 });
 
@@ -127,9 +126,9 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "compress-js",
-  "images",
-  "svgmin",
+  // "compress-js",
+  // "images",
+  // "svgmin",
   "HM",
 ));
 
