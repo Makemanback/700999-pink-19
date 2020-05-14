@@ -38,7 +38,7 @@
 
   @media (min-width: $desktop-width) {
     box-shadow: none;
-    background-image: linear-gradient(-4.3deg, #f2f2f2 91%, $white-color 91%);
+    background-image: linear-gradient(-4.3deg, #f2f2f2 86.8%, $white-color 86.8%);
 
     &--rates {
       background-image: linear-gradient(-4.3deg, #f2f2f2 86.5%, $white-color 86.5%);
@@ -47,6 +47,15 @@
     &--contacts {
       background-image: none;
       background-color: $white-color;
+    }
+  }
+}
+
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-width: $desktop-width) {
+    .container--preferences {
+      background-image: linear-gradient(-4.3deg,#f2f2f2 86.5%,#fff 86.5%);
     }
   }
 }
