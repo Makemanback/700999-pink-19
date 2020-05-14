@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  padding-top: 67px;
+
+  background-color: #f2f2f2;
+  background-image: linear-gradient(-5.4deg, #f2f2f2 93.1%, $white-color 93.1%);
+  background-position: 0 0;
+
+  &--rates {
+    padding-top: 0;
+
+    background-color: $white-color;
+  }
+
+  &--contacts {
+    background-image: none;
+    background-color: $white-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+
+    background-image: linear-gradient(-4.3deg, #f2f2f2 89.4%, $white-color 89.4%);
+    box-shadow: inset 0 -337px 0 0 $white-color;
+
+    &--rates {
+      padding-top: 1px;
+
+      box-shadow: none;
+      background-image: linear-gradient(-4.3deg, #f2f2f2 88.4%, $white-color 88.4%);
+    }
+
+    &--contacts {
+      background-image: none;
+      background-color: $white-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    box-shadow: none;
+    background-image: linear-gradient(-4.3deg, #f2f2f2 91%, $white-color 91%);
+
+    &--rates {
+      background-image: linear-gradient(-4.3deg, #f2f2f2 86.5%, $white-color 86.5%);
+    }
+
+    &--contacts {
+      background-image: none;
+      background-color: $white-color;
+    }
+  }
+}

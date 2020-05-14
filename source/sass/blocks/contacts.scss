@@ -99,7 +99,7 @@
   .contacts__container-inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   // заголовок
@@ -116,8 +116,15 @@
     margin-bottom: 49px;
   }
 
+  .contacts__wrapper-inner:first-of-type {
+    margin-left: 49px;
+    margin-right: 98px;
+  }
+
   .contacts__wrapper-inner:last-of-type {
     margin-bottom: 28px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   // контакты
@@ -178,6 +185,7 @@
     margin-right: 95px;
     order: 2;
     margin-bottom: 22px;
+    margin-left: -20px;
   }
 
   .contacts__wrapper-inner:nth-of-type(2) {

@@ -25,6 +25,11 @@
   display: none;
 }
 
+// прячем при отключенном js
+.menu__hidden {
+  display: none;
+}
+
 // СТИЛИ ДЛЯ ДЕСКТОПА
 
 @media (min-width: $desktop-width) {

@@ -1,15 +1,15 @@
 // преимущества
 .preferences {
   max-width: 320px;
-  height: 817px;
+  height: 750px;
 
   margin: 0 auto;
   margin-bottom: 42px;
 
   background-color: #f2f2f2;
-  background-image: url("../img/iphone-screen-mobile@1x.png"), linear-gradient(-5.4deg, #f2f2f2 92.7%, $white-color 92.7%);
+  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center 539px, 0 0;
+  background-position: center 473px;
 }
 
 
@@ -17,7 +17,7 @@
 .preferences__wrapper {
   max-width: 280px;
   margin: 0 auto;
-  padding-top: 113px;
+  padding-top: 46px;
 }
 
 // обнуление стилей списка преимуществ
@@ -39,6 +39,7 @@
   padding: 0;
 
   font-size: 18px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
 }
@@ -75,8 +76,9 @@
   // спискок преимуществ
   .preferences__wrapper {
     max-width: 660px;
+    margin-bottom: -16px;
 
-    background-image: url("../img/iphone-screen-3-tablet@1x.png"), linear-gradient(-4deg, #f2f2f2 85%, $white-color 85%);
+    background-image: url("../img/iphone-screen-3-tablet@1x.png"), linear-gradient(-4.3deg, #f2f2f2 85%, $white-color 85%);
     background-position: 21px 42px, 0 0;
     background-repeat: no-repeat;
   }
@@ -91,6 +93,7 @@
   .preferences__list--margins {
     margin-left: 330px;
     margin-right: 20px;
+    padding-top: 67px;
   }
 
   .preferences__list-item--margins {
@@ -191,12 +194,12 @@
 
 @media (min-width: $desktop-width) {
   .preferences {
-    max-width: 1200px;
+    max-width: 960px;
     min-height: 1040px;
     margin-bottom: 186px;
 
     background-color: #f2f2f2;
-    background-image: linear-gradient(-4.3deg, #f2f2f2 91.6%, $white-color 91.6%);
+    background-image: linear-gradient(-4.3deg, #f2f2f2 87.8%, $white-color 87.8%);
     background-position: 0 0;
   }
 
@@ -204,12 +207,12 @@
   .preferences__wrapper {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0;
 
     background-image: url("../img/iphone-screen-1-desktop@1x.png"), url("../img/iphone-screen-2-desktop@1x.png"), url("../img/iphone-screen-3-desktop@1x.png");
-    background-position: 134px 0, 457px 0, 777px 0;
+    background-position: 14px 0, 337px 0, 677px 0;
   }
 
   // список преимуществ
@@ -224,7 +227,7 @@
   }
 
   .preferences__list--margins {
-    margin-top: 358px;
+    margin-top: 291px;
     margin-bottom: 68px;
   }
 
@@ -246,13 +249,10 @@
 
   // заголовок в списке
   .preferences__header {
+    margin-bottom: 24px;
     font-size: 30px;
     line-height: 30px;
     text-align: center;
-  }
-
-  .preferences--header {
-    margin-bottom: 24px;
   }
 
   // описание
@@ -283,7 +283,7 @@
 
   // обертка текста
   .preferences__effect-wrapper-inner {
-    max-width: 525px;
+    max-width: 526px;
   }
 
   // прячем br
@@ -299,7 +299,7 @@
 
   // описание
   .preferences__effect-description {
-    max-width: 525px;
+    max-width: 526px;
 
     font-size: 18px;
     line-height: 30px;
@@ -335,10 +335,10 @@
 // мобильная
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .preferences {
-    background-image: url("../img/iphone-screen-mobile@2x.png"), linear-gradient(-5.4deg, #f2f2f2 92.7%, $white-color 92.7%);
+    background-image: url("../img/iphone-screen-mobile@2x.png");
     background-repeat: no-repeat;
-    background-position: center 539px, 0 0;
-    background-size: 157px auto, auto;
+    background-position: center 473px;
+    background-size: 157px auto;
   }
 }
 
@@ -350,7 +350,7 @@
     }
 
     .preferences__wrapper {
-      background-image: url("../img/iphone-screen-3-tablet@2x.png"), linear-gradient(-4deg, #f2f2f2 85%, #ffffff 85%);
+      background-image: url("../img/iphone-screen-3-tablet@2x.png"), linear-gradient(-4.3deg, #f2f2f2 85%, $white-color 85%);
       background-position: 21px 42px, 0 0;
       background-repeat: no-repeat;
       background-size: 268px auto, auto;
@@ -362,9 +362,9 @@
 @media (min-width: $desktop-width) {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .preferences__wrapper {
-      background-image: url("../img/iphone-screen-1-desktop@2x.png"), url("../img/iphone-screen-2-desktop@2x.png"), url("../img/iphone-screen-3-desktop@2x.png"), linear-gradient(-4.3deg, #f2f2f2 91.6%, $white-color 91.6%);
-      background-size: 292px auto, 292px auto, 292px auto, 1200px 1040px;
-      background-position: 134px 0, 457px 0, 777px 0, 0 0;
+      background-image: url("../img/iphone-screen-1-desktop@2x.png"), url("../img/iphone-screen-2-desktop@2x.png"), url("../img/iphone-screen-3-desktop@2x.png"), linear-gradient(-4.3deg, #f2f2f2 87.8%, $white-color 87.8%);
+      background-size: 292px auto, 292px auto, 292px auto, auto;
+      background-position: 14px 0, 337px 0, 657px 0, 0 0;
     }
   }
 }

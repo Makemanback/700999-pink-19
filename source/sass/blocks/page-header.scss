@@ -72,13 +72,13 @@
 @media (min-width: $desktop-width) {
   .page-header {
     width: 100%;
-    max-width: 1200px;
-    padding-right: 130px;
-    padding-left: 130px;
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-top: 20px;
     margin: 0 auto;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
   }
 
   .page-header__logo {

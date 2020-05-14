@@ -21,41 +21,43 @@
   </head>
   <body>
 
-    <header class="page-header page-header--paddings">
-      <a class="page-header__logo">
-          <svg class="page-header__logo-image" role="img" aria-labelledby="pink-logo1 pink-logo2" width="75" height="25">
-            <title id="pink-logo1">логотип pink</title>
-            <desc id="pink-logo2">ссылка на главную pink</desc>
-            <use xlink:href="img/sprite-min.svg#icon-logo-header-pink"></use>
+    <header class="header">
+      <div class="page-header page-header--paddings">
+        <a class="page-header__logo">
+            <svg class="page-header__logo-image" role="img" aria-labelledby="pink-logo1 pink-logo2" width="75" height="25">
+              <title id="pink-logo1">логотип pink</title>
+              <desc id="pink-logo2">ссылка на главную pink</desc>
+              <use xlink:href="img/sprite-min.svg#icon-logo-header-pink"></use>
+            </svg>
+        </a>
+
+        <button class="menu menu__hidden" type="button" aria-label="Открыть меню">
+          <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite-min.svg#icon-menu-burger"></use>
           </svg>
-      </a>
+          <svg class="menu__close menu__close--js" width="24" height="24" viewBox="0 0 24 24">
+            <use xlink:href="img/sprite-min.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
 
-      <button class="menu" type="button" aria-label="Открыть меню">
-        <svg class="menu__open" width="50" height="24" viewBox="0 0 50 24"><use xlink:href="img/sprite-min.svg#icon-menu-burger"></use>
-        </svg>
-        <svg class="menu__close menu__close--js" width="24" height="24" viewBox="0 0 24 24">
-          <use xlink:href="img/sprite-min.svg#icon-menu-cross"></use>
-        </svg>
-      </button>
-
-      <nav class="main-nav">
-        <div class="main-nav__wrapper ">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="photo.html">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper ">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -102,39 +104,40 @@
         <b class="slogan__text slogan__text--padding">Нам есть, что вам предложить!</b>
       </div>
 
-      <section class="preferences">
+      <section class="container">
         <h2 class="visually-hidden">Преимущества</h2>
-
-        <div class="preferences__wrapper">
-          <ul class="preferences__list preferences__list--margins">
-            <li class="preferences__list-item preferences__list-item--margins">
-              <h3 class="preferences__header">Поднимает настроение</h3>
-              <p class="preferences__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="preferences__list-item preferences__list-item--margins">
-              <h3 class="preferences__header">Меняет мир вокруг</h3>
-              <p class="preferences__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="preferences__list-item preferences__list-item--margins">
-              <h3 class="preferences__header">Заводит новых друзей</h3>
-              <p class="preferences__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-        </div>
-        <div class="preferences__effect">
-          <div class="preferences__image-wrapper">
-            <div class="preferences__effect-image">
-              <svg class="preferences__effect-circle" width="238" height="276" viewBox="0 0 298 345.097">
-                <use xlink:href="img/sprite-min.svg#icon-timer"></use>
-              </svg>
-            </div>
+        <div class="preferences">
+          <div class="preferences__wrapper">
+            <ul class="preferences__list preferences__list--margins">
+              <li class="preferences__list-item preferences__list-item--margins">
+                <h3 class="preferences__header">Поднимает настроение</h3>
+                <p class="preferences__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="preferences__list-item preferences__list-item--margins">
+                <h3 class="preferences__header">Меняет мир вокруг</h3>
+                <p class="preferences__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="preferences__list-item preferences__list-item--margins">
+                <h3 class="preferences__header">Заводит новых друзей</h3>
+                <p class="preferences__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
           </div>
-          <div class="preferences__effect-wrapper-inner">
-            <h2 class="preferences__effect-header preferences__effect-header--margin">Эффект <br class="preferences__divider">на 24 часа!</h2>
-            <p class="preferences__effect-description preferences__effect-description--margin">
-              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-            </p>
-            <a class="preferences__effect-link">Узнать больше об ислледовании</a>
+          <div class="preferences__effect">
+            <div class="preferences__image-wrapper">
+              <div class="preferences__effect-image">
+                <svg class="preferences__effect-circle" width="238" height="276" viewBox="0 0 298 345.097">
+                  <use xlink:href="img/sprite-min.svg#icon-timer"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="preferences__effect-wrapper-inner">
+              <h2 class="preferences__effect-header preferences__effect-header--margin">Эффект <br class="preferences__divider"> на 24 часа!</h2>
+              <p class="preferences__effect-description preferences__effect-description--margin">
+                Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от использования&nbsp;приложения длится целые сутки!
+              </p>
+              <a class="preferences__effect-link">Узнать больше об ислледовании</a>
+            </div>
           </div>
         </div>
       </section>
@@ -170,96 +173,100 @@
         </div>
       </section>
 
-      <section class="rates">
+      <section class="container container--rates">
         <h2 class="visually-hidden">Тарифы</h2>
-        <div class="rates__container">
+        <div class="rates">
+          <div class="rates__container">
 
-          <ul class="rates__item-tablet">
-            <li class="rates__list-tablet">Розовый фильтр</li>
-            <li class="rates__list-tablet">Смайлики</li>
-            <li class="rates__list-tablet">Комментарии</li>
-          </ul>
+            <ul class="rates__item-tablet">
+              <li class="rates__list-tablet">Розовый фильтр</li>
+              <li class="rates__list-tablet">Смайлики</li>
+              <li class="rates__list-tablet">Комментарии</li>
+            </ul>
 
-          <dl class="rates__wrapper">
-            <div class="rates__header">
-              <dt class="rates__title">База</dt>
-              <dd class="rates__price">1,99 USD</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item rates__list-item--no">нет</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item rates__list-item--no">нет</dd>
-            </div>
-          </dl>
+            <dl class="rates__wrapper">
+              <div class="rates__header">
+                <dt class="rates__title">База</dt>
+                <dd class="rates__price">1,99 USD</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Розовый фильтр</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Смайлики</dt>
+                <dd class="rates__list-item rates__list-item--no">нет</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Комментарии</dt>
+                <dd class="rates__list-item rates__list-item--no">нет</dd>
+              </div>
+            </dl>
 
-          <dl class="rates__wrapper">
-            <div class="rates__header">
-              <dt class="rates__title">Стандарт</dt>
-              <dd class="rates__price">3,99 USD</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item rates__list-item--no">нет</dd>
-            </div>
-          </dl>
+            <dl class="rates__wrapper">
+              <div class="rates__header">
+                <dt class="rates__title">Стандарт</dt>
+                <dd class="rates__price">3,99 USD</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Розовый фильтр</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Смайлики</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Комментарии</dt>
+                <dd class="rates__list-item rates__list-item--no">нет</dd>
+              </div>
+            </dl>
 
-          <dl class="rates__wrapper">
-            <div class="rates__header">
-              <dt class="rates__title">Анлим</dt>
-              <dd class="rates__price">9,99 USD</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Розовый фильтр</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Смайлики</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-            <div class="rates__item-wrapper">
-              <dt class="rates__list-item">Комментарии</dt>
-              <dd class="rates__list-item rates__list-item--yes">да</dd>
-            </div>
-          </dl>
+            <dl class="rates__wrapper">
+              <div class="rates__header">
+                <dt class="rates__title">Анлим</dt>
+                <dd class="rates__price">9,99 USD</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Розовый фильтр</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Смайлики</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+              <div class="rates__item-wrapper">
+                <dt class="rates__list-item">Комментарии</dt>
+                <dd class="rates__list-item rates__list-item--yes">да</dd>
+              </div>
+            </dl>
 
-        </div>
-        <div class="rates__button-wrapper">
-          <button class="rates__button" type="button"></button>
-          <button class="rates__button rates__button--active" type="button"></button>
-          <button class="rates__button" type="button"></button>
+          </div>
+          <div class="rates__button-wrapper">
+            <button class="rates__button" type="button"></button>
+            <button class="rates__button rates__button--active" type="button"></button>
+            <button class="rates__button" type="button"></button>
+          </div>
         </div>
       </section>
 
-      <section class="contacts">
-        <div class="contacts__wrapper contacts__wrapper--margins">
-          <span class="contacts__header contacts__header--margins">Остались вопросы?<br> Свяжитесь с нами!</span>
-          <div class="contacts__container-inner">
-            <div class="contacts__wrapper-inner">
-              <h3 class="contacts__phone-header contacts__phone-header--margins">Звоните:</h3>
-              <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
-            </div>
-            <div class="contacts__wrapper-inner">
-              <h3 class="contacts__mail-header contacts__mail-header--margins">Пишите:</h3>
-              <a href="#" class="contacts__mail-address">mail@htmlacademy.ru</a>
-            </div>
-            <div class="contacts__wrapper-inner">
-              <h3 class="contacts__address-header contacts__address-header--margins">Приезжайте в гости:</h3>
-              <span class="contacts__address">ул. Большая<br> Конюшенная, 19/8</span>
+      <section class="container container--contacts">
+        <div class="contacts">
+          <div class="contacts__wrapper contacts__wrapper--margins">
+            <span class="contacts__header contacts__header--margins">Остались вопросы?<br> Свяжитесь с нами!</span>
+            <div class="contacts__container-inner">
+              <div class="contacts__wrapper-inner">
+                <h3 class="contacts__phone-header contacts__phone-header--margins">Звоните:</h3>
+                <a href="tel:+78125556666" class="contacts__phone-number">+7 (812) 555-66-66</a>
+              </div>
+              <div class="contacts__wrapper-inner">
+                <h3 class="contacts__mail-header contacts__mail-header--margins">Пишите:</h3>
+                <a href="#" class="contacts__mail-address">mail@htmlacademy.ru</a>
+              </div>
+              <div class="contacts__wrapper-inner">
+                <h3 class="contacts__address-header contacts__address-header--margins">Приезжайте в гости:</h3>
+                <span class="contacts__address">ул. Большая<br> Конюшенная, 19/8</span>
+              </div>
             </div>
           </div>
         </div>

@@ -277,7 +277,6 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    width: 94%;
     margin: 0 auto;
   }
 
@@ -324,6 +323,8 @@
   // панорама
   .photos__image-panorama {
     height: 506px;
+    min-width: 1200px;
+    max-width: 1200px;
   }
 
   // фото блоков
@@ -355,8 +356,8 @@
   .photos__description--margins {
     display: flex;
     justify-content: center;
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 170px;
+    padding-right: 170px;
     padding-bottom: 88px;
   }
 

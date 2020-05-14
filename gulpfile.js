@@ -24,9 +24,9 @@ var pipeline = require("readable-stream").pipeline;
 // минификация js
 gulp.task("compress-js", function () {
   return pipeline(
-        gulp.src("source/js/*.js"),
-        uglify(),
-        gulp.dest("build/js")
+    gulp.src("source/js/*.js"),
+    uglify(),
+    gulp.dest("build/js")
   );
 });
 
@@ -38,30 +38,31 @@ gulp.task("js-concat", function () {
 });
 
 // минификация html
-gulp.task("HM", function() {
-  return gulp.src("source/index.html")
-      .pipe(htmlmin({
-        collapseWhitespace: true}))
-      .pipe(gulp.dest("build"));
+gulp.task("HM", function () {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"));
 });
 
 // вставляем спрайт в разметку команда выполняется во время билда, до нее в разметке нет иконок
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 });
 
 // оптимизация свг за исключением спрайта
-gulp.task("svgmin", function() {
+gulp.task("svgmin", function () {
   return gulp.src("source/img/*.svg, !source/img/sprite-min.svg")
     .pipe(svgmin({
       plugins: [{
         moveGroupAttrsToElems: false
       }
-    ]
+      ]
     }))
     .pipe(gulp.dest("source/img"));
 });
@@ -70,8 +71,8 @@ gulp.task("svgmin", function() {
 gulp.task("images", function () {
   return gulp.src("source/img/*.{png,jpg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({quality: 75, progressive: true})
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ quality: 75, progressive: true })
     ]))
     .pipe(gulp.dest("build/img"));
 });
@@ -108,7 +109,7 @@ gulp.task("clean", function () {
 });
 
 // копируем файлы в папку build
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
@@ -126,9 +127,9 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  // "compress-js",
-  // "images",
-  // "svgmin",
+  "compress-js",
+  "images",
+  "svgmin",
   "HM",
 ));
 

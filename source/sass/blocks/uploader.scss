@@ -73,6 +73,8 @@
 
   width: 44px;
   height: 44px;
+
+  cursor: pointer;
 }
 
 .uploader__tool-image {
@@ -107,7 +109,7 @@
   &::after {
     position: absolute;
     top: -6px;
-    left: 190px;
+    left: 79.5%;
 
     content: "";
     width: 15px;
@@ -116,6 +118,7 @@
     border-radius: 50%;
     background-color: #f2f2f2;
 
+    cursor: pointer;
     z-index: 2;
   }
 }
@@ -247,7 +250,7 @@
     width: 202px;
 
     &::after {
-      left: 146px;
+      left: 72.5%;
     }
   }
 
@@ -260,7 +263,7 @@
     top: 92px;
 
     &::after {
-      left: 24px;
+      left: 12%;
     }
   }
 
@@ -268,7 +271,7 @@
     top: 162px;
 
     &::after {
-      left: 95px;
+      left: 47.5%;
     }
   }
   // кнопки формы
@@ -343,7 +346,7 @@
     width: 288px;
 
     &::after {
-      left: 71px;
+      left: 24.8%;
     }
   }
 
@@ -351,7 +354,7 @@
     top: 92px;
 
     &::after {
-      left: 246px;
+      left: 85.5%;
     }
   }
 
@@ -359,7 +362,7 @@
     top: 162px;
 
     &::after {
-      left: 160px;
+      left: 55.6%;
     }
   }
 
@@ -372,4 +375,8 @@
   .uploader__button-submit--margins {
     margin-right: 44px;
   }
+}
+
+.uploader__range:active::after {
+  background-color: $pink-color;
 }

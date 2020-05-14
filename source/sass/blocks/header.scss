@@ -1,0 +1,10 @@
+.header {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    width: 100%;
+    min-height: 30px;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+}

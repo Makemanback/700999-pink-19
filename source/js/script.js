@@ -9,7 +9,9 @@ let open = document.querySelector(".menu__open");
 // иконка закрытия
 let close = document.querySelector(".menu__close");
 
+
 // прячем меню
+button.classList.remove("menu__hidden")
 menu.classList.add("main-nav__visually-hidden");
 header.classList.add("page-header--background-js");
 
@@ -38,12 +40,12 @@ let name = document.querySelector(".name-js");
 let mail = document.querySelector(".mail-js");
 
 // находим окно ошибки
-let popupError = document.querySelector(".form__popup-error");
+let popupError = document.querySelector(".form__popup-container");
 // кнопка ошибки
 let errorButton = document.querySelector(".button-error-js");
 
 // находим окно сабмита
-let popupSubmit = document.querySelector(".form__popup-submit");
+let popupSubmit = document.querySelector(".form__popup-container-submit");
 // кнопка сабмита
 let submitButton = document.querySelector(".form__submit-button");
 
@@ -61,11 +63,11 @@ form.addEventListener("submit", function(evt) {
       evt.preventDefault();
       popupError.classList.remove("form__not-visible");
       errorButton.focus();
-
       name.setAttribute("style", "border-color: red; border-width: 3px");
       surname.setAttribute("style", "border-color: red; border-width: 3px");
       mail.setAttribute("style", "border-color: red; border-width: 3px");
   } else {
+      evt.preventDefault();
       popupSubmit.classList.remove("form__not-visible");
       submitButton.focus();
   }
