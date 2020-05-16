@@ -128,10 +128,10 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  // "compress-js",
-  // "images",
-  // "svgmin",
-  // "HM",
+  "compress-js",
+  "images",
+  "svgmin",
+  "HM",
 ));
 
 gulp.task("server", function () {
