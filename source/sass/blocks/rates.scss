@@ -372,14 +372,15 @@
     margin-bottom: 64px;
     margin-top: 78px;
 
-    background-color: #f2f2f2;
+    background-color: transparent;
   }
 
   .rates__container {
     max-width: 940px;
     margin-top: 75px;
     margin-bottom: 98px;
-    margin-left: 126px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // обертки столбцов

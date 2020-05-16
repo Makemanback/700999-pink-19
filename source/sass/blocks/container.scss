@@ -40,12 +40,16 @@
     box-shadow: none;
 
     &--rates {
-      background-image: linear-gradient(-4.3deg, #f2f2f2 86.5%, $white-color 86.5%);
+      background-image: linear-gradient(-3.8deg, #f2f2f2 87%, $white-color 87%);
     }
 
     &--contacts {
       background-image: none;
       background-color: $white-color;
+    }
+
+    &--preferences {
+      background-image: linear-gradient(-4.3deg, #f2f2f2 92.3%, $white-color 92.3%);
     }
   }
 }
@@ -54,7 +58,7 @@
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   @media (min-width: $desktop-width) {
     .container--preferences {
-      background-image: linear-gradient(-4.3deg, #f2f2f2 91%, $white-color 91%);
+      background-image: linear-gradient(-4.3deg, #f2f2f2 92.3%, $white-color 92.3%);
     }
   }
 }
