@@ -914,7 +914,7 @@
 
   .form__achievement-container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     margin: 0 auto;
@@ -986,7 +986,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 52px;
-    margin-right: 64px;
+    margin-right: 115px;
   }
 
   // ордера
@@ -997,26 +997,27 @@
 
   .form__achievement-label:nth-of-type(2) {
     order: -3;
-    margin-right: 51px;
+    margin-right: 154px;
   }
 
   .form__achievement-label:nth-of-type(3) {
     order: -5;
-    margin-right: 63px;
+    margin-right: 115px;
   }
 
   .form__achievement-label:nth-of-type(4) {
     order: -2;
-    margin-right: 20px;
+    margin-right: 123px;
   }
 
   .form__achievement-label:nth-of-type(5) {
     order: -4;
+    margin-right: 0;
   }
 
   .form__achievement-label:last-of-type {
     order: -1;
-    margin-right: 59px;
+    margin-right: 0;
     margin-bottom: 52px;
   }
 

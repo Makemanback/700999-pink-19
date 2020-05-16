@@ -115,7 +115,8 @@ gulp.task("copy", function () {
     "source/img/**",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
+    "source/*.html",
+    "source/css/*.css"
   ], {
     base: "source"
   })
@@ -127,10 +128,10 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "compress-js",
-  "images",
-  "svgmin",
-  "HM",
+  // "compress-js",
+  // "images",
+  // "svgmin",
+  // "HM",
 ));
 
 gulp.task("server", function () {

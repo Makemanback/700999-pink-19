@@ -8,6 +8,13 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
+  background-color: $darkblue-color;
+}
+
+.photos__container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $white-color;
 }
 
 // заголовок фотографий
@@ -247,7 +254,6 @@
   .photos {
     margin-top: -110px;
 
-    background-color: #ffffff;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: auto;
@@ -278,6 +284,8 @@
     align-items: flex-start;
 
     margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   // фото блоков
@@ -338,6 +346,7 @@
   }
 
   .photos__wrapper {
+    justify-content: flex-start;
     max-width: 940px;
     padding: 0;
     margin: 0 auto;
@@ -345,6 +354,10 @@
 
   .photos__wrapper-inner {
     margin-bottom: 34px;
+  }
+
+  .photos__wrapper-inner:not(:nth-of-type(3n)) {
+    margin-right: 20px;
   }
 
   .photos__header--margins {

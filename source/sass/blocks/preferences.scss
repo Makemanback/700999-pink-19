@@ -188,6 +188,12 @@
     color: $pink-color;
     text-decoration: underline;
   }
+
+  .preferences__effect-container {
+    width: 100%;
+    background-color: $white-color;
+    margin: 0 auto;
+  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
@@ -196,6 +202,7 @@
   .preferences {
     max-width: 960px;
     min-height: 1040px;
+    height: auto;
     margin-bottom: 186px;
 
     background-color: transparent;
@@ -325,6 +332,11 @@
 
     font-size: 120px;
     line-height: 187px;
+  }
+
+
+  .preferences__effect-container {
+    background-color: #f2f2f2;
   }
 }
 

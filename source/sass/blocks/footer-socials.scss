@@ -2,8 +2,8 @@
 .footer-socials {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 176px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .footer-socials--margin {
@@ -13,6 +13,7 @@
 .footer-socials__link {
   width: 50px;
   height: 50px;
+  margin-right: 13px;
 
   color: $pink-color;
   border: 3px solid #e9ebec;
@@ -37,25 +38,31 @@
 // позиционирование свг иконок
 .footer-socials__link-twitter {
   position: relative;
-  top: 15px;
-  left: 13px;
+  top: 14px;
+  left: 16px;
 }
 
 .footer-socials__link-facebook {
   position: relative;
   top: 12px;
-  left: 17px;
+  left: 18px;
 }
 
 .footer-socials__link-youtube {
   position: relative;
-  top: 14px;
-  left: 16px;
+  top: 12px;
+  left: 15px;
 }
 
 // СТИЛИ ДЛЯ ПЛАНШЕТА
 
 @media (min-width: $tablet-width) {
+  .footer-socials {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
   // социальные кнопки
   .footer-socials--margin {
     margin: 0;
@@ -71,5 +78,9 @@
     margin: 0;
     margin-top: 74px;
     margin-right: auto;
+  }
+
+  .footer-socials__link {
+    margin-right: 15px;
   }
 }
