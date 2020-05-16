@@ -307,6 +307,11 @@
     font-size: 18px;
     line-height: 30px;
   }
+
+  .photos__description-text {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 
 // СТИЛИ ДЛЯ ДЕСКТОПА
@@ -370,6 +375,11 @@
   // лайк на панораме
   .photos__comment-panorama .photos__like::before {
     left: 790px;
+  }
+
+  .photos__description-text {
+    width: 600px;
+    margin: 0 auto;
   }
 }
 
