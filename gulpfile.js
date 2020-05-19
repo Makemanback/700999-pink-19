@@ -129,7 +129,7 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "compress-js",
-  // "images",
+  "images",
   "svgmin",
   "HM",
 ));
