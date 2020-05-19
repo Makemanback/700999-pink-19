@@ -9,9 +9,7 @@
 }
 
 .page-footer--margins {
-  // временно для сетки
   margin-top: 40px;
-
   margin-bottom: 40px;
 }
 
@@ -51,7 +49,7 @@
 @media (min-width: $tablet-width) {
   .page-footer {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 
     max-width: 620px;
@@ -77,7 +75,6 @@
   .page-footer__logo {
     margin: 0;
     margin-top: 35px;
-    margin-right: 75px;
   }
 }
 
@@ -86,19 +83,18 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     max-width: 940px;
-    height: 197px;
+    min-height: 197px;
     margin: 0 auto;
+
+    overflow: hidden;
   }
 
   .page-footer__logo {
     margin: 0;
-    margin-top: 19px;
-    margin-right: 239px;
   }
 
   .page-footer__logo--margins {
     margin-top: 69px;
-    margin-right: 236px;
   }
 
   .page-footer__logo-image {

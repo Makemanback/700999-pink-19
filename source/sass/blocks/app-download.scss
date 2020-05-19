@@ -179,7 +179,7 @@
 
   // контейнер приложений
   .app-download__container {
-    align-items: start;
+    align-items: flex-start;
 
     width: 940px;
     margin-right: auto;
@@ -189,6 +189,8 @@
     background-repeat: no-repeat;
     background-position: 16px 0;
     background-size: 1050px auto;
+
+    overflow: hidden;
   }
 
   .app-download__container--margins {

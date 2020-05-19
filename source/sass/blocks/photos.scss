@@ -252,16 +252,20 @@
 @media (min-width: $tablet-width) {
   // блок фотографий
   .photos {
+    align-items: center;
     margin-top: -110px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: center;
+
+    overflow: hidden;
   }
 
   // фото панорамы
   .photos__wrapper-panorama {
+    width: 100%;
     overflow: hidden;
   }
 
@@ -306,6 +310,10 @@
   }
 
   // описание блока
+  .photos__description {
+    width: 100%;
+  }
+
   .photos__description--margins {
     padding-top: 92px;
     padding-right: 55px;
@@ -373,7 +381,7 @@
 
   .photos__description--margins {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-left: 170px;
     padding-right: 170px;
     padding-bottom: 88px;
