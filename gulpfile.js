@@ -52,6 +52,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 });
 
@@ -96,7 +99,6 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
@@ -133,9 +135,10 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "compress-js",
-  "images",
+  // "images",
   "svgmin",
-  "HM",
+  "html",
+  // "HM",
 ));
 
 gulp.task("server", function () {
